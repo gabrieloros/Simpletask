@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/GDR/!svn/ver/317/branches/trunk_integracion/application/db/postgreSQL
+END
+01_create_database.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/01_create_database.sql
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/readme.txt
+END
+gdr_structure_sample_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/gdr_structure_sample_data.sql
+END
+02_gdr_structure.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/02_gdr_structure.sql
+END

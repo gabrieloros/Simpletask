@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/GDR/!svn/ver/328/branches/trunk_integracion/application/views
+END
+Footer.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Footer.view.php
+END
+Captcha.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Captcha.view.php
+END
+BasicAjaxMessageResponse.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/BasicAjaxMessageResponse.view.php
+END
+Content.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Content.view.php
+END
+EmbedErrorMessage.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/EmbedErrorMessage.view.php
+END
+MasterLdr.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/GDR/!svn/ver/328/branches/trunk_integracion/application/views/MasterLdr.view.php
+END
+404.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/404.view.php
+END
+ActionMessage.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/ActionMessage.view.php
+END
+LoginCaptcha.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/LoginCaptcha.view.php
+END
+Header.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Header.view.php
+END
+Login.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Login.view.php
+END
+PageTitle.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/GDR/!svn/ver/271/branches/trunk_integracion/application/views/PageTitle.view.php
+END
+Pager.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Pager.view.php
+END
+Master.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/295/branches/trunk_integracion/application/views/Master.view.php
+END
+ContentTools.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/ContentTools.view.php
+END
+PopupPrint.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/PopupPrint.view.php
+END
+ChangePass.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/ChangePass.view.php
+END
+ErrorMessage.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/ErrorMessage.view.php
+END
+Menu.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/Menu.view.php
+END

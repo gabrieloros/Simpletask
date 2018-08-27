@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls
+END
+DateControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/DateControl.class.php
+END
+NumericControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/NumericControl.class.php
+END
+TextControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/TextControl.class.php
+END
+SelectControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/SelectControl.class.php
+END
+TwoPanelsControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/TwoPanelsControl.class.php
+END
+PasswordControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/PasswordControl.class.php
+END
+TextAreaControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/TextAreaControl.class.php
+END
+SelectionTreeControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/SelectionTreeControl.class.php
+END
+RichTextControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/RichTextControl.class.php
+END
+CheckboxControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/controls/CheckboxControl.class.php
+END

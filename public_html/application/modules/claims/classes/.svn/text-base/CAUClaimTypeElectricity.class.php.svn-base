@@ -1,0 +1,222 @@
+<?php
+require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/ClaimType.class.php';
+require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/CAUElectricClaim.class.php';
+
+/**
+ * 
+ * Class that defines the CAU Electricity Department's claim type. CAU = Centro de Atencion Unificada
+ * @author Gabriel Guzman
+ *
+ */
+class CAUClaimTypeElectricity extends ClaimType {
+	
+	function __construct() {
+	
+	}
+	
+	/**
+	 * (non-PHPdoc)
+	 * @see ClaimType::parse()
+	 * Parses an array and seeks for CAU-formatted claims
+	 * @return boolean
+	 */
+	public function parse($data){
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
+		
+		if(!isset($data) || $data == null || !is_array($data)){
+			$_SESSION ['logger']->error("Data variable to parse must be an array");
+			throw new InvalidArgumentException("Data variable to parse must be an array");
+		}
+		
+		$parsedData = array();
+			
+		//Check if is CAU valid claim list
+		$firstColumnLabel = trim($data[4]['A']);
+		
+		if($firstColumnLabel != claimsConcepts::CLAIMTYPECAUELECTRICITYCOLUMNCHECK){
+			$_SESSION['logger']->error("Invalid file format");
+			throw new InvalidArgumentException("Invalid file format");
+		}
+		
+		//Remove the first three row, left only claims data
+		$parsedData = array_slice($data, 4);
+		
+		if(count($parsedData) > 0){
+			
+			$counter = 0;
+			
+			foreach ($parsedData as $row){
+				
+				if(isset($row['A']) && $row['A'] != null){
+					
+					//Code
+					if(!isset($row['B']) || $row['B'] == null){
+						$code = $this->generateCode();
+					}
+					else{
+						$code = $row['B'];
+					}
+					
+					//Entry date
+					$fullDate = date("d/m/Y");
+					
+					//Address
+					if(isset($row['H']) && trim($row['H']) != null && trim($row['H']) != 'IDEM'){
+						$address = trim($row['H']);
+					}
+					else{					
+						$address = trim($row['F']);
+					}
+					
+					$claimObj = new CAUElectricClaim(null, $code, $address); 
+					
+					//Set entry date				
+					$claimObj->setEntryDate($fullDate, 'd/m/Y');
+					
+					//Set requester name
+					$claimObj->setRequesterName($row['G']);
+					
+					//Set requester phone
+					$claimObj->setRequesterPhone($row['I']);
+					
+					//Set claim neighborhood
+					$claimObj->setNeighborhood($row['E']);
+					
+					//Set Input Type
+					$claimObj->setInputTypeId(claimsConcepts::CLAIMINPUTTYPEPHONEID);
+					
+					//Set origin
+					$originId = array_search(claimsConcepts::CLAIMTYPECAUELECTRICITY, $_SESSION['claimsConcepts']['origins']);
+					if($originId !== false){
+						$claimObj->setOriginId($originId);
+					}
+					
+					//Set subject
+					$claimObj->setSubjectId(claimsConcepts::ALUMBRADO_PUBLICO_SUBJECT_ID);
+					
+					//Set cause
+					$claimObj->setCauseId(claimsConcepts::ALUMBRADO_PUBLICO_CAUSE_ID);
+					
+					//Set dependency
+					//The current XLS for CAU doesn't have the dependency field
+					$claimObj->setDependencyId($_SESSION['loggedUser']->getDependencyid());
+					
+					//Set assigned
+					//Currently all the claims are marked as assigned, in the future it will change
+					$claimObj->setAssigned('true');
+					
+					//Set state
+					//By default is pending
+					$claimObj->setStateId(claimsConcepts::PENDINGSTATE);
+					
+					//Electric-specific data
+					$claimObj->setPiquete($row['J']);
+					$claimObj->setFusible($row['K']);
+					$claimObj->setLamp_125($row['L']);
+					$claimObj->setLamp_150($row['M']);
+					$claimObj->setLamp_250($row['N']);
+					$claimObj->setLamp_400($row['O']);
+					$claimObj->setExt_125($row['P']);
+					$claimObj->setExt_150($row['Q']);
+					$claimObj->setExt_250($row['R']);
+					$claimObj->setExt_400($row['S']);
+					$claimObj->setInt_125($row['T']);
+					$claimObj->setInt_150($row['U']);
+					$claimObj->setInt_250($row['V']);
+					$claimObj->setInt_400($row['W']);
+					$claimObj->setMorceto($row['X']);
+					$claimObj->setEspejo($row['Y']);
+					$claimObj->setColumna($row['Z']);
+					$claimObj->setAtrio($row['AA']);
+					$claimObj->setNeutro($row['AB']);
+					$claimObj->setCable($row['AC']);
+					$claimObj->setTulipa($row['AD']);
+					$claimObj->setPortalampara($row['AE']);
+					$claimObj->setCanasto($row['AF']);
+					
+					//Get GeoLocation data
+					if(trim($address) != ''){
+						
+						require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/util/GoogleAPI/GeoLocation.class.php';
+						
+						$fullAddress = trim($address) . ' ' . $_SESSION['loggedUser']->getLocationName() . ' ' . $_SESSION['loggedUser']->getProvinceName() . ' ' . $_SESSION['loggedUser']->getCountryName();
+						
+						$geoLocation = new GeoLocation();
+						$geoCodes = $geoLocation->getGeoLocationFromAddress($fullAddress);
+			
+						if(is_array($geoCodes) && count($geoCodes) > 0){
+							$claimObj->setLatitude($geoCodes ['lat']);
+							$claimObj->setLongitude($geoCodes ['lon']);
+						}
+						
+					}
+					
+					$result = $claimObj->insert();
+					
+					if(!$result){
+						$_SESSION['logger']->error("Error inserting claim");
+						throw new Exception("Error inserting claim", $counter);
+					}
+					
+					$counter ++;
+					
+				}
+			}
+		}
+		else{
+			$_SESSION['logger']->error("Claims file is empty");
+			throw new Exception("Claims file is empty");
+		}
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+		
+		return $counter;
+		
+	}
+	
+	/**
+	 * Generates the code for CAU Electricity Department's claims
+	 * @return string
+	 */
+	private function generateCode(){
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
+		
+		$code = $this->getNullCodeCauCount();
+		
+		$newCode = 'R-' . date("Y") . '-' . ((int)$code+1);
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+		
+		return $newCode;
+		
+	}
+	
+	/**
+	 * Returns the max code for CAU claims in database
+	 * @return number
+	 */
+	private function getNullCodeCauCount(){
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
+		
+		$query = ClaimsDB::getNullCodeCauCount();
+		
+		$connectionManager = ConnectionManager::getInstance ();
+		
+		$rs = $connectionManager->select ( $query );
+		
+		$code = 0;
+		
+		if(isset($rs[0]['caucount']) && $rs[0]['caucount'] != null){
+			$code = (int)$rs[0]['caucount'];
+		}
+		
+		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+		
+		return $code;
+		
+	}
+	
+}

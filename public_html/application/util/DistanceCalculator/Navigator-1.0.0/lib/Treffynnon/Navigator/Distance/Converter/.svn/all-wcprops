@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter
+END
+MetreToNauticalMile.php
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToNauticalMile.php
+END
+MetreToLeague.php
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToLeague.php
+END
+MetreToParsec.php
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToParsec.php
+END
+MetreToMile.php
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToMile.php
+END
+ConverterAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/ConverterAbstract.php
+END
+MetreToKilometre.php
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToKilometre.php
+END
+MetreToFurlong.php
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Converter/MetreToFurlong.php
+END

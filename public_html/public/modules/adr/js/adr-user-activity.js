@@ -1,0 +1,402 @@
+var PENDINGSTATE = "1";
+var CLOSEDSTATE = "2";
+var CANCELSTATE = "3";
+var PENDINGSUBSTATE = "0";
+var USERINCLAIMSUBSTATE = "1";
+var TERMINATECLAIMSUBSTATE = "2";
+var CLAIMCLOSEDSUBSTATE = "3";
+var rows = new Array();
+
+function getReportActivity() {
+
+	cleanReportList();
+	clearNoResultsFound();
+	// sendClaimsTrackFilters();
+	var userId = $('#adr-user-id').val();
+	var dateFrom = $('#adr-date-left').val();
+	var dateTo = $('#adr-date-right').val();
+	var timeTo = $('#adr-date-time-right').val();
+	var timeFrom = $('#adr-date-time-left').val();
+
+	if ($('#adr-user-id').val() != 'undefined' && $('#adr-user-id').val() != '') {
+
+		if (validDates(dateFrom, dateTo)) {
+
+			$.ajax({
+
+				type : "POST",
+				url : window.location.pathname
+						+ '?action=getUserActivityReport',
+				dataType : "json",
+				data : {
+					userId : userId,
+					dateFrom : dateFrom,
+					dateTo : dateTo,
+					timeFrom : timeFrom,
+					timeTo : timeTo
+				},
+
+				success : function(data) {
+
+					result = eval(data[1]);
+
+					if (result.length > 0) {
+
+						var isData = true;
+						if (result.length == 2) {
+							if (result[0].codeclaim == 'no_data_found') {
+
+								// Append no data found to list
+								var data = '';
+								populateReportList(data);
+
+								isData = false;
+							}
+						}
+
+						if (isData) {
+
+							for ( var i = 0; i < result.length; i++) {
+								// Append data to list
+								populateReportList(result[i], i);
+							}
+						}
+					}
+
+				},
+				complete : function() {
+
+					sendClaimsTrackFilters();
+
+				},
+				error : function() {
+					genericNoDataFound(s_message['error_retrieving_data']);
+				}
+
+			});
+		} else {
+
+			genericNoDataFound(s_message['error_invalid_dates']);
+		}
+
+	} else {
+
+		genericNoDataFound(s_message['error_select_systemuser']);
+
+	}
+}
+
+/**
+ * Draw and populate the report list
+ * 
+ * @param data
+ */
+function populateReportList(data, index) {
+
+	var row = null;
+	// window.alert(data.codeclaim+" "+data.timeIn+" "+data.timeOut+"
+	// "+data.timeInZone+" "+data.address);
+
+	if (data != '' && data.codeclaim != 'no_data_found') {
+
+		if (data.codeclaim == 'TRASLADO') {
+			classname = "userActColumnTraslado";
+			var classname_1 = "userActAddressTraslado";
+
+		} else if (data.unattended) {
+			classname = "userActColumnUnatended";
+			classname_1 = "userActAddressTraslado";
+
+		} else {
+			classname = "userActColumn";
+			classname_1 = "userActAddress";
+		}
+		
+		row = '<div id="column-content fila_' + index + '" class="report-content-row">' +
+					'<div class="' + classname + '" id="column1">'+ data.codeclaim + '</div>'+
+					'<div class="' + classname + '" id="column1">' + data.state+'</div>' + 
+					'<div class="' + classname + '" id="column1">'+ data.timeIn + '</div>'+
+					'<div class="' + classname + '" id="column1">' + data.timeOut+'</div>' +
+					'<div class="' + classname + '" id="column1">'+ data.timeInZone + '</div>'+
+					'<div class="' + classname_1 + '" id="column1">' + data.address+ '</div>' +
+			  '</div>';
+
+	} else {
+		row = '<div class="report-content-row" id="column-content fila_0">'
+				+ '	<div id="report-content-row" class="no-results-found_1">'+
+						s_message['no_results_found'] + 
+					'</div>' + 
+			  '</div>';
+
+	}
+
+	if (row != null) {
+		$('#report-container-table').append(row);
+		rows.push('.report-content-row');
+	}
+
+}
+
+function cleanReportList() {
+	for ( var i = 0; i < rows.length; i++) {
+		$(rows[i]).remove();
+		var index = rows.indexOf(i);
+		rows.splice(index, 1);
+	}
+}
+
+function exportActivity() {
+
+	var userId = $('#adr-user-id').val();
+	var dateFrom = $('#adr-date-left').val();
+	var dateTo = $('#adr-date-right').val();
+	var timeTo = $('#adr-date-time-right').val();
+	var timeFrom = $('#adr-date-time-left').val();
+
+	var date1 = dateFrom + ' ' + timeFrom;
+	var date2 = dateTo + ' ' + timeTo;
+	if (rows.length > 0) {
+
+		if ($('#adr-user-id').val() != 'undefined'
+				&& $('#adr-user-id').val() != '') {
+
+			window.location = window.location.pathname
+					+ '?action=export&userId=' + userId + '&dateFrom='
+					+ dateFrom + '&dateTo=' + dateTo + '&timeTo=' + timeTo
+					+ '&timeFrom=' + timeFrom;
+
+		} else {
+
+			genericNoDataFound(s_message['error_select_systemuser']);
+
+		}
+
+	} else {
+
+		genericNoDataFound(s_message['error_first_filter_data']);
+
+	}
+
+}
+
+function validDates(dateFrom, dateTo) {
+
+	return !(dateFrom == '' || dateTo == '');
+
+}
+
+// ----------------------- reclamos en mapa -------------------------
+
+var applyBtn = false;
+function sendClaimsTrackFilters() {
+
+	cleanMarkersForUserActivityClaim();
+	cleanMarkersForCompany();
+	cleanInfowindows();
+	cleanPathMarkers();
+	var formdata = $('#frm_activity_user_filters').serialize();
+	showLoadingWheel();
+	// Get claims coords
+	$.ajax({
+				scriptCharset : "utf-8",
+				contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+				cache : false,
+				dataType : "json",
+				type : "POST",
+				url : window.location.pathname
+						+ '?action=getCoordsUserActivity',
+				async : true,
+				data : formdata,
+				success : function(data) {
+					var result = eval(data[1]);
+					var resultEmpresas = result[0].empresas.length;
+					var resultReclamos = result[0].reclamos.length;
+					var resultRoutes = result[0].rutas.length;
+
+					if ((resultEmpresas + resultReclamos + resultRoutes) > 0) {
+						//add claims
+							addMarkersForClaimFromArray(result[0].reclamos);
+						//add company
+							for ( var j = 0; j < result[0].empresas.length; j++) {
+								var urlIcon = "/modules/adr/css/img/company.png";
+
+								updateMapForCompany(j,
+										result[0].empresas[j].id,
+										result[0].empresas[j].lat,
+										result[0].empresas[j].long, urlIcon);
+							}
+
+						//add route
+						var pathIcon = "/modules/adr/css/img/arrow_stop.png";
+						var lastIcon = "/modules/adr/css/img/user_1.png";
+						var cant = result[0].rutas.length; 
+
+						for (var k = 0; k < cant; k++) {
+							if(k != cant - 1){
+								drawPathForUser(k, result[0].rutas[k].userid, result[0].rutas[k].latitude, result[0].rutas[k].longitude, pathIcon);
+				}
+							else{
+								drawPathForUser(k, result[0].rutas[k].userid, result[0].rutas[k].latitude, result[0].rutas[k].longitude, lastIcon);
+							}
+						}
+
+					}else{
+
+						$('#notify').html(s_message['no_results_found']);
+					}
+					showLoadingWheel();
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					showLoadingWheel();
+					alert(s_message['error_retrieving_data']);
+
+				}
+			});
+
+
+}
+
+function addMarkersForClaimFromArray(arrayClaim) {
+	for ( var i = 0; i < arrayClaim.length; i++) {
+
+		var stateId = arrayClaim[i].stateId;
+		var substateId = arrayClaim[i].substateId;
+		var isCritical = arrayClaim[i].isCritical;
+		var urlIcon = "";
+
+		// procesando estados
+		switch (stateId) {
+
+		case PENDINGSTATE:
+			// procesando subestados
+			switch (substateId) {
+
+			case TERMINATECLAIMSUBSTATE:
+			case CLAIMCLOSEDSUBSTATE:
+				urlIcon = "/modules/claims/css/img/state_" + stateId + "_"
+						+ substateId + ".png";
+				break;
+			default:
+				urlIcon = "/modules/claims/css/img/state_" + isCritical
+						+ ".png";
+			}
+
+			break;
+
+		case CLOSEDSTATE:
+		case CANCELSTATE:
+			urlIcon = "/modules/claims/css/img/state_" + stateId + ".png";
+			break;
+		}
+
+		if (arrayClaim.length == 1) {
+			var center = true;
+		}
+
+		addMarkersForClaimUA(arrayClaim[i].id, arrayClaim[i].code,
+				arrayClaim[i].lat, arrayClaim[i].long, urlIcon, center);
+	}
+
+}
+var markers = [];
+function addMarkersForClaimUA(claimId, claimCode, latitude, longitude,
+		stateUrlIcon, center) {
+
+	var newLatLng = new google.maps.LatLng(latitude, longitude);
+	if (center) {
+		map.setCenter(newLatLng);
+	}
+
+	var markerId = claimId;
+	var marker = new google.maps.Marker({
+		id : markerId,
+		position : newLatLng,
+		map : map,
+		icon : stateUrlIcon,
+		draggable : false,
+		zIndex : google.maps.Marker.MAX_ZINDEX + 1
+	});
+
+	index = markers.length;
+	var infowindow = new google.maps.InfoWindow();
+	google.maps.event.addListener(marker, 'click', function(event) {
+
+	var infowindowContent = '';
+		// Get claim detail
+		$.ajax({
+			scriptCharset : "utf-8",
+			contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+			cache : false,
+			dataType : "json",
+			type : "POST",
+			url : window.location.pathname + '?action=getAdrClaim',
+			async : true,
+			data : {
+				claimId : claimId
+			},
+			success : function(data) {
+				var result = eval(data[1]);
+				if (result.length > 0) {
+					var isData = true;
+					if (result.length == 1) {
+						if (result[0].code == 'no_data_found') {
+							isData = false;
+						}
+					}
+
+					if (isData) {
+
+						var claim = new Array();
+						claim['code'] = result[0].code;
+						claim['state'] = result[0].state;
+						claim['claimAddress'] = result[0].claimaddress;
+						claim['requesterName'] = result[0].requestername;
+						claim['requesterPhone'] = result[0].requesterphone;
+						claim['requesterAddress'] = '';
+						claim['subjectName'] = result[0].subjectname;
+						claim['date'] = result[0].date;
+
+						infowindowContent = getClaimInfowindowContent(claim);
+					}
+				}
+
+			},
+			complete : function() {
+				infowindow.setContent(infowindowContent);
+				infowindow.setPosition(event.latLng);
+				infowindow.open(map);
+				infowindowses[index] = infowindow;
+			},
+			error : function() {
+				alert(s_message['error_retrieving_data']);
+			}
+		});
+
+	});
+
+	// cache created marker to markers object with id as its key
+
+	markers[index] = marker;
+	return marker;
+
+}
+
+function cleanMarkersForUserActivityClaim() {
+	for ( var i = 0; i < markers.length; i++) {
+		// find the marker by given id
+		var marker = markers[i];
+		if (typeof (marker) != "undefined") {
+			marker.setMap(null);
+		}
+	}
+	markers = [];
+}
+
+function clearNoResultsFound() {
+
+	$('#notify').html('');
+
+}
+function isDefined(variable) {
+	return (typeof (window[variable]) != "undefined");
+}

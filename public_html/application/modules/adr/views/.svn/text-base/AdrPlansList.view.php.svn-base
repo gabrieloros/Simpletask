@@ -1,0 +1,81 @@
+<?php
+class AdrPlansList extends Render {
+
+	static public function render ($list, $filterGroup, $pager, $actions, $numrows) {
+		
+		ob_start();
+		?>
+		
+		
+		<?
+		echo $filterGroup->drawForm();
+    	?>
+    
+    	<br />
+    	
+		<?php
+    	//Actions
+    	echo $actions;
+
+    	//Counters
+    	?>
+    	<div class="plans-counters">
+    	<?php
+	    	echo '<div>' . Util::getLiteral('total_plans') . ': ' . $numrows . '</div>';
+    	?>
+    	</div>
+    	
+    	<div style="clear:both;"></div>
+  		
+	   	<?php
+		if(count($list) != 0) {
+		?>
+		 
+		<div id="contenedor-table">
+		    <div id="contenidos" class="head-contenidos">
+		        <div id="columna1" class="head-column"><?=Util::getLiteral('plan_id')?></div>
+		        <div id="columna1" class="head-column"><?=Util::getLiteral('plan_name')?></div>
+		        <div id="columna1" class="head-column"><?=Util::getLiteral('plan_coordinateupdatetime_short')?> (<?=Util::getLiteral('plan_coordinateupdatetime_short_unit')?>)</div>
+		        <div id="columna1" class="head-column"><?=Util::getLiteral('plan_minutestoclose_short')?> (<?=Util::getLiteral('plan_minutestoclose_short_unit')?>)</div>
+		        <div id="columna1" class="head-column"><?=Util::getLiteral('plan_minutesforcancellation_short')?> (<?=Util::getLiteral('plan_minutesforcancellation_short_unit')?>)</div>
+		        <div id="columna2" class="head-column column-action-head"><?=Util::getLiteral('plan_actions')?></div>
+		    </div>
+		    <?php
+		    	/* @var $adrPlan adrPlan */
+		    	foreach ($list as $adrPlan){?>
+			    <div id="contenidos" class="column-contenidos fila_<?=$adrPlan->getId()?>">
+			        <div id="columna1"><?php echo ($adrPlan->getId()) ?></div>
+			        <div id="columna1"><?php echo ($adrPlan->getName()) ?></div>
+			        <div id="columna1"><?php echo ($adrPlan->getCoordinateUpdateTime()) ?></div>
+			        <div id="columna1"><?php echo ($adrPlan->getClaimMinutesToCloseTime()) ?></div>
+			        <div id="columna1"><?php echo ($adrPlan->getClaimMinutesForCancellation()) ?></div>
+			        <div id="columna2" class="column-action">
+			        	<div onclick="editPlan(<?=$adrPlan->getId()?>);" title="<?=Util::getLiteral('plan_edit')?>" class="close_icon action_button"><?=Util::getLiteral('plan_edit')?></div>
+			        	<?php
+			        	$display = '';
+			        	
+			        	if($adrPlan->getHasUser() != 0) {
+							$display = 'style="display: none; "';
+						}
+			        	?>
+				        <div onclick="deletePlan(<?=$adrPlan->getId()?>);" title="<?=Util::getLiteral('plan_delete')?>" class="close_icon action_button" <?=$display?>><?=Util::getLiteral('plan_delete')?></div>
+			        </div>
+			    </div>
+		    <?php }?>
+		</div>
+		
+		<?php 
+		} else {
+			echo '<div>'.$_SESSION['s_message']['no_results_found'].'</div>';
+		}
+
+		require_once $_SERVER['DOCUMENT_ROOT'].'/../application/views/Pager.view.php';
+		echo Pager::render($pager);    	
+
+    	$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-plans.js";
+				
+		return ob_get_clean();
+	}
+	
+}
+?>

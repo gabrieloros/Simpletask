@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/GDR/!svn/ver/284/branches/trunk_integracion/application/modules/users/db
+END
+UsersPostgreSQL.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/284/branches/trunk_integracion/application/modules/users/db/UsersPostgreSQL.class.php
+END
+UsersDB.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/271/branches/trunk_integracion/application/modules/users/db/UsersDB.class.php
+END
+UsersOracle.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/271/branches/trunk_integracion/application/modules/users/db/UsersOracle.class.php
+END
+UsersMysql.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/271/branches/trunk_integracion/application/modules/users/db/UsersMysql.class.php
+END

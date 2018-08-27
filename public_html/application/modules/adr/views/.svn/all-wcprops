@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/views
+END
+AdrCaptions.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrCaptions.view.php
+END
+ExportXLS.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/views/ExportXLS.view.php
+END
+AdrUserHistory.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/adr/views/AdrUserHistory.view.php
+END
+AdrPlansList.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrPlansList.view.php
+END
+AdrUsersList.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrUsersList.view.php
+END
+AdrClaimsTrack.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/adr/views/AdrClaimsTrack.view.php
+END
+AdrTemporalReport.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/290/branches/trunk_integracion/application/modules/adr/views/AdrTemporalReport.view.php
+END
+AdrUsersActions.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrUsersActions.view.php
+END
+AdrPlanNewEdit.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrPlanNewEdit.view.php
+END
+AdrPlansActions.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrPlansActions.view.php
+END
+AdrTemporal.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/adr/views/AdrTemporal.view.php
+END
+AdrAssignTasks.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/adr/views/AdrAssignTasks.view.php
+END
+AdrUserNewEdit.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/views/AdrUserNewEdit.view.php
+END
+AdrUserHistoryReport.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/282/branches/trunk_integracion/application/modules/adr/views/AdrUserHistoryReport.view.php
+END

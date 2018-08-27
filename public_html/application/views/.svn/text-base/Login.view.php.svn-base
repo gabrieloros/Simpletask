@@ -1,0 +1,120 @@
+<?php
+/**
+ * Login class
+ *
+ * @author Gabriel Guzman
+ *  @version 1.0
+ *  DATE OF CREATION: 16/03/2012
+ *  UPDATE LIST
+ *  * UPDATE: 
+ *  CALLED BY:  
+ */
+class Login  extends Render{
+	
+	static public function render ($showerror=false, $currentUrl='', $returnUrl='', $returnAction='', $errormsg=null) {
+		
+		ob_start();
+		?>
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml">
+			<head>
+			
+				<title><?=$_SESSION['s_parameters']['site_title']?> Login</title>	
+			
+				<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+					
+				<link rel="stylesheet" type="text/css" href="/core/css/login.css" />
+				
+				<link  type="image/x-icon" rel="shortcut icon" href="/core/img/favicon.ico"/>
+			</head>
+			<body>
+				<div class="page_top_bar">
+				</div>
+				<div class="login-zone">
+					
+					<div id="header-login">
+						
+						<div id="form_login_label">
+						<?
+						if (isset($_SESSION['s_parameters']['login_form_literal'])) {
+							echo Util::getLiteral(strtolower($_SESSION['s_parameters']['login_form_literal']));	
+						}
+						?>						
+						</div>
+						
+					</div>					
+					
+					<form action="/<?=$_SESSION['s_languageIsoUrl']?>/login" name="loginForm" method="post">
+					
+					<div class="login_form">
+						
+						<input type="hidden" id="action" name="action" value="login" />
+                    	<input type="hidden" id="returnUrl" name="returnUrl" value="<?php echo $returnUrl;?>" />
+                    	<input type="hidden" id="returnAction" name="returnAction" value="<?php echo $returnAction;?>" />
+                        	
+                        	<table align="center">
+								<tr>
+									<td align="right">
+										<strong>
+											<label for="login_user">
+											    <?php echo self::renderContent(Util::getLiteral('user'))?>:
+											</label>
+										</strong>
+									</td>
+									<td> 
+										<input type="text" value="" id="login_user" name="login_user" title="<?php echo self::renderContent(Util::getLiteral('user'));?>" alt="<?php echo self::renderContent(Util::getLiteral('login'));?>" />
+									</td>
+								</tr>
+								<tr>
+									<td align="right">
+										<strong>
+											<label for="login_password">
+											    <?php echo self::renderContent(Util::getLiteral('password'))?>:
+										    </label>
+									    </strong>
+								    </td>
+									<td>
+										<input type="password" value="" id="login_password" name="login_password" title="<?php echo self::renderContent(Util::getLiteral('password'));?>" alt="<?php echo self::renderContent(Util::getLiteral('password'));?>" />
+									</td>
+								</tr>
+								<tr>
+								  <td colspan="2" align="right"> <input type="submit" value="<?php echo self::renderContent(Util::getLiteral('login'));?>" title="<?php echo self::renderContent(Util::getLiteral('login'));?>" alt="<?php echo self::renderContent(Util::getLiteral('login'));?>"/> </td>
+								</tr>
+
+							</table>
+                            
+                            <?php                               
+                            if($showerror){?>
+                                <div id='invalidLogin' class="invalidLogin">
+                                	<div class='centered-container'>
+                                		<div class='centered-content'>
+	                                        <?
+	                                        	$errormsg = isset($errormsg) && $errormsg!='' ? $errormsg : Util::getLiteral('loginerror');
+	                                        	echo self::renderContent($errormsg);//show the login error message
+	                                        ?>
+                                    	</div>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <br/>
+                            <?php }                              
+                            ?>
+                            
+                        </div>
+					
+					<script type="text/javascript">
+						document.forms[0].login_user.focus();
+					</script>
+					
+				</form>
+				
+				<div id="foot-login"></div>
+				
+				</div>
+			
+			</body>
+			</html>
+		<?
+		return ob_get_clean();
+	}
+}

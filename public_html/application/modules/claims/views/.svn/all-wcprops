@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/317/branches/trunk_integracion/application/modules/claims/views
+END
+ExportXLS.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/ExportXLS.view.php
+END
+GeoLocationClaimsList.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/GeoLocationClaimsList.view.php
+END
+TelepromStatsXLS.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/views/TelepromStatsXLS.view.php
+END
+PendingTelepromClaimsList.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/PendingTelepromClaimsList.view.php
+END
+ClaimsActions.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/views/ClaimsActions.view.php
+END
+ClaimsList.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/ClaimsList.view.php
+END
+InfoWindows.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/views/InfoWindows.view.php
+END
+Import.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/317/branches/trunk_integracion/application/modules/claims/views/Import.view.php
+END
+MapClaims.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/MapClaims.view.php
+END
+ImportResult.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/views/ImportResult.view.php
+END
+Stats.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/Stats.view.php
+END
+MapNewEditClaim.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/views/MapNewEditClaim.view.php
+END
+ClaimNewEdit.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/299/branches/trunk_integracion/application/modules/claims/views/ClaimNewEdit.view.php
+END

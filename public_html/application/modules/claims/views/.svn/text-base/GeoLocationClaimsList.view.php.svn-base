@@ -1,0 +1,83 @@
+<?php
+class GeoLocationClaimsList extends Render {
+
+	static public function render ($list, $pager) {
+		
+		ob_start();
+		?>
+		<br /><br /><br />
+    		
+		<table border="1" id="geoLocationList" class="tablesList">
+		<?php
+    		
+    	for($i=0 ; $i < count($list) ; $i++){
+    		
+    		$element = $list[$i];
+    		?>
+    		<tr id='table_row_<?= $element->getId() ?>' class="claim_element_row">
+    			
+				<td class="table_col_1">
+    				<div title="<?=$element->getCode()?>" class="text-ellipsis padding">ID: <?=$element->getCode()?></div>
+    			</td>
+    				
+    			<td class="table_col_2">
+				<?php 
+    			$claimAddress = $element->getClaimAddress();
+    			?>
+    				<div class="padding left_float"><?=Util::getLiteral('address')?>:&nbsp;&nbsp;</div>
+    				<div id="address_<?=$element->getId()?>" style="max-width: 360px;" title="<?=$element->getClaimAddress()?>" class="text-ellipsis padding"><?=$element->getClaimAddress()?></div>
+    			</td>
+    			
+    			<td class="table_col_3">
+    			<?php
+    			$requesterPhone = $element->getRequesterPhone();
+    			if(isset($requesterPhone) && $requesterPhone != null){ 
+    			?>
+    				<div title="<?=$element->getRequesterPhone()?>" class="text-ellipsis padding">Teléfono: <?=$element->getRequesterPhone()?></div>
+    			<?php
+    			}
+    			?>		
+    			</td>
+    			
+    			<td class="table_col_4">
+    				<div style="margin-right: 6px;" id="geolocate_button_<?=$element->getId()?>" class="confirm_icon action_button left_float" title="<?=Util::getLiteral('geolocate')?>" value="<?=$element->getId()?>"><?=Util::getLiteral('geolocate')?></div>
+    				<div class="padding left_float" style="display: none;" id="geo_location_container_<?=$element->getId()?>">
+	    				<strong><?=Util::getLiteral('lat')?>:</strong> <span id="latitude_<?=$element->getId()?>"></span>
+	    				<strong><?=Util::getLiteral('long')?>:</strong> <span id="longitude_<?=$element->getId()?>"></span>
+    				</div>
+    				<div id="confirm_button_<?=$element->getId()?>" style="float: right; display: none;" class="confirm_icon action_button" title="<?=Util::getLiteral('confirm')?>" onclick="saveClaimGeoLocation(<?=$element->getId()?>);"><?=Util::getLiteral('confirm')?></div>
+    			</td>
+    			
+    			<td class="table_col_5">
+    				<div id="close_button_<?=$element->getId()?>" style="float: right; " class="close_icon action_button" title="<?=Util::getLiteral('close_claim_no_geo')?>" onclick="closeClaimNoGeo(<?=$element->getId()?>,<?=claimsConcepts::CLOSEDSTATENOGEO?>);">
+    					<?=Util::getLiteral('close_claim_no_geo_short')?>
+    				</div>
+    			</td>
+
+    		</tr>
+    			
+    		<tr id="table_row_separator_<?=$element->getId()?>">
+    			<td colspan="5" style="border-bottom: 1px solid; "></td>
+    		</tr>
+    			
+    		<?php
+    		}
+    		if(count($list) == 0){
+    	    	echo '<tr><td colspan="5">'.$_SESSION['s_message']['no_results_found'].'</td></tr>';
+    		}
+    		?>
+    	</table>
+    		
+		<br />
+    		
+		<?php
+		require_once $_SERVER['DOCUMENT_ROOT'].'/../application/views/Pager.view.php';
+		echo Pager::render($pager);    	
+
+		$_REQUEST['jsToLoad'][] = "/modules/settings/js/settings.js";
+    	$_REQUEST['jsToLoad'][] = "/modules/claims/js/claims.js";
+    	$_REQUEST['jsToLoad'][] = "/modules/settings/js/layers.js";    	 
+		return ob_get_clean();
+	}
+	
+}

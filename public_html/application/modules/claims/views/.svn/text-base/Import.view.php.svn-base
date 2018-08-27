@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * Draws the import upload component
+ * @author Gabriel Guzman
+ *
+ */
+class Import extends Render{
+	
+	public function render($origins){
+		
+		ob_start();
+		
+		?>
+		<div class="upload-form-container">
+			
+			<form id="uploadFileForm" action="" method="post" enctype="multipart/form-data">
+				
+				<label for="claimsFile"><?=$_SESSION['s_message']['document']?>:</label>
+				
+				<input class="mandatory-input" type="file" name="claimsFile" id="claimsFile" />
+				
+				<?=$_SESSION['s_message']['maxuploadfilesize']?>: <?=ini_get('upload_max_filesize')?>
+				
+				<br /><br />
+				
+				<label for="originName"><?=$_SESSION['s_message']['origin']?>:</label>
+				
+				<select class="mandatory-input" name="originName" id="originName">
+					<?php
+					foreach ($origins as $originKey => $origin){
+						?>
+						<option value="<?=$origin?>"><?=Util::getLiteral($origin)?></option>
+						<?php
+					} 
+					?>
+				</select>
+				
+				<br /><br />
+				
+				<div id="button-container">
+					<input type="button" value="<?=$_SESSION['s_message']['upload']?>" onclick="sendUploadForm('uploadFileForm');" />
+				</div>
+				
+				<br />
+				
+				<div id="upload-messages" style="display: none;">
+				</div>
+								
+			</form>
+			
+		</div>
+		
+		<br /><br />
+		
+		<a href="/<?=$_REQUEST['urlargs'][0]?>/<?=$_REQUEST['urlargs'][1]?>"><?=Util::getLiteral('back')?></a>
+		
+		<?php 
+		$_REQUEST['jsToLoad'][] = "/modules/settings/js/settings.js";
+		$_REQUEST['jsToLoad'][] = "/modules/claims/js/claims.js";
+		$_REQUEST['jsToLoad'][] = "/core/js/ajaxfileupload.js";
+		
+		return ob_get_clean();
+	}
+
+}

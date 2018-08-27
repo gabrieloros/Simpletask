@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/295/branches/trunk_integracion/application/core/classes/filters
+END
+SelectFilterType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/SelectFilterType.class.php
+END
+Order.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/Order.class.php
+END
+FilterType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/FilterType.class.php
+END
+FilterFactory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/FilterFactory.class.php
+END
+SelectFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/292/branches/trunk_integracion/application/core/classes/filters/SelectFilter.class.php
+END
+TreeFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/TreeFilter.class.php
+END
+NumberFilterType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/NumberFilterType.class.php
+END
+TextFilterType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/TextFilterType.class.php
+END
+SelectionPopupFilterGeneric.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/SelectionPopupFilterGeneric.class.php
+END
+BooleanFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/BooleanFilter.class.php
+END
+NumberFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/292/branches/trunk_integracion/application/core/classes/filters/NumberFilter.class.php
+END
+SelectionTreeFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/SelectionTreeFilter.class.php
+END
+FilterControl.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/FilterControl.class.php
+END
+TextFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/292/branches/trunk_integracion/application/core/classes/filters/TextFilter.class.php
+END
+DateRangeFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/295/branches/trunk_integracion/application/core/classes/filters/DateRangeFilter.class.php
+END
+FilterGroup.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/filters/FilterGroup.class.php
+END

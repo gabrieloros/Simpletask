@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/317/branches/trunk_integracion/application/db/postgreSQL/Patches
+END
+patch_1.0.3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.3.sql
+END
+patch_4.0.0_literales_ES_DML.sql
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_4.0.0_literales_ES_DML.sql
+END
+patch_1.0.4.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.4.sql
+END
+patch_5.0.0_Maps_API_Nativa.sql
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/GDR/!svn/ver/317/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_5.0.0_Maps_API_Nativa.sql
+END
+patch_1.0.6.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.6.sql
+END
+patch_4.0.0_DML.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_4.0.0_DML.sql
+END
+patch_1.0.7.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.7.sql
+END
+patch_1.0.8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.8.sql
+END
+patch_4.0.0_DDL.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_4.0.0_DDL.sql
+END
+patch_1.0.1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/db/postgreSQL/Patches/patch_1.0.1.sql
+END

@@ -1,0 +1,140 @@
+var map;
+
+function initialize() {
+
+	// map options
+	var myOptions = {
+		zoom : 7,
+		center : new google.maps.LatLng(-32.91778179563671, -68.8320923),
+		mapTypeId : google.maps.MapTypeId.ROADMAP
+	};
+	
+	
+	document.getElementById('map_canvas').style.width=window.innerWidth + "px";
+	document.getElementById('map_canvas').style.height=window.innerHeight+ "px";
+	
+
+	// the map
+	map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+	// directions service
+	directionsService = new google.maps.DirectionsService();
+
+	// Define our origin position, the start of our trip.
+
+	var infowindow = new google.maps.InfoWindow({
+		content : '<div id="content"> Descripcion de punto Oringen</div>'
+	});
+
+	originPosition = new google.maps.Marker({
+		position : new google.maps.LatLng('-32.9177637829652',
+				'-68.84338976437074'),
+		icon : 'http://local-reclamos.com/modules/claims/css/img/state_2.png',
+		map : map
+	});
+
+	google.maps.event.addListener(originPosition, 'click', function() {
+		infowindow.open(map, originPosition);
+	});
+
+	/***********Puntos Intermedios**************/
+	waypoint1 = new google.maps.Marker({
+		position : new google.maps.LatLng('-32.91988877951842',
+				'-68.86114598804933'),
+		icon : 'http://local-reclamos.com/modules/claims/css/img/state_2.png',
+		map : map
+	});
+
+	infowindowIntermedio1 = new google.maps.InfoWindow({
+		content : '<div id="content"> <input type="button" value="Dar de baja" onclick="changeClaimsState(3);" class="form_bt"></div>'
+	});
+	google.maps.event.addListener(waypoint1, 'click', function() {
+		infowindowIntermedio1.open(map, waypoint1);
+	});
+	
+	
+//	waypoint2 = new google.maps.Marker({
+//		position : new google.maps.LatLng('-32.91988877951842',
+//				'-68.86214598804933'),
+//		icon : 'http://local-reclamos.com/modules/claims/css/img/state_2.png',
+//		map : map
+//	});
+//
+//	infowindowIntermedio2 = new google.maps.InfoWindow({
+//		content : '<div id="content"> <input type="button" value="Dar de baja" onclick="changeClaimsState(3);" class="form_bt"></div>'
+//	});
+//	google.maps.event.addListener(waypoint2, 'click', function() {
+//		infowindowIntermedio.open(map, waypoint2);
+//	});
+
+	wayPointArray = new Array();
+	wayPointArray.push({
+		location : waypoint1.position,
+		stopover : true
+	});
+//	wayPointArray.push({
+//		location : waypoint2.position,
+//		stopover : true
+//	});
+
+	/***********FIN Puntos Intermedios**************/
+
+	var infowindowFin = new google.maps.InfoWindow({
+		content : '<div id="content"> Descripcion de punto Destino</div>'
+	});
+
+	destinationPosition = new google.maps.Marker({
+		position : new google.maps.LatLng('-32.91109836948091',
+				'-68.85814191395265'),
+		icon : 'http://local-reclamos.com/modules/claims/css/img/state_2.png',
+		map : map
+	});
+
+	google.maps.event.addListener(destinationPosition, 'click', function() {
+		infowindowFin.open(map, destinationPosition);
+	});
+
+	//        destinationPosition = new google.maps.LatLng('-32.91109836948091', '-68.85814191395265');
+
+	var request = {
+		origin : originPosition.position,
+		destination : destinationPosition.position,
+		waypoints : wayPointArray,
+		travelMode : google.maps.DirectionsTravelMode.DRIVING,
+		unitSystem : google.maps.DirectionsUnitSystem.METRIC,
+		optimizeWaypoints : true
+	};
+
+	directionsService.route(request, function(response, status) {
+
+		if (status == google.maps.DirectionsStatus.OK) {
+
+			var polyOpts = {
+				strokeOpacity : 1.0,
+				strokeColor : '#0000FF',
+				strokeWeight : 2
+			}
+
+			var directionsDisplayOptions = {
+				suppressMarkers : true,
+				suppressInfoWindows : true,
+				preserveViewport : false,
+				polylineOptions : polyOpts
+			};
+
+			directionsRenderer = new google.maps.DirectionsRenderer(
+					directionsDisplayOptions);
+			directionsRenderer.setMap(map);
+			directionsRenderer.setDirections(response);
+
+		} else {
+
+			console.info('could not get route');
+			console.info(response);
+
+		}
+	});
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);

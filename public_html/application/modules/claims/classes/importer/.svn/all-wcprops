@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/importer
+END
+Importer.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/importer/Importer.class.php
+END
+XlsFileType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/importer/XlsFileType.class.php
+END
+FileType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/importer/FileType.class.php
+END
+ImporterFactory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/importer/ImporterFactory.class.php
+END

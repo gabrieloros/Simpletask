@@ -1,0 +1,94 @@
+### APACHE ###
+
+-Si es Zend Server, ubicar el archivo ZendEnablerConf.xml en la instalación del mismo 
+y modificar la propiedad "requestTimeout" y llevarla al valor deseado :
+
+<Timeouts connectionTimeout="60" requestTimeout="3600" />
+
+Enlaces para configuración en Windows:
+
+http://files.zend.com/help/Zend-Server-Community-Edition/content/configuring%20php%20timeouts%20under%20windows%20apache.htm
+
+-Si es Apache Stand Alone, añadir las siguientes reclas al archivo httpd.conf o al virtual host configurado:
+
+TimeOut 3600
+
+-Virtual Host (ejemplo, adaptar al entorno y directorio que corresponda):
+
+<VirtualHost *:80>
+
+    ServerAdmin webmaster@localhost
+    DocumentRoot "/var/www/html/gdr/public"
+    ServerName www-qa.gdr.com
+    DirectoryIndex url.php
+
+    <Directory "/var/www/html/gdr/public">
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+        Options FollowSymLinks
+        RewriteEngine on
+        RewriteCond %{REQUEST_URI} !^/pfw_files/
+        RewriteBase /
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule [^\x00-,.-@[-^`{-\x7F] /url.php
+    </Directory>
+
+    #compress text, html, javascript, css, xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xhtml
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+
+    ExpiresActive on
+    ExpiresDefault "access plus 15 days"
+    ExpiresByType application/x-javascript "access plus 1 years"
+    ExpiresByType application/javascript "access plus 1 years"
+    ExpiresByType text/css "access plus 1 years"
+
+</VirtualHost>
+
+El valor elegido para "ServerName" (en este caso, www-qa.gdr.com) debe ser el nombre del dominio con el que se usará la aplicación. 
+Este dominio debe ser de acceso público o estar definido en los archivos de hosts de los clientes.
+
+### PHP ###
+
+-Configuraciones del archivo php.ini. Buscar los siguientes parámetros y asignarles el valor indicado:
+
+max_execution_time = 3600 ;estos valores coinciden con el timeout de Apache
+max_input_time = 3600
+memory_limit = 256M
+
+post_max_size = 2M ;(O el valor deseado)
+
+file_uploads = On
+
+upload_tmp_dir = "C:\www\tmp" ;(O el valor correspondiente, por ejemplo en linux /tmp o /var/www/tmp) El directorio debe existir previamente
+
+upload_max_filesize = 2M ;(Normalmente el mismo indicado en el parametro post_max_size)
+
+date.timezone = "America/Argentina/Mendoza"
+
+### PostgreSQL ###
+
+Datos para crear la base de datos antes de importar el dump:
+
+Base de datos: gdr
+Usuario: gdr
+Password: admin00
+
+Asignar al usuario gdr como 'owner' de la base de datos y de las nuevas tablas que se creen.
+
+-Acceso remoto a la base de datos. Añadir la siguiente línea al archivo pg_hba.conf:
+
+host all all <ip> <mask> md5
+ip, por ejemplo: 192.168.150.108
+mask, por ejemplo: 255.255.255.0
+
+

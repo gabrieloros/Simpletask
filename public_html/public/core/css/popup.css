@@ -1,0 +1,739 @@
+.popup-window
+{
+	-position: fixed;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+}
+.popup-container
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+	z-index: 10000;
+}
+.popup-window-transparent
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+}
+.popup-window-light
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+}
+* HTML .popup-window-light
+{
+	/*ie6 hack*/
+	position: absolute;
+}
+.popup-window-dark
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+}
+.login-popup-close
+  {
+	  position: absolute;
+	  top: 0px;
+	  right: 0px;
+	  width: 35px;
+	  height: 35px;
+	  cursor: pointer;
+	  margin-right: 42%;
+	  margin-top:11%;
+  }
+.pic-popup-close
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	margin-right: -21%;
+	margin-top:-4%;
+}
+.popup-window-transparent
+{
+	background-image: url("/core/img/popup/blank.png");
+}
+.popup-window-light
+{
+	background-color: #000;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+.popup-window-dark
+{
+	background-image: url("/core/img/popup/dark.png");
+}
+
+.popup-body
+{
+	background-color: transparent;
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 11%;
+}
+
+.login-popup-loading-label
+{
+	font-size: 12px;
+}
+.login-popup-loading-icon
+{
+
+}
+#image-popup
+{
+	border: 7px solid #09305B;
+}
+.img-popup-container-1
+{
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+}
+.img-popup-container-1 IMG
+{
+	cursor: pointer;
+}
+.img-popup-message
+{
+	font-size: 9px;
+	font-family: verdana;
+	padding: 3px;
+	text-align: center;
+	color: #666;
+}
+.overflow-auto
+{
+	overflow: auto;
+}
+.basic-popup
+{
+
+}
+.basic-popup H1
+{
+	margin-top: 0px;
+}
+.basic-popup-border
+{
+}
+.popup-scroll
+{
+	overflow: auto;
+}
+
+#map_canvas {
+    background-color: rgba(0, 0, 0, 0) !important;
+    min-height: 655px;
+}
+.confirm_icon.action_button {
+position: relative;
+margin-bottom: 10px;
+}
+/*Fin edicion de mapa*/
+.popup-button
+{
+	min-width: 100px;
+	width: auto !important;
+	text-align: center;
+}
+.popup-title
+{
+	height: 40px;
+	margin-bottom: 16px;
+}
+.popup-title H1
+{
+	color: #5790C7;
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	font-size: 28px;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0;
+	padding-top: 6px;
+}
+/********************* POPUPS - LOGIN / REGISTER ********************
+********************************************************************/
+#login
+{
+	background: #09305B url("/core/img/popup/bg-body-login.gif") no-repeat;
+	/*background:#09305b url("/core/img/popup/bg-body-login.gif") 20px 20px no-repeat;*/
+	width: 590px;
+	height: 311px;
+	font-size: 15px;
+	font-family: Verdana, Helvetica, Arial;
+	position: relative;
+	/*padding:20px;
+border:1px solid #57c7e8;*/
+}
+#login H1
+{
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	color: #72A6D2;
+	font-size: 28px;
+	text-align: right;
+	padding-right: 30px;
+	padding-top: 46px;
+}
+#login TABLE
+{
+	margin-top: 25px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+#login INPUT[type="button"], INPUT[type="reset"]
+{
+	/*font-size:14px;*/
+}
+#login .input-text
+{
+	width: 200px;
+	padding-top: 6px;
+	padding-left: 4px;
+	font-family: Verdana, Helvetica;
+	font-size: 0.9em;
+	color: #1B4987;
+	border: 1px solid #72A7D1;
+	height: 20px;
+	background: url("/core/img/bg-input-contact.gif");
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-right: 5px;
+}
+#login .legend-contact
+{
+	font-family: Verdana, Helvetica;
+	font-size: 0.9em;
+	width: 130px;
+	text-align: right;
+	padding-right: 10px;
+	vertical-align: middle;
+	color: #405C81;
+	font-weight: bold;
+}
+.login-popup-close
+{
+	position: absolute;
+	top: -4px;
+	right: -15px;
+}
+
+.pic-popup-close
+{
+	position: absolute;
+	top: 10%;
+	right: 50%;
+}
+.links-login
+{
+	margin-top: 10px;
+}
+#login A
+{
+	padding-left: 140px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #D12426;
+	font-size: 0.8em;
+	clear: both;
+	line-height: 1.56em;
+}
+#login A:hover
+{
+	text-decoration: underline;
+	color: #000;
+}
+#login #button-cell
+{
+	padding-top: 15px;
+}
+#login #login-password-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login #login-user-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login .error-message
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+	margin: 0 auto;
+	text-align: center;
+}
+#login-message-cell
+{
+	height: 30px;
+}
+/********************* POPUPS - COMPRAR ********************
+*********************************************************/
+#buy
+{
+	/*background:#5790c7 url("/core/img/popup/bg-body-comprar.gif") 20px 20px no-repeat;*/
+	background: #5790C7 url("/core/img/popup/bg-body-comprar.gif") no-repeat;
+	width: 568px;
+	height: 573px;
+	font-size: 14px;
+	font-family: Verdana, Helvetica, Arial;
+	position: relative;
+	/*padding:20px;*/
+	border: 1px solid #26374D;
+}
+#buy H1
+{
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	color: #26374D;
+	font-size: 28px;
+	text-align: right;
+	font-weight: normal;
+	line-height: 1em;
+	padding-top: 32px;
+	padding-right: 45px;
+}
+#buy #buyso-name-empty-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-name-non-numeric-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-surname-empty-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-surname-non-numeric-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-company-empty-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-mail-empty-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-mail-format-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buy #buyso-phone-numeric-error
+{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#buySO-message-cell
+{
+	height: 30px;
+}
+#buySO_form
+{
+	font-size: 13px;
+	margin-top: 20px;
+}
+#buySO_form .error-message
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+	margin: 0 auto;
+	text-align: center;
+}
+#buy .input-text
+{
+	width: 230px;
+	padding-top: 3px;
+	padding-left: 4px;
+	font-family: "trebuchet MS";
+	font-size: 15px;
+	color: #1B4987;
+	border: 1px solid #72A7D1;
+	height: 23px;
+	background: url("/core/img/bg-input-contact.gif");
+	margin-bottom: 5px;
+}
+#buy #select-contact
+{
+	width: 230px;
+	font-family: "trebuchet MS";
+	font-size: 15px;
+	color: #1B4987;
+	border: 1px solid #72A7D1;
+	height: 26px;
+	background-image: url("/core/img/bg-input-contact.gif");
+}
+#buy .legend-contact1
+{
+	padding-left: 10px;
+	font-family: Verdana, Helvetica;
+	font-size: 9px;
+	text-align: left;
+	padding-right: 10px;
+	vertical-align: top;
+}
+#buy .legend-contact
+{
+	font-family: Verdana, Helvetica;
+	font-size: 13px;
+	width: 130px;
+	text-align: right;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+#buy TEXTAREA
+{
+	width: 230px;
+	padding-top: 3px;
+	padding-left: 4px;
+	font-family: "trebuchet MS";
+	font-size: 15px;
+	color: #1B4987;
+	background-color: #EFF4F8;
+	border: 1px solid #72A7D1;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+#unregister_form H1
+{
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	color: #FF9192;
+	font-size: 28px;
+	text-align: right;
+	font-weight: normal;
+	line-height: 1em;
+	padding-top: 25px;
+	padding-right: 15px;
+}
+/********************* POPUPS - REGISTRO ********************
+************************************************************/
+#login2
+{
+	background: #09305B url("/core/img/bg-body-reister.gif") no-repeat;
+	/*background:#09305b url("/core/img/bg-body-reister.gif") 20px 20px no-repeat;*/
+	width: 590px;
+	height: 545px;
+	font-size: 15px;
+	font-family: Verdana, Helvetica, Arial;
+	position: relative;
+	/*padding:20px;
+border:1px solid #57c7e8;*/
+}
+#login2 H1
+{
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	color: #72A6D2;
+	font-size: 28px;
+	text-align: right;
+	padding-right: 35px;
+	padding-top: 40px;
+}
+#login2 INPUT[type="button"], INPUT[type="reset"]
+{
+	/*font-size:14px;*/
+}
+#login2 .input-text
+{
+	width: 230px;
+	padding-top: 6px;
+	padding-left: 4px;
+	font-family: Verdana, Helvetica;
+	font-size: 0.9em;
+	color: #1B4987;
+	border: 1px solid #72A7D1;
+	height: 20px;
+	background: url("/core/img/bg-input-contact.gif");
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-right: 5px;
+}
+#login2 #select-contact
+{
+	width: 230px;
+	font-family: "trebuchet MS";
+	font-size: 15px;
+	color: #1B4987;
+	border: 1px solid #72A7D1;
+	height: 26px;
+	background-image: url("/core/img/bg-input-contact.gif");
+}
+#login2 .legend-contact
+{
+	font-family: Verdana, Helvetica;
+	font-size: 0.8em;
+	width: 130px;
+	text-align: right;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+#login2 A
+{
+	padding-left: 140px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #D12426;
+	font-size: 0.8em;
+	clear: both;
+	line-height: 1.56em;
+}
+#login2 A:hover
+{
+	text-decoration: underline;
+	color: #000;
+}
+#login2 #button-cell
+{
+	padding-top: 30px;
+}
+#login2 #register-password-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-user-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 .error-message
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+	margin: 0 auto;
+	text-align: center;
+}
+.success-message *
+{
+	font-size: 11px;
+	font-weight: bold;
+	color: #008000;
+	text-align: center;
+	margin-top: 80px;
+}
+#login2 #register-name-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-surname-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-company-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-mail-empty-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-name-format-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-surname-format-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-company-format-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+#login2 #register-mail-format-error
+{
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.content-form-popup1
+{
+	margin-top: 15px;
+	height: 420px;
+	overflow: auto;
+	width: 570px;
+}
+.button-zone-popup, .button-zone-popup INPUT
+{
+	font-size: 11px;
+	margin-top: 2px;
+}
+#register-message-cell
+{
+	height: 30px;
+}
+#unregister-message-cell
+{
+	height: 30px;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 25px;
+}
+#login2 TEXTAREA
+{
+	width: 230px;
+	padding-top: 3px;
+	padding-left: 4px;
+	font-family: "trebuchet MS";
+	font-size: 0.9em;
+	color: #1B4987;
+	background-color: #EFF4F8;
+	border: 1px solid #72A7D1;
+	margin-top: 5px;
+}
+.buttons-register
+{
+	padding-top: 25px;
+}
+/********************* POPUPS - AVISO LEGAL ********************
+**************************************************************/
+#aviso
+{
+	background: #09305B url("/core/img/bg-body-reister.gif") no-repeat;
+	/*background:#09305b url("/core/img/bg-body-reister.gif") 20px 20px no-repeat;*/
+	width: 590px;
+	height: 545px;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, Arial;
+	position: relative;
+	/*padding:20px;*/
+	border: 1px solid #57C7E8;
+}
+#aviso H1
+{
+	font-family: Tahoma, Verdana, Helvetica, Arial;
+	color: #72A6D2;
+	font-size: 28px;
+	text-align: right;
+	padding-right: 35px;
+	padding-top: 40px;
+}
+.texto-legal
+{
+	margin: 60px 40px 20px;
+}
+.texto-legal P
+{
+	margin-bottom: 15px;
+	font-size: 0.8em;
+}
+/********************* POPUPS - UNREGISTER ********************
+**************************************************************/
+#unregister
+{
+	width: 590px;
+	height: 210px;
+	font-size: 15px;
+	position: relative;
+	font-family: "Trebuchet MS", Verdana, Arial;
+	background: #09305B url("/core/img/popup/bg-unregister.gif") no-repeat;
+	border: 1px solid #666;
+	text-align: center;
+}
+#unregister_form
+{
+}
+#unregister H1
+{
+	font-family: "Trebuchet MS", Verdana, Arial;
+	color: #000;
+	font-size: 20px;
+	text-align: left;
+	margin-top: 100px;
+	padding-left: 30px;
+	margin-bottom: 20px;
+}
+#Msg
+{
+	color: #A61414;
+	font-weight: bold;
+}
+#unregister_button
+{
+	text-align: center;
+	width: 80%;
+	background: none;
+}
+#unregister_button INPUT
+{
+	margin: 10px;
+}
+.img-popup
+{
+	background: #FFFFFF;
+	border: 7px solid #3C3C3C;
+	font-size: 11px;
+	text-align: center;
+	font-family: Verdana;
+}
+.img-popup A
+{
+	color: #1364A4;
+}
+.botton-aligment
+{
+	float: right;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-top: -672px;
+    margin-right: 48px
+}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend
+END
+logarithmicBestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/logarithmicBestFitClass.php
+END
+trendClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/trendClass.php
+END
+bestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/bestFitClass.php
+END
+polynomialBestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/polynomialBestFitClass.php
+END
+exponentialBestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/exponentialBestFitClass.php
+END
+linearBestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/linearBestFitClass.php
+END
+powerBestFitClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/trend/powerBestFitClass.php
+END

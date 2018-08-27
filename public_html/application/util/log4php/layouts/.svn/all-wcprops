@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts
+END
+LoggerLayoutPattern.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts/LoggerLayoutPattern.php
+END
+LoggerLayoutTTCC.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts/LoggerLayoutTTCC.php
+END
+LoggerLayoutSimple.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts/LoggerLayoutSimple.php
+END
+LoggerLayoutXml.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts/LoggerLayoutXml.php
+END
+LoggerLayoutHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/layouts/LoggerLayoutHtml.php
+END

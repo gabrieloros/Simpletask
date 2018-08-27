@@ -1,0 +1,20 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+
+	<GroundOverlay>
+		<name>mapalafavorita</name>
+		<Icon>
+			<href>imgfavorita.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>-32.88241248830515</north>
+			<south>-32.89760673067135</south>
+			<east>-68.89507781230796</east>
+			<west>-68.91629992551721</west>
+			 <rotation>-2.71529261255391</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+
+</kml>

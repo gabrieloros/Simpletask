@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/configurators
+END
+LoggerConfiguratorBasic.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/configurators/LoggerConfiguratorBasic.php
+END
+LoggerConfiguratorIni.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/configurators/LoggerConfiguratorIni.php
+END
+LoggerConfiguratorXml.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/configurators/LoggerConfiguratorXml.php
+END
+LoggerConfiguratorPhp.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/configurators/LoggerConfiguratorPhp.php
+END

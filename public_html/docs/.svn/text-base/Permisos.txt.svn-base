@@ -1,0 +1,15 @@
+Las siguientes carpetas deben tener los permisos de escritura necesarios para el usuario
+del servidor web, ya sea www-data o apache segun la distribucion de linux en la que se 
+este corriendo:
+
+log/
+public/core/css/
+public/core/js/
+public/modules/claims/imports/
+
+Por ejemplo:
+
+sudo chmod 777 /var/www/html/gdr/log/ 
+sudo chmod 777 /var/www/html/gdr/public/core/css/
+sudo chmod 777 /var/www/html/gdr/public/core/js/
+sudo chmod 777 /var/www/html/gdr/public/modules/claims/imports/

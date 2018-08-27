@@ -1,0 +1,6 @@
+Importación de datos excel a postgres: se usó la herramienta "Navicat for Postgres"
+
+1. Crear una nueva conexión a la base de datos destino
+2. Seleccionar la base de datos destino e iniciar el asistente de importación
+3. Seguir los pasos indicando el archivo de excel elegido (xls, dbf), tabla destino, nombres de campos, encoding, etc.
+4. Listo!

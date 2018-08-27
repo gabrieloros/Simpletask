@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/GDR/!svn/ver/299/branches/trunk_integracion/application/util/GoogleAPI
+END
+SelectorMap.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/GoogleAPI/SelectorMap.view.php
+END
+GoogleAPIException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/GoogleAPI/GoogleAPIException.class.php
+END
+LocationSelector.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/GoogleAPI/LocationSelector.view.php
+END
+GoogleMaps.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/GoogleAPI/GoogleMaps.php
+END
+EmbeddedSelectorMap.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/299/branches/trunk_integracion/application/util/GoogleAPI/EmbeddedSelectorMap.view.php
+END
+GeoLocation.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/GoogleAPI/GeoLocation.class.php
+END

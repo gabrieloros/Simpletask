@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/GDR/!svn/ver/292/branches/trunk_integracion/application/views/popup
+END
+Popup.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/popup/Popup.view.php
+END
+PopupBorders.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/popup/PopupBorders.view.php
+END
+PopupDecorator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/popup/PopupDecorator.class.php
+END
+AdvancedPopup.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/popup/AdvancedPopup.view.php
+END
+PopupScrollBars.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/views/popup/PopupScrollBars.view.php
+END
+PopupConfirm.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/GDR/!svn/ver/292/branches/trunk_integracion/application/views/popup/PopupConfirm.view.php
+END
+PopupBasic.view.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/292/branches/trunk_integracion/application/views/popup/PopupBasic.view.php
+END

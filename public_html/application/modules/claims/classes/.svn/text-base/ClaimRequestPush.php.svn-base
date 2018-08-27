@@ -1,0 +1,110 @@
+<?php
+require_once ($_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/Claim.class.php');
+
+/**
+ * Clase que encapsulara los datos para las peticiones request para enviar notificaciones push
+ *
+ * @author dalberto.saez
+ *        
+ */
+class ClaimRequestPush {
+	private $notificationIds;
+	private $claim;
+	private $command;
+	
+	/**
+	 *
+	 * @param array $noificationIds        	
+	 * @param Claim $claim        	
+	 * @param string $command        	
+	 */
+	public function __construct($notificationIds, $claim, $command) {
+		if (! is_array ( $notificationIds )) {
+			
+			$notificationIds = array ();
+		}
+		
+		$this->notificationIds = $notificationIds;
+		$this->claim = $claim;
+		$this->command = $command;
+	}
+	
+	/**
+	 * Retorna la instancia de ClaimRequestPush como string en formato json para ser enviado como
+	 * request body
+	 *
+	 * @return json
+	 */
+	public function getJson() {
+		$idClaim = $this->claim->getId ();
+		$stateId = $this->claim->getStateId ();
+		$latitude = $this->claim->getLatitude ();
+		$longitude = $this->claim->getLongitude ();
+		$claimAddress = $this->claim->getClaimAddress ();
+		$code = $this->claim->getCode ();
+		$requesterPhone = $this->claim->getRequesterPhone ();
+		$detail = $this->claim->getDetail ();
+		$subStateId = $this->claim->getSubstateid ();
+		$requesterName = $this->claim->getRequesterName ();
+		$causeName = $this->claim->getCauseName ();
+		$dependencyName = $this->claim->getDependencyName ();
+		$inputTypeName = $this->claim->getInputTypeName ();
+		$subjectName = $this->claim->getSubjectName();
+		$entryDate = $this->claim->getEntryDate();
+		$entryDateString = isset ( $entryDate ) ? $entryDate->format ( 'd-m-Y' ) : null;
+		
+		$claimArray = array (
+				'id' => (int)$idClaim,
+				'code' => $code,
+				'detail' => $detail,
+				'claimaddress' => $claimAddress,
+				'stateid' => (int)$stateId,
+				'subStateId' => (int)$subStateId,
+				'entryDateString' => $entryDateString,
+				'latitude' => (float)$latitude,
+				'longitude' => (float)$longitude,
+				'subjectName' => $subjectName,
+				'inputTypeName' => $inputTypeName,
+				'causeName' => $causeName,
+				'dependencyName' => $dependencyName,
+				'requesterName' => $requesterName,
+				'requesterPhone' => (int)$requesterPhone 
+		);
+		
+		$data = array (
+				'id' => (int)$idClaim,
+				'command' => $this->command,
+				'object' => $claimArray 
+		);
+		
+		$body = array (
+				'registration_ids' => $this->notificationIds,
+				'data' => $data 
+		);
+		
+		$bodyJson = json_encode ( $body );
+		
+		return $bodyJson;
+	}
+	public function getNotificationIds() {
+		return $this->notificationIds;
+	}
+	public function setNotificationIds($noificationIds) {
+		$this->notificationIds = $noificationIds;
+		return $this;
+	}
+	public function getClaim() {
+		return $this->claim;
+	}
+	public function setClaim($claim) {
+		$this->claim = $claim;
+		return $this;
+	}
+	public function getCommand() {
+		return $this->command;
+	}
+	public function setCommand($command) {
+		$this->command = $command;
+		return $this;
+	}
+}

@@ -1,0 +1,95 @@
+/*
+ * CSS for login. 
+ */
+
+
+*{
+	font-family: verdana;
+	font-size: 11px;
+}
+	
+body{
+	/*background:transparent url(/core/img/login/bg2.jpg) repeat scroll 50% 0;*/
+	color:#3E3E3E;
+	font-family:Tahoma,Arial,Helvetica;
+	font-size:11px;
+}
+	
+.login-zone{
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	margin:120px auto 0;
+	width:383px;
+}
+	
+#header-login{
+	width:383px;
+	height:81px; 
+}
+
+.login-zone form{
+	padding:18px;
+	background-color:#fff;
+	margin:0 !important;
+}
+
+#login-error{
+	padding:18px;
+	color:red;
+	background-color:white;
+}
+
+#foot-login{
+	width:383px;
+	height:9px;	
+}
+
+#form_login_label{
+	position:relative;
+	top:42px;
+	left:150px;
+	color:#fff;
+	font-size: 2em;				
+}
+
+.invalidLogin{
+	color: red;
+				font-weight: bold;
+}
+
+.centered-container{
+	float:left;
+	 left:50%;
+	 padding-top:10px;
+	 position:relative;
+
+}
+
+.centered-content{
+	 float:left;
+	 left:-50%;
+	 position:relative;
+
+}
+
+.page_top_bar{
+	height: 26px;
+	width: 100%;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+input[type=text],input[type=password]{
+	width: 220px;
+	height: 20px;
+}
+
+input[type=submit]{
+	width: 90px;
+	height: 30px;
+	padding: 2px;
+}
+
+

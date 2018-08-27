@@ -1,0 +1,331 @@
+#upload-messages
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.text-ellipsis
+{
+	-moz-binding: url("/core/css/ellipsis.xml#ellipsis");
+	display: block;
+	float: left;
+	max-width: 95%;
+	min-width: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: auto;
+}
+/*Tables*/
+.claim_row_element_1, .claim_row_element_2 .claim_row_element_3
+{
+	width: 100%;
+}
+.claim_row_element_1
+{
+	color: #5384DA;
+}
+.claim_row_element_2
+{
+	color: #666;
+}
+.claim_row_element_3
+{
+	color: #222;
+}
+.tablesList TR TD, .tablesList TR TD TABLE TR TD
+{
+	vertical-align: top;
+	padding: 0px;
+	border: none;
+	font-size: 12px;
+}
+#claimsList .table_col_1
+{
+	width: 2%;
+}
+#claimsList .table_col_2
+{
+	width: 3%;
+}
+#claimsList .table_col_3
+{
+	width: 70%;
+}
+#claimsList .table_col_4
+{
+	width: 10%;
+	color: #5384DA;
+	font-size: 9pt;
+}
+#claimsList .table_col_5 .table_col_6
+{
+	width: 10%;
+}
+#pendingTelepromClaimsList .table_col_1
+{
+	width: 3%;
+}
+#pendingTelepromClaimsList .table_col_2
+{
+	width: 53%;
+}
+#pendingTelepromClaimsList .table_col_3
+{
+	width: 14%;
+}
+#pendingTelepromClaimsList .table_col_4
+{
+	width: 10%;
+}
+#pendingTelepromClaimsList .table_col_5
+{
+	width: 12%;
+}
+#pendingTelepromClaimsList .table_col_6
+{
+	width: 11%;
+}
+/*actions*/
+.action_button
+{
+	margin-top: -514px;
+    margin-right: 50px;
+	border: 1px solid #040000e8;
+	float:left;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	width: 75px;
+	margin: 2px;
+	background-color: #ff2d01b0;
+	height: 33px;
+	color: #f5f5f5;
+	font-weight: bold;
+}
+.close_icon
+{
+}
+.geo_button
+{
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	width: 35px;
+	height: 35px;
+	margin: 2px;
+	background-image: url("/modules/claims/css/img/geoposition.png");
+}
+/*States*/
+.state_0, .state_1, .state_2, .state_3, .state_4
+{
+	width: 35px;
+	height: 35px;
+}
+.state
+{
+	width: 35px;
+	height: 35px;
+}
+.state_0
+{
+	background: url("/modules/claims/css/img/state_0.png") -6px 1px;
+}
+.state_1
+{
+	background: url("/modules/claims/css/img/state_1.png") -6px 1px;
+}
+.state_2
+{
+	background: url("/modules/claims/css/img/state_2.png") -6px 0px;
+}
+.state_3
+{
+	background: url("/modules/claims/css/img/state_3.png") -5px 0px;
+}
+.state_4
+{
+	background: url("/modules/claims/css/img/state_4.png");
+}
+/*Forms*/
+#pendingTelepromClaimsList INPUT[type=text], #pendingTelepromClaimsList SELECT, #pendingTelepromClaimsList TEXTAREA, #geoLocationList INPUT[type=text]
+{
+	font-size: 11px;
+	border: 1px solid #A9BDC6;
+}
+#pendingTelepromClaimsList INPUT[type=text], #pendingTelepromClaimsList SELECT, #geoLocationList INPUT[type=text]
+{
+	padding: 4px;
+}
+#pendingTelepromClaimsList INPUT.piquete
+{
+	max-width: 110px;
+}
+#pendingTelepromClaimsList INPUT.lights
+{
+	max-width: 80px;
+}
+#pendingTelepromClaimsList SELECT
+{
+	max-width: 140px;
+}
+#pendingTelepromClaimsList INPUT[type=text]
+{
+	height: 18px;
+}
+#pendingTelepromClaimsList SELECT
+{
+	height: 30px;
+}
+.claims-counters
+{
+	width: 100%;
+	height: 20px;
+	text-align: right;
+	margin-bottom: 10px;
+}
+.claims-counters DIV
+{
+	display: inline;
+	margin-right: 10px;
+	font-weight: bold;
+	color: #444444;
+}
+#geoLocationList .table_col_1
+{
+	width: 9%;
+}
+#geoLocationList .table_col_2
+{
+	width: 30%;
+}
+#geoLocationList .table_col_3
+{
+	width: 11%;
+}
+#geoLocationList .table_col_4
+{
+	width: 43%;
+	margin-bottom: 0px;
+}
+#geoLocationList .table_col_5
+{
+	width: 7%;
+}
+#geoLocationList .claim_element_row
+{
+	height: 32px;
+}
+#geoLocationList DIV.padding
+{
+	padding: 4px 0px;
+}
+.left_float
+{
+	float: left;
+}
+.map_address_input
+{
+	padding: 2px 0px;
+	height: 22px;
+	width: 100%;
+	border: 1px solid #A9BDC6;
+	font-size: 14px;
+}
+.regionArea
+{
+	font-size: 10px;
+	font-weight: bold;
+}
+.regionArea .regionName
+{
+	color: #447799;
+	text-transform: uppercase;
+}
+.claimDetail
+{
+	resize: none;
+	min-width: 470px;
+	min-height: 50px;
+	max-width: 470px;
+	max-height: 50px;
+}
+/*Claims map InfoWindows*/
+#infowHead
+{
+	width: 505px;
+	height: 40px;
+}
+#double
+{
+	list-style-type: none;
+	width: 500px;
+	color: #1B72B5;
+}
+#double LI
+{
+	float: left;
+	margin: 10px 0 0;
+	padding: 0 10px 0 0;
+	width: 200px;
+	text-align: left;
+	font-size: 11px;
+}
+#items LI
+{
+	list-style-type: none;
+	font-size: 11px;
+	text-align: left;
+}
+.line
+{
+	border-bottom: 1px solid #808080;
+	margin: 10px 0;
+}
+
+#claim-new-edit
+{
+	margin: 0px auto 0;
+	width: 450px;
+	height: 300px;
+	border: none;
+}
+.claim-form-item
+{
+	margin-bottom: 1%;
+	border: none;
+	width: 440px;
+	padding: 4px;
+}
+.claim-input
+{
+	width: 300px;
+}
+/*Css para formatear campos en pantalla "Nuevo Reclamo*/
+
+#assigned-claim1 {
+	margin-left: 5%;
+	max-width: 5%;
+	margin-top: 0%;
+}
+.txt-assigned{
+	padding-bottom: 1%;
+}
+.textbox {
+    font-size: 13px;
+    margin-bottom: 1%;
+}
+.lineal-box{
+	float: right;
+	margin-right: 45%;
+}
+.lineal-box1{
+	float: right;
+	margin-right: 214px;
+}
+.lineal-box2{
+	float: right;
+	margin-right: 14%;
+}

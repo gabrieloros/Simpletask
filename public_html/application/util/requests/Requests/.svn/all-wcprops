@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests
+END
+Session.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Session.php
+END
+IPv6.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/IPv6.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Auth.php
+END
+Transport.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Transport.php
+END
+SSL.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/SSL.php
+END
+IDNAEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/IDNAEncoder.php
+END
+Proxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Proxy.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Exception.php
+END
+IRI.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/IRI.php
+END
+Hooks.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Hooks.php
+END
+Hooker.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Hooker.php
+END
+Response.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Response.php
+END
+Cookie.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Cookie.php
+END

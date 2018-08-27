@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/GDR/!svn/ver/320/branches/trunk_integracion/application/configs
+END
+config.ini
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/GDR/!svn/ver/320/branches/trunk_integracion/application/configs/config.ini
+END
+log4php.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/configs/log4php.properties
+END
+config.ini.default
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/configs/config.ini.default
+END
+log4php.properties.default
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/269/branches/trunk_integracion/application/configs/log4php.properties.default
+END

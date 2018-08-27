@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums
+END
+CommonActionManagerActions.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/CommonActionManagerActions.enum.php
+END
+LoginActionManagerActions.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/LoginActionManagerActions.enum.php
+END
+MessageBoxType.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/MessageBoxType.enum.php
+END
+ErrorActionManagerActions.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/ErrorActionManagerActions.enum.php
+END
+common.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/common.enum.php
+END
+AjaxResponseType.enum.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/enums/AjaxResponseType.enum.php
+END

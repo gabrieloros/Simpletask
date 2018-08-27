@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/CelestialBody
+END
+Earth.php
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/CelestialBody/Earth.php
+END
+EarthMoon.php
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/CelestialBody/EarthMoon.php
+END
+CelestialBodyAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/CelestialBody/CelestialBodyAbstract.php
+END
+Mars.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/CelestialBody/Mars.php
+END

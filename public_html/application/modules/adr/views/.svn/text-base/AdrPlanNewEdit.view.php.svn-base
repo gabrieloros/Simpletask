@@ -1,0 +1,67 @@
+<?php
+class AdrPlanNewEdit extends Render {
+
+	static public function render ($plan) {
+		
+		ob_start();
+
+		/* @var $plan AdrPlan */
+		?>
+		
+		<div id="adr-plan-new-edit">
+	  		<form id="adrPlanNewEditForm" name="adrPlanNewEditForm" method="POST" action="" autocomplete="off">
+	  			<div class="adr-plan-form-item">
+		  			<label><?=Util::getLiteral('plan_name')?>:</label><input type="text" id="name" class="adr-plan-input mandatory-input" name="name" value="<?=$plan->getName()?>" />
+		  		</div>
+		  		<div class="adr-plan-form-item">
+		  			<label><?=Util::getLiteral('plan_coordinateupdatetime_short')?> (<?=Util::getLiteral('plan_coordinateupdatetime_short_unit')?>):</label>
+		  			<input type="text" id="coordinateUpdateTime" class="adr-plan-input mandatory-input input-number-validate" name="coordinateUpdateTime" value="<?=$plan->getCoordinateUpdateTime()==''? 0: $plan->getCoordinateUpdateTime() ?>" style="width: 200px;" />
+		  		</div>
+		  		<div class="adr-plan-form-item">
+		  			<label style="float: left; display: inline; "><?=Util::getLiteral('plan_minutestoclose_short')?> (<?=Util::getLiteral('plan_minutestoclose_short_unit')?>):</label>
+		  			<input type="text" id="claimMinutesToCloseTime" class="adr-plan-input mandatory-input input-number-validate" name="claimMinutesToCloseTime" value="<?=$plan->getClaimMinutesToCloseTime()==''? 0: $plan->getClaimMinutesToCloseTime() ?>" style="float: left; display: inline; width: 200px;" />
+		  		</div>
+		  		<br />
+		  		<div class="adr-plan-form-item">
+		  			<label style="float: left; display: inline; "><?=Util::getLiteral('plan_minutesforcancellation_short')?> (<?=Util::getLiteral('plan_minutesforcancellation_short_unit')?>):</label>
+		  			<input type="text" id="claimMinutesForCancellation" class="adr-plan-input mandatory-input input-number-validate" name="claimMinutesForCancellation" value="<?=$plan->getClaimMinutesForCancellation()==''? 0: $plan->getClaimMinutesForCancellation() ?>" style="float: left; display: inline; width: 200px;" />
+		  		</div>
+		  		<br />
+		  		<div class="adr-plan-form-item">
+		  			<label><?=Util::getLiteral('plan_latitude')?>:</label>
+		  			<input type="text" id="claimLatitude" class="adr-plan-input mandatory-input input-number-validate" name="claimLatitude" value="<?=$plan->getLatitude()?>" />
+		  		</div>
+		  		<div class="adr-plan-form-item">
+		  			<label><?=Util::getLiteral('plan_longitude')?>:</label>
+		  			<input type="text" id="claimLongitude" class="adr-plan-input mandatory-input input-number-validate" name="claimLongitude" value="<?=$plan->getLongitude()?>" />
+		  		</div>
+		  		<div class="adr-plan-form-item" style="border-top: 1px solid #a9bdc6;">
+		  			<input type="hidden" name="id" value="<?=$plan->getId()?>" />
+		  			<div onclick="savePlan();" title="<?=Util::getLiteral('plan_save')?>" class="close_icon action_button"><?=Util::getLiteral('plan_save')?></div>
+		  			<div onclick="cancelSavePlan();" title="<?=Util::getLiteral('plan_cancel_save')?>" class="close_icon action_button"><?=Util::getLiteral('plan_cancel_save')?></div>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript">
+			jQuery().ready(function($) {
+				$('#coordinateUpdateTime').spinner({ min: 0, max: 2000 });
+			});
+		
+			jQuery().ready(function($) {
+				$('#claimMinutesToCloseTime').spinner({ min: 0, max: 2000 });
+			});
+
+			jQuery().ready(function($) {
+				$('#claimMinutesForCancellation').spinner({ min: 0, max: 2000 });
+			});
+		</script>
+		
+		<?php
+		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-plans.js";
+				
+		return ob_get_clean();
+	}
+	
+}
+?>

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/classes
+END
+EnumSubstateActivityUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/GDR/!svn/ver/273/branches/trunk_integracion/application/modules/adr/classes/EnumSubstateActivityUser.class.php
+END
+AdrUserReport.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/AdrUserReport.class.php
+END
+EnumPhoneCompany.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/EnumPhoneCompany.class.php
+END
+AdrUserZoneEvent.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/AdrUserZoneEvent.class.php
+END
+AdrUserPoint.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/289/branches/trunk_integracion/application/modules/adr/classes/AdrUserPoint.class.php
+END
+AdrUserState.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/AdrUserState.class.php
+END
+AdrPlan.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/274/branches/trunk_integracion/application/modules/adr/classes/AdrPlan.class.php
+END
+AdrUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/317/branches/trunk_integracion/application/modules/adr/classes/AdrUser.class.php
+END
+AdrSubstateActivityUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/classes/AdrSubstateActivityUser.class.php
+END
+EnumAdrUserHistory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/EnumAdrUserHistory.class.php
+END
+EnumAdrUserStates.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/EnumAdrUserStates.class.php
+END
+AdrZone.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/AdrZone.class.php
+END
+AdrUserReportActivity.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/273/branches/trunk_integracion/application/modules/adr/classes/AdrUserReportActivity.class.php
+END
+AdrPhoneCompany.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/classes/AdrPhoneCompany.class.php
+END
+EnumConceptActivityUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/GDR/!svn/ver/273/branches/trunk_integracion/application/modules/adr/classes/EnumConceptActivityUser.class.php
+END

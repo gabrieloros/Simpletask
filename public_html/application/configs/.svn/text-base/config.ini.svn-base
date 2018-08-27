@@ -1,0 +1,12 @@
+;database configuration
+dbms=pgsql
+dbname=gdr_400
+dbserver=192.168.150.90
+dbuser=gdr
+dbpass=gdr1324
+;minify options
+minimice.css=0
+minimice.js=0
+urlpushmessage=http://192.168.150.92:8080/GDR_API_Restful/adr/service/messages/push
+userpushmessage=desktop
+passwordpushmessage=123456

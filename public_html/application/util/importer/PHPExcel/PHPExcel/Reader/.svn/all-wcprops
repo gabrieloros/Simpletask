@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader
+END
+Gnumeric.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/Gnumeric.php
+END
+CSV.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/CSV.php
+END
+IReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/IReadFilter.php
+END
+Excel2007.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/Excel2007.php
+END
+IReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/IReader.php
+END
+Excel5.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/Excel5.php
+END
+DefaultReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/DefaultReadFilter.php
+END
+Excel2003XML.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/Excel2003XML.php
+END
+OOCalc.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/OOCalc.php
+END
+SYLK.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Reader/SYLK.php
+END

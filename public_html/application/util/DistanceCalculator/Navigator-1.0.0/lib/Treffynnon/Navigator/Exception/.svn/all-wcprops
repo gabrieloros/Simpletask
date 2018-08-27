@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Exception
+END
+InvalidDirectionException.php
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Exception/InvalidDirectionException.php
+END
+InvalidCoordinateFormatException.php
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Exception/InvalidCoordinateFormatException.php
+END
+InvalidCoordinateValueException.php
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Exception/InvalidCoordinateValueException.php
+END

@@ -1,0 +1,192 @@
+/*General Structure*/
+*
+{
+	font-family: arial;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+#header-home
+{
+	display: none;
+}
+#interior-container #interior-content #content-detail .central-content .center-div-04 #especific-content #report-container-table .column-content #column1
+{
+	border-bottom: 1px solid #6D6D6D;
+	border-left: 1px solid #6D6D6D;
+	padding: 5px;
+	min-width: 250px;
+}
+#tools
+{
+	background: #000;
+}
+#user-info A
+{
+	color: #FFF !important;
+	width: auto;
+	text-decoration: none;
+	font-size: 12px;
+}
+#user-info A:hover
+{
+	text-decoration: underline;
+}
+#content-back
+{
+	display: none;
+}
+#path
+{
+	display: none;
+}
+#container
+{
+}
+#interior-container-02
+{
+	background: none;
+}
+#container4a
+{
+	background: none;
+}
+
+#title-section, .section-title, .section-title-bg
+{
+	background: none;
+}
+.esquina-tit-bottom
+{
+	color: #000;
+}
+/*Menu*/
+#menu-up UL LI
+{
+}
+/*Error messages*/
+#embedErrorMessage, .action-messages
+{
+	color: #1B72B5;
+	font-size: 11px;
+}
+/*Tables*/
+.cmsTablesList TR.par
+{
+	background: none;
+}
+.cmsTablesList TR:hover
+{
+	background: none;
+}
+/*General elements*/
+HR
+{
+	color: #666;
+	background-color: #666;
+	height: 1px;
+	border: none;
+	margin-bottom: 15px;
+}
+/*New Elements*/
+.message-text
+{
+	margin: 20px 0px;
+	font-size: 11px;
+}
+/*General Structure*/
+#header-home
+{
+	display: none;
+}
+#tools
+{
+	background: #2D2D2D;
+	height: 25px;
+}
+#user-info A
+{
+	color: #FFF !important;
+	width: auto;
+	text-decoration: none;
+}
+#user-info A:hover
+{
+	text-decoration: underline;
+}
+#menu-search
+{
+	background: #F1F1F1;
+	width: 100%;
+	height: 70px;
+	border-bottom: none;
+}
+#content-back
+{
+	display: none;
+}
+#path
+{
+	display: none;
+}
+#container2, #container3a, #header-home
+{
+	width: 100%;
+}
+#interior-container-02
+{
+	background: none;
+}
+#container4a
+{
+	background: none;
+}
+#title-section, .section-title, .section-title-bg
+{
+	background: none;
+}
+.esquina-tit-bottom
+{
+	color: #000;
+	visibility: hidden;
+	height: 0px;
+}
+/*Menu*/
+#menu-up UL LI:hover, #menu-up UL LI.menu-activo-li
+{
+	background: #F1F1F1;
+}
+UL .sub
+{
+	background: #1B72B5;
+}
+/*Error messages*/
+#embedErrorMessage, .action-messages
+{
+	color: #1B72B5;
+	font-size: 11px;
+}
+/*Tables*/
+.cmsTablesList TR.par
+{
+	background: none;
+}
+.cmsTablesList TR:hover
+{
+	background: none;
+}
+/*General elements*/
+HR
+{
+	color: #666;
+	background-color: #666;
+	height: 1px;
+	border: none;
+	margin-bottom: 15px;
+}
+/*New Elements*/
+.message-text
+{
+	margin: 20px 0px;
+	font-size: 11px;
+}

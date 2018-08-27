@@ -1,0 +1,10 @@
+;database configuration
+dbms=pgsql
+dbserver=localhost
+dbname=gdr
+dbuser=gdr
+dbpass=gdr1324
+
+;minify options
+minimice.css=1
+minimice.js=1

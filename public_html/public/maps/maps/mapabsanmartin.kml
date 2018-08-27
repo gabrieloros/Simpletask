@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<GroundOverlay>
+	<name>mapabsanmartin</name>
+	<Icon>
+		<href>imgbsanmartin.jpg</href>
+		<viewBoundScale>0.75</viewBoundScale>
+	</Icon>
+	<LatLonBox>
+		<north>-32.86417233097868</north>
+		<south>-32.87335987646338</south>
+		<east>-68.85807143588927</east>
+		<west>-68.87279959725154</west>
+		<rotation>84.49241799553586</rotation>
+	</LatLonBox>
+</GroundOverlay>
+</kml>

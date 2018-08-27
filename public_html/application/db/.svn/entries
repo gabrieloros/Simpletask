@@ -1,0 +1,34 @@
+10
+
+dir
+330
+https://svn.concatel.com/GDR/branches/trunk_integracion/application/db
+https://svn.concatel.com/GDR
+
+
+
+2014-10-17T14:48:44.413821Z
+317
+dalberto.saez
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b94e5b24-a3d2-4a74-852f-b3514234328d
+
+enums
+dir
+
+postgreSQL
+dir
+

@@ -1,0 +1,163 @@
+<?php
+
+class MapClaims extends Render{
+	
+	public function render($list){
+		
+		ob_start();
+		
+		?>
+		 
+		<div id="map_canvas"></div>
+		<div id="map-debug" style="height: 20px; display: none;"></div>
+		
+		<input type="hidden" id="locationAddress" value="<?=$_SESSION['loggedUser']->getLocationname()?> <?=$_SESSION['loggedUser']->getProvincename()?> <?=$_SESSION['loggedUser']->getCountryname()?>" />
+			
+		<br />
+		
+		<script type="text/javascript">
+
+			window.gMapsCallback = function(){
+			    $(window).trigger('gMapsLoaded');
+			}
+
+			$(document).ready(function(){
+
+				function initialize(){
+
+					//Map options
+					var mapOptions = {
+			            zoom: 13,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+			        };
+
+					var address = $('#locationAddress').val();
+
+					geocoder = new google.maps.Geocoder();	
+					geocoder.geocode({'address': address}, function(results, status) {
+
+						if (status == google.maps.GeocoderStatus.OK) {
+
+							//Center map on marker location
+							map.setCenter(results[0].geometry.location);
+							
+						}
+						else {
+							$('#map-debug:last').html('No se pudo cargar la Geolocalización: ' + status);
+							$('#map-debug:last').show();
+						}
+					});
+
+			        //Map instance
+					map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
+
+					//Create marker
+					<?php
+					/* @var $claim Claim */
+					foreach ($list as $claim){
+						
+						$latitude = $claim->getLatitude();
+						$longitude = $claim->getLongitude();
+						
+						if( isset($latitude) && $latitude != null && isset($longitude) && $longitude != null){
+
+							$stateId = $claim->getStateId();
+
+							if($stateId == claimsConcepts::PENDINGSTATE){
+								$now = DateTime::createFromFormat('d/m/Y', date('d/m/Y'));
+								$diff = $now->diff($claim->getEntryDate());
+								$years = $diff->y;
+								$months = $diff->m;
+								$days = $diff->d;
+								if($years > 0 || $months > 0 || $days <= 2){
+									$stateId = 0;
+								}
+							}
+
+
+						?>
+						var position_<?=$claim->getId()?> = new google.maps.LatLng(<?=$claim->getLatitude()?>, <?=$claim->getLongitude()?>);
+
+						var marker_<?=$claim->getId()?> = new google.maps.Marker({
+							position: position_<?=$claim->getId()?>,
+							title: '<?=htmlspecialchars($claim->getClaimaddress(), ENT_QUOTES)?>',
+							map: map,
+							icon: '/modules/claims/css/img/state_'+<?=$stateId?>+'.png'
+						});
+						
+						//Info window
+						var infowindow_<?=$claim->getId()?> = new google.maps.InfoWindow({
+							maxWidth: 600,
+							disableAutoPan: false
+						});
+
+						var infoWindowContent_<?=$claim->getId()?> =
+																	'<div id="infowHead">' +
+									 								'	<ul id="double">' +
+									 								'		<li>ID: <?=$claim->getCode()?></li>' +
+									 								'		<li style="float: right; ">' + s_message["entry_date"] + ': <?=$claim->getEntryDate()->format("d/m/Y")?></li>' +
+									 								'	</ul>' +
+									 								'</div>' +
+									 								'<div>' +
+									 								'	<ul id="items">' +
+									 								'		<li>' + s_message['subject_name'] + ': <?=addslashes($claim->getSubjectName())?></li>' +
+									 								'		<li>' + s_message['input_type_name'] + ': <?=$claim->getInputTypeName()?></li>' +
+									 								'		<li>' + s_message['cause_name'] + ': <?=$claim->getCauseName()?></li>' +
+									 								'		<li>' + s_message['dependency'] + ': <?=$claim->getDependencyName()?></li>' +
+									 								'		<li class="line"></li>' +
+									 								'		<li>' + s_message['requester_name'] + ': <?=addslashes($claim->getRequesterName())?></li>' +
+									 								'		<li>' + s_message['claim_address'] + ': <?=addslashes($claim->getClaimAddress())?></li>' +
+									 								'		<li>' + s_message['requester_phone'] + ': <?=$claim->getRequesterPhone()?></li>' +
+									 								'		<li class="line"></li>' +
+									 								'	</ul>' +
+									 								'</div>';
+					
+
+						infowindow_<?=$claim->getId()?>.setContent(infoWindowContent_<?=$claim->getId()?>);
+
+						//Marker click event listener: show info window
+						google.maps.event.addListener(marker_<?=$claim->getId()?>, 'click', function() {
+				    		infowindow_<?=$claim->getId()?>.open(map,marker_<?=$claim->getId()?>);
+						});
+						
+						<?php
+						}
+					} 
+					?>
+					
+			    }
+
+				//Load Google Maps scripts
+				function loadGoogleMaps(){
+
+					//Check if google maps were previously loaded
+					if($('#googleMapsScript').length <= 0){
+				        var script_tag = document.createElement('script');
+				        script_tag.setAttribute("type","text/javascript");
+				        script_tag.setAttribute("src","http://maps.google.com/maps/api/js?sensor=false&callback=gMapsCallback");
+				        script_tag.setAttribute("id","googleMapsScript");
+				        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+					}
+					
+					else{
+						$(window).trigger('gMapsLoaded');
+					}
+					
+			    }
+				
+			    $(window).bind('gMapsLoaded', initialize);
+				
+			    loadGoogleMaps();
+	
+			});
+		
+		</script>
+		<script type="text/javascript" src="/modules/settings/js/settings.js"></script>
+		<script type="text/javascript" src="/modules/settings/js/layers.js"></script>
+		<?php
+				
+		return ob_get_clean();
+		
+	}
+
+}

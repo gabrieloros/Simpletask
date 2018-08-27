@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/GDR/!svn/ver/295/branches/trunk_integracion/application/core/classes
+END
+StringDecoder.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/StringDecoder.class.php
+END
+ContentResource.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/ContentResource.class.php
+END
+Language.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/classes/Language.class.php
+END

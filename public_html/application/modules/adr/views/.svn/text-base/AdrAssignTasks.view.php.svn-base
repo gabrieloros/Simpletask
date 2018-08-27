@@ -1,0 +1,144 @@
+<?php
+
+class AdrAssignTasks extends Render {
+
+	static public function render () {
+
+		ob_start();
+
+		?>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				// Load map
+				loadGoogleMaps();
+
+				// Get and show the markers
+				setTimeout(function(){ 
+					showUnassignedClaims(); 
+				}, 3000);
+				
+				$(function() {
+					$( "#sortable" ).sortable();
+					$( "#sortable" ).disableSelection();
+				});
+
+				$('#buttons').hide();
+
+		        // Captions panel
+				$('#panel').slidePanel({
+	                triggerName: '#trigger',
+	                triggerTopPos: '200px',
+	                panelTopPos: '200px'
+		        });
+				
+			});
+		</script>
+		
+		<form id="frm_assigned_claims">
+		
+			<div class="div-table">
+
+				<div class="div-row">
+					<div class="div-cell-left">
+						<div class="div-table1">
+							<div class="div-row1">
+								<div class="div-cell1"></div>
+							</div>
+						</div>
+		
+						<div class="div-table1">
+							<div class="div-row1">
+								<div class="div-cell1"><?=Util::getLiteral('adr_claims_track_assign_tasks_title')?></div>
+							</div>
+						</div>
+		
+						<div class="div-table1">
+							<div class="div-row1">
+								<div class="div-cell1">
+				  					<input loadaction="getAdrUserFromAutoComplete" 
+				  							minChars="3" 
+				  							maxlength="50" 
+				  							class="autocomplete-control menu-item" 
+				  							type="text" 
+				  							name="adrUserFullname" 
+				  							id="adr-user-fullname"
+				  							style="display: inline; float: left; width: 210px;" />
+				  					<input type="hidden" name="adrUserId" value="" id="adr-user-id" />
+			  						<div id="search-button" onclick="getClaimsForUser();" style="display: inline; float: left;"></div>
+					  			</div>
+							</div>
+						</div>
+		
+						<div class="div-table1">
+							<div class="div-row1">
+								<div class="div-cell1"><?=Util::getLiteral('adr_claims_track_assign_tasks_list_title')?></div>
+							</div>
+						</div>
+
+						<div class="div-table2">
+							<div class="div-row1">
+								<div class="div-cell1">
+
+									<div id="container-table">
+									    <div id="contenidos" class="head-contenidos">
+									        <div id="column1" class="head-column"><?=Util::getLiteral('adr_claims_track_assign_tasks_list_id')?></div>
+									        <div id="column2" class="head-column">
+									        	<input type="checkbox" id="assignAllCheck" onclick="checkAllClaims()"; />
+									        </div>
+									    </div>
+									    <div id="sortable">
+									    	<!-- js auto append rows -->
+									    </div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+		
+						<div id="buttons" class="div-table1">
+							<div class="div-row1">
+								<div class="div-cell1">
+									<input type="hidden" id="polygon-coords-path" name="polygonCoordsPath" value="" />
+									<input onclick="saveAssignedClaims();" id="filterSearch" class="form_bt" type="button" value="<?=Util::getLiteral('adr_claims_track_assign_tasks_submit')?>" style="float: left; margin-right: 2px;">
+									<input onclick="deletePolygon();" id="reset-polygon" class="form_bt" type="button" value="<?=Util::getLiteral('adr_claims_track_reset_plygon')?>" style="float: left; margin-right: 2px;"/>
+									<br />
+									<input onclick="drawRoute();" id="generate-route" class="form_bt" type="button" value="<?=Util::getLiteral('adr_claims_track_generate_route')?>" style="float: left; margin-right: 2px;"/>
+									<input onclick="drawOptimizedRoute();" id="optimize-route" class="form_bt" type="button" value="<?=Util::getLiteral('adr_claims_track_optimize_route')?>" style="float: left; margin-right: 2px;"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div  class="div-cell-rigth">
+						<div id="map-canvas"></div>
+						<div id="map-debug" style="height: 20px; display: none;"></div>
+						<a href="#" id="trigger" class="trigger right"><?=Util::getLiteral('adr_captions_box')?></a>
+						<div id="panel" class="panel right">
+						<?php 
+							require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/adr/views/AdrCaptions.view.php';
+							echo AdrCaptions::render();    	
+						?>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		
+		</form>
+				
+		<?php
+		
+		$_REQUEST['jsToLoad'][] = "/modules/adr/js/polygon.min.js";
+		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-common.js";
+		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-assign-tasks.js";
+		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-assign-tasks-map.js";
+		$_REQUEST['jsToLoad'][] = "/modules/settings/js/settings.js";
+		$_REQUEST['jsToLoad'][] = "/core/js/jquery.slidePanel.min.js";
+		$_REQUEST['jsToLoad'][] = "/modules/settings/js/layers.js";			
+		
+		return ob_get_clean();
+	}
+	
+}
+?>

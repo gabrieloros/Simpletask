@@ -1,0 +1,59 @@
+#title-section{
+display:none !important;
+}
+.div-table{
+        top: 0px !important;
+}
+.div-cell-left{
+        position: relative !important;
+        float: left !important;
+        width: 275px;
+	background: #6D6D6D !important;
+        color: #FFF !important;
+}
+
+.aaa{
+        margin:0 auto;
+        width:95% !important;
+}
+.seach-icon{
+        float: right;
+        background: url("/modules/claims/css/img/lupa.png");
+        width: 48px;
+        height: 27px;
+}
+.div-cell1{
+        margin-top:10px;
+}
+.search-item-txt {
+  width: 183px !important;
+  height: 27px !important;
+  border: none;
+}
+.marker-pend{
+        float: left;
+        background: url("/modules/claims/css/img/markertype_1.png");
+        width: 37px;
+        height: 37px;
+        border: hidden;
+}
+.marker-close{
+        float: left;
+        background: url("/modules/claims/css/img/markertype_2.png");
+        width: 37px;
+        height: 37px;
+        border: hidden;
+}
+.marker-baja{
+        float: left;
+        background: url("/modules/claims/css/img/markertype_3.png");
+        width: 37px;
+        height: 37px;
+        border: hidden;
+}
+.text-leyend{
+        font-size: 11px;
+}
+.div-cell-left .menu-item {
+        background: #000;
+}

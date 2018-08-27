@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Transport
+END
+cURL.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Transport/cURL.php
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Transport/cacert.pem
+END
+fsockopen.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/317/branches/trunk_integracion/application/util/requests/Requests/Transport/fsockopen.php
+END

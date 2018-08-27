@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator
+END
+Coordinate.php
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Coordinate.php
+END
+LatLong.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/LatLong.php
+END
+Distance.php
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance.php
+END

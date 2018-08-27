@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions
+END
+ReadPermission.exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/ReadPermission.exception.php
+END
+BreadcrumbException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/BreadcrumbException.class.php
+END
+LoginException.exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/LoginException.exception.php
+END
+PageNotFoundException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/PageNotFoundException.class.php
+END
+FileNotFoundException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/FileNotFoundException.class.php
+END
+InvalidParametersException.exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/InvalidParametersException.exception.php
+END
+PermissionException.exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/exceptions/PermissionException.exception.php
+END

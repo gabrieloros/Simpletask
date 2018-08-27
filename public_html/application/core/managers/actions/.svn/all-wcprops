@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/GDR/!svn/ver/295/branches/trunk_integracion/application/core/managers/actions
+END
+CommonActionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/managers/actions/CommonActionManager.class.php
+END
+LoginActionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/managers/actions/LoginActionManager.class.php
+END
+ErrorActionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/managers/actions/ErrorActionManager.class.php
+END
+ModuleActionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/295/branches/trunk_integracion/application/core/managers/actions/ModuleActionManager.class.php
+END

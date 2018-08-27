@@ -1,0 +1,391 @@
+<?php
+//require_once $_SERVER ['DOCUMENT_ROOT'] .'/GDR/application/modules/adr/managers/AdrUsersManager.class.php';
+require_once $_SERVER ['DOCUMENT_ROOT'] .'/application/core/managers/common/db/PostgreSQLConnectionManager.class.php';
+require_once $_SERVER ['DOCUMENT_ROOT'] .'/application/modules/claims/enums/claims.enum.php';
+require_once $_SERVER ['DOCUMENT_ROOT'] .'/application/modules/adr/classes/EnumConceptActivityUser.class.php';
+function generateHistorical(){
+
+	$configIni = $_SERVER ['DOCUMENT_ROOT'] . '/application/configs/config.ini' ;
+	$connectionManager = PostgreSQLConnectionManager::getInstance ($configIni);
+
+        $cant_dias = 1;
+        $dia_inicial = 1;
+        
+        for($x = $dia_inicial; $x < $dia_inicial+$cant_dias ; $x++){
+
+	$timeFrom = strtotime ( '-'.$x.' day' , strtotime (date('Y-m-d 00:00:00'))) * 1000;
+	$timeTo = strtotime ( '-'.$x.' day' , strtotime (date('Y-m-d 23:59:00'))) * 1000;
+	
+	//	Las lineas de abajo son para generar el informe en un dia puntual
+	//  $timeFrom = strtotime (date('Y-m-29 00:00:00')) * 1000;
+	// $timeTo = strtotime (date('Y-m-29 23:59:00')) * 1000;
+	// Fin ejemplo.
+	
+	//$timeFrom = strtotime(date('Y-m-26 00:00:00'))*1000;
+	//$timeTo = strtotime(date('Y-m-26 23:59:00'))*1000;
+
+	echo 'Generando historico para el día '.date('Y-m-d 00:00:00', $timeFrom/1000).'</br>';
+	$query = "SELECT * FROM historicalclaimsystemuseradr WHERE datereporting BETWEEN ".$timeFrom.' AND '.$timeTo;
+	echo $query.'</br>';
+	$resultQuery =  $connectionManager->select($query);
+
+	$query = "SELECT * FROM historicalreportuseractivity WHERE timereporting BETWEEN ".$timeFrom.' AND '.$timeTo;
+	$resultQuery2 =  $connectionManager->select($query);
+	echo $query.'</br>';
+
+	if (count($resultQuery) == 0 && count($resultQuery2) == 0){
+		$query = 'SELECT
+		claimsystemuseradr.systemuseradrid,
+		claimsystemuseradr.claimid,
+		claim.substateid,
+		claim.stateid
+		FROM claimsystemuseradr
+		LEFT JOIN claim ON claim.id = claimsystemuseradr.claimid
+		WHERE claim.stateid = 1';
+
+
+		$rs = $connectionManager->select ( $query );
+
+		$dateReporting = $timeFrom;
+		//generando copia de claimsystemuseradr
+
+		foreach ($rs as $value) {
+
+			$stateid = 'null';
+
+			if(!is_null($value['substateid'])){
+
+				$stateid = $value['substateid'];
+
+			}
+
+			$insert = 'INSERT INTO historicalclaimsystemuseradr(claimid,
+			systemuseradrid,
+			datereporting,
+			stateid,
+			substateid)
+			VALUES ('.$value['claimid'].','.
+			$value['systemuseradrid'].','.
+			$dateReporting.','.$value['stateid'].','.
+			$stateid.')';
+			echo $insert . '</br>';
+			$id = $connectionManager->executeTransaction($insert);
+			//echo 'Id '.$id.'</br>';
+		}
+
+		
+		//Insertar datos en la bd
+
+		//generando reportes de todos los ADR
+		$query = 'SELECT systemuseradr.systemuserid FROM systemuseradr';
+
+		$resultAdr = $connectionManager->select ( $query );
+
+		foreach ($resultAdr as $value) {
+
+			$filters = array();
+			$filters[] = array('field' =>'useractivity.iduser',
+					'value'=> $value['systemuserid']);
+			$reports = getUserActivity($filters, $timeFrom, $timeTo,$value['systemuserid'], 'ASC');
+
+			$reference = "";
+			foreach ($reports as $report) {
+
+				$address = "";
+				$timeZoneIn = 'null';
+				$timeZoneOut = 'null';
+				$stateName = '-';
+				$stateid = 'null';
+				$substateid = 'null';
+
+
+				if($report['idconcept'] == EnumConceptActivityUser::CLAIM){
+
+					$address = $report['claimaddress'];
+					$select = 'SELECT claim.stateid, claim.substateid FROM claim WHERE claim.id = '.$report['code'];
+					$resultClaim = $connectionManager->select ($select);
+
+					$reference = $report['claimcode'];
+
+					if(!is_null( $resultClaim[0]['stateid'])){
+
+						$stateid = $resultClaim[0]['stateid'];
+
+					}
+
+					if(!is_null( $resultClaim[0]['substateid'])){
+
+						$substateid = $resultClaim[0]['substateid'];
+
+					}
+
+
+				}else{
+
+					$address =$report['planaddress'];
+
+					$reference = $report['name'];
+				}
+
+				if(!empty($report['timezonein'] )){
+
+					$timeZoneIn = $report['timezonein'];
+
+				}
+
+				if(!empty($report['timezoneout'] )){
+						
+					$timeZoneOut = $report['timezoneout'];
+						
+				}
+
+				if(!empty($report['statename']) ){
+
+					$stateName = $report['statename'];
+				}
+
+				//agregar el estado y subestado del metodo que hace el reporte
+				$insert = 'INSERT INTO historicalreportuseractivity (reference, state, timein, timeout, address, iduser, idclaim ,
+				timereporting,idconcept, stateid,
+				substateid)VALUES (
+				\''.$reference.'\','.
+				'\''.$stateName.'\','.
+				$timeZoneIn.','.
+				$timeZoneOut.', \''.
+				$address.'\','.
+				$value['systemuserid'].','.
+				$report['code'].','.
+				$dateReporting.','.
+				$report['idconcept'].','.
+				$stateid.','.
+				$substateid.')';
+
+				echo $insert;
+				echo '</br>';
+				$connectionManager->executeTransaction($insert);
+
+			}
+
+		}
+
+	}
+}
+}
+
+
+function getUserActivity($filters,$timeFrom,$timeTo,$idUser, $order){
+
+	$query = '	SELECT
+	useractivity.code,
+	useractivity.iduseractivity,
+	userlocation.reportedtime,
+	eventtype.ideventtype AS eventtype,
+	concept.idconcept,
+	concept.description,
+	claim.code as claimcode,
+	plan.name as name,
+	claim.claimaddress,
+	claim.stateid,
+	claim.substateid,
+	state.name AS statename,
+	claim.id AS claimid,
+	plan.planaddress
+	FROM useractivity
+	left join claim on claim.id = useractivity.code
+	left join eventtype on eventtype.ideventtype = useractivity.ideventtype
+	left join concept on concept.idconcept = useractivity.idconcept
+	left join plan on plan.id = useractivity.code
+	left join userlocation on userlocation.iduserlocation = useractivity.idlocation
+	left join state on state.id = claim.stateid
+	WHERE 1=1';
+
+	foreach ($filters as $filter) {
+
+		$query.= ' AND '.$filter['field'].'='.$filter['value'];
+
+	}
+
+	if($timeFrom != '' && $timeTo != '') {
+		$query .= '
+		AND  userlocation.reportedtime BETWEEN '.$timeFrom.' AND '.$timeTo.'
+		';
+	}
+
+	$query .= '
+	ORDER BY  userlocation.reportedtime '.$order.'
+	';
+
+	$connectionManager = PostgreSQLConnectionManager::getInstance ();
+
+	$result = $connectionManager->select ($query);
+
+	$sortedResult = array();
+	$activity = array();
+	$timeIn;
+	$dateInGlobal = null;
+	$dateOutGlobal = null;
+	$startIn = false;
+	$dateFrom =  $timeFrom;
+
+	for ($i = 0; $i < count($result); $i++) {
+
+		$row = $result[$i];
+
+		if($row['eventtype'] == 1){
+
+			$activityIn = array(
+					"code" 			=>'',
+					"idconcept"		=>'',
+					"name" 			=>'',
+					"claimcode"		=>'',
+					"timezonein"	=>'',
+					"timezoneout"	=>'',
+					"timezone" 		=>'',
+					"claimaddress"	=>'',
+					"planaddress"	=>'',
+					"statename" 	=>'',
+					"translate" 	=>'',
+					"unattended"    => false
+			);
+			//$activityIn = array();
+
+			$startIn = true;
+			$idIn = $row['code'];
+			$timeIn = $row['reportedtime'];
+			$dateInObject = DateTime::createFromFormat ( 'd/m/Y H:i:s', date('d/m/Y H:i:s',$timeIn/1000));
+			$dateInGlobal  = $dateInObject;
+			$stringDate = $dateInObject->format('Y-m-d H:i:s');
+			$stringDate = strtotime($stringDate)*1000;
+			$sortedResult[$row['iduseractivity']] = 'Entrada '.$idIn.' '.$row['idconcept'].' '.$stringDate;
+
+			$activityIn['code'] = $row['code'];
+			$activityIn['timezonein'] = $stringDate;
+			$activityIn['claimcode'] = $row['claimcode'];
+			$activityIn['name'] = $row['name'];
+			$activityIn['claimaddress'] = $row['claimaddress'];
+			$activityIn['planaddress'] = $row['planaddress'];
+			$activityIn['statename'] = $row['statename'];
+
+
+			$activityIn['idconcept'] = $row['idconcept'];
+			if( !is_null($dateOutGlobal) && !is_null($dateInGlobal)){
+
+				//Make the diference!
+
+				$out = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', ($dateOutGlobal->format('d/m/Y H:i:s')))));
+				$in = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', ($dateInGlobal->format('d/m/Y H:i:s')))));
+
+				$secondsDateIn=strtotime($in);
+				$secondsDateOut=strtotime($out);
+
+				if($secondsDateIn>$secondsDateOut){
+					$difference = $dateInGlobal->diff($dateOutGlobal);
+					$time = $difference->days.'d '.$difference ->h.'h '.$difference ->i.'m '.$difference ->s.'s ';
+
+				}else{
+
+					$time = '';
+				}
+
+				$dateInGlobal = null;
+				$dateOutGlobal = null;
+				$activityIn['translate'] = $time;
+
+			}
+
+			$haySalida = false;
+			for ($j = $i+1; $j < count($result); $j++) {
+
+				$rowOut = $result[$j];
+				$idOut = $rowOut['code'];
+				$timeOutSearch = $rowOut['reportedtime'];
+
+				if(($idIn== $idOut) && $rowOut['eventtype'] == 2 &&($timeOutSearch>$timeIn)){
+
+					$haySalida = true;
+					//calcular los traslados y el tiempo en zona
+					$dateOutObject = DateTime::createFromFormat ( 'd/m/Y H:i:s', date('d/m/Y H:i:s',$timeOutSearch/1000) );
+					$stringDate = $dateOutObject->format('Y-m-d H:i:s');
+					$stringDate = strtotime($stringDate)*1000;
+					$sortedResult[$rowOut['iduseractivity']] = ' Salida '.$idIn.' '.$rowOut['idconcept'].' '.$stringDate;
+
+					$dateInObject = DateTime::createFromFormat ( 'd/m/Y H:i:s', date('d/m/Y H:i:s',$timeIn/1000));
+					$diff = $dateOutObject->diff($dateInObject);
+					$inTimeZone = $diff->days.'d '.$diff->h.'h '.$diff->i.'m '.$diff->s.'s ';
+
+
+					$dateOutGlobal = $dateOutObject;
+					$activityIn['timezoneout'] = $stringDate;
+					$activityIn['timezonein'] = $timeIn;
+					$activityIn['timezone'] = $inTimeZone;
+					$activity[] = $activityIn;
+					break;
+
+				}
+
+			}
+
+			if(!$haySalida){
+				$activityIn['code'] = $row['code'];
+				$activityIn['timezonein'] = $stringDate;
+				$activityIn['claimcode'] = $row['claimcode'];
+				$activityIn['name'] = $row['name'];
+				$activityIn['timezoneout'] = null;
+				$activityIn['timezone']  = null;
+				$activity[] = $activityIn;
+			}
+
+		}else{
+
+			$idIn = $row['code'];
+			$timeOut = $row['reportedtime'];
+
+			if(empty($sortedResult[$row['iduseractivity']])){
+				$timeIn =$dateFrom;
+				$dateOutObject = DateTime::createFromFormat ( 'd/m/Y H:i:s', date('d/m/Y H:i:s',$timeOut/1000) );
+				$dateInObject = DateTime::createFromFormat ( 'd/m/Y H:i:s', date('d/m/Y H:i:s',$timeIn/1000));
+				$stringDate = $dateInObject->format('Y-m-d H:i:s');
+				$sortedResult[$row['iduseractivity']] = 'Salida '.$idIn.' '.$row['idconcept'].' '.$stringDate;
+				$stringDate = strtotime($stringDate)*1000;
+				$diff = $dateOutObject->diff($dateInObject);
+				$inTimeZone = $diff->days.'d '.$diff->h.'h '.$diff->i.'m '.$diff->s.'s ';
+
+
+				$dateOutGlobal = $dateOutObject;
+
+				$activityIn = array(
+						"code" 			=> '',
+						"idconcept"		=> '',
+						"name" 			=> '',
+						"claimcode"		=> '',
+						"timezonein"	=> '',
+						"timezoneout"	=> '',
+						"timezone" 		=> '',
+						"claimaddress"	=> '',
+						"planaddress"	=> '',
+						"statename" 	=> '',
+						"translate" 	=> '',
+						"unattended"    => false
+				);
+
+				$activityIn['code'] = $row['code'];
+				$activityIn['timezoneout'] = $timeOut;
+				$activityIn['claimcode'] = $row['claimcode'];
+				$activityIn['name'] = $row['name'];
+				$activityIn['timezonein'] = null;
+				$activityIn['timezone'] = null;
+				$activityIn['claimaddress'] = $row['claimaddress'];
+				$activityIn['planaddress'] = $row['planaddress'];
+				$activityIn['idconcept'] = $row['idconcept'];
+				$activityIn['statename'] = $row['statename'];
+				$activity[] = $activityIn;
+			}
+
+		}
+
+	}
+
+	return $activity;
+
+}
+generateHistorical();

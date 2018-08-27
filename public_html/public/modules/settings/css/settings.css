@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+#settings_layer_container {
+	margin: 0 auto;
+}
+
+.upload-form-container {
+	margin: 0 auto;
+	width: 600px;
+}
+
+li {
+	list-style: none;
+}
+
+#container_layers {
+	width: 600px;
+	height: 90px;
+	margin: 0 auto;
+	margin-bottom: 2px;
+	overflow: auto;
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+}
+
+.center_settings {
+	text-align: center;
+}

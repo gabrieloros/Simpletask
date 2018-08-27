@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation
+END
+TextData.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/TextData.php
+END
+Function.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Function.php
+END
+LookupRef.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/LookupRef.php
+END
+ExceptionHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/ExceptionHandler.php
+END
+DateTime.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/DateTime.php
+END
+Database.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Database.php
+END
+Functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Functions.php
+END
+Statistical.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Statistical.php
+END
+MathTrig.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/MathTrig.php
+END
+FormulaParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/FormulaParser.php
+END
+Logical.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Logical.php
+END
+Financial.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Financial.php
+END
+functionlist.txt
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/functionlist.txt
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Exception.php
+END
+Engineering.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/Engineering.php
+END
+FormulaToken.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Calculation/FormulaToken.php
+END

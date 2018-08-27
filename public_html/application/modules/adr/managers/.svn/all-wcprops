@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/managers
+END
+AdrTasksManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/managers/AdrTasksManager.class.php
+END
+AdrPlansManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/managers/AdrPlansManager.class.php
+END
+AdrUsersManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/managers/AdrUsersManager.class.php
+END

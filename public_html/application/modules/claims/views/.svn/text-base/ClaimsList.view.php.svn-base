@@ -1,0 +1,247 @@
+<?php
+class ClaimsList extends Render {
+	
+	static public function render ($list, $filterGroup, $pager, $actions, $counters) {
+		
+		ob_start();
+
+		/* @var $element Claim */
+		
+		?>
+		
+		<br />
+		
+		<?
+		echo $filterGroup->drawForm();
+    	?>
+    
+    	<br />
+    	
+    	<?php
+    	//Actions
+    	echo $actions;
+
+    	//Counters
+    	if(is_array($counters) && count($counters) > 0){
+    		
+    		?>
+    		<div class="claims-counters">
+    		<?php
+	    	foreach ($counters as $key => $counter){
+	    		echo '<div>' . Util::getLiteral($_SESSION['claimsConcepts']['states'][$key]) . ': ' . $counter . '</div>';
+	    	}
+    		?>
+    		</div>
+    		
+    		<div style="clear:both;"></div>
+    		<?php	
+    	}
+    	?>
+    	
+		<form id="massiveActionsForm" name="massiveActionsForm" method="post" action="/<?=$_REQUEST['urlargs'][0]?>/<?=$_REQUEST['urlargs'][1]?>?action=changeClaimState">
+    		
+    		<input type="hidden" name="stateId" id="stateId" />
+    		
+    		<table id="claimsList" class="tablesList">
+    		<?php
+    		
+    		for($i=0 ; $i < count($list) ; $i++){
+    			$element = $list[$i];
+    			
+    			$rowClass = "par";
+    			if($i%2){
+    				$rowClass = "impar";
+    			}
+    		?>
+    			<tr id='table_row_<?= $element->getId() ?>' class="<?= $rowClass ?> claim_element_row">
+    			
+    				<td class="table_col_1">
+    					<?php
+    					if($element->getStateId()==claimsConcepts::PENDINGSTATE){ 
+    					?>
+    					<div style="padding-top: 5px;">
+    					<input value="<?=$element->getId()?>" type="checkbox" name="massiveActions[]" id="massiveActions_<?=$element->getId()?>" />
+    					</div>
+    					<?php
+    					} 
+    					?>
+    				</td>
+    				
+    				<td class="table_col_2">
+    					<?php
+    					$state = 0;
+
+    					if($element->getStateId() == claimsConcepts::PENDINGSTATE){
+    						$now = DateTime::createFromFormat('d/m/Y', date('d/m/Y'));
+    						$diff = $now->diff($element->getEntryDate());
+    						$years = $diff->y;
+							$months = $diff->m;
+							$days = $diff->d;
+    						if($years > 0 || $months > 0 || $days >= claimsConcepts::CRITICALPENDINGSTATETIME){
+    							$state = 1;
+    						}
+    					}
+    					?>
+    					<div title="<?=Util::getLiteral($element->getStateName())?>" class="state_<?=$state?>" style=""></div>
+    				</td>
+    			
+    				<td class="table_col_3">
+    				
+    					<?php
+					$dependencyName = $element->getDependencyName();
+					$thirdCellWidth = '28%';
+					$fourthCellWidth = '2%';
+					if(isset($dependencyName) && $dependencyName != null){
+						$thirdCellWidth = '30%';
+						$fourthCellWidth = '10%';
+					}
+					?>
+    				
+    					<table id="claimData_<?=$element->getId()?>" style="table-layout: fixed;">
+    						<tr id="element_row_<?=$element->getId()?>_1" class="claim_row_element_1">
+    							<td width="35%">
+    								<div title="<?=$element->getEntryDate()->format("d/m/Y")?>" class="text-ellipsis">Fecha de ingreso: <?=$element->getEntryDate()->format("d/m/Y")?></div>	    							
+    							<? 
+  									if(null != $element->getClosedDate()){
+  									?>	
+  										<div title="<?=$element->getClosedDate()->format("d/m/Y")?>" class="text-ellipsis">Fecha de cierre: <?=$element->getClosedDate()->format("d/m/Y")?></div>
+  									<?	
+  									}else{
+  										?>
+  										<br/>
+  										<div title="<?php echo Util::getLiteral("no_closing_date")?>" class="text-ellipsis">Fecha de cierre: <?php echo Util::getLiteral("no_closing_date")?></div>							
+  									<?	
+  									}
+  									?> 	
+    							</td>
+    							<td width="35%">
+    								<div title="<?=$element->getId()?>" class="text-ellipsis">ID: <?=$element->getCode()?></div>
+    							</td>
+    							<td width="<?=$thirdCellWidth?>">
+    							<div title="<?=$element->getUserName()?>" class="text-ellipsis">OPERARIO: <?=$element->getUserName()?></div>
+    							</td>
+    							<td width="<?=$fourthCellWidth?>">
+    							</td>
+    						</tr>
+    						<tr id="element_row_<?=$element->getId()?>_2" class="claim_row_element_2">
+    							<td>
+    								<div title="<?=$element->getSubjectName()?>" class="text-ellipsis">Tema: <?=$element->getSubjectName()?></div>
+    							</td>
+    							<td>
+    								<div title="<?=$element->getInputTypeName()?>" class="text-ellipsis">Ingreso: <?=$element->getInputTypeName()?></div>
+    							</td>
+    							<td>
+    								<div title="<?=$element->getCauseName()?>" class="text-ellipsis">Motivo: <?=$element->getCauseName()?></div>
+    							</td>
+    							<td>
+								<?php
+								/*
+	    						if(isset($dependencyName) && $dependencyName != null){ 
+	    						?>
+	    							<div title="<?=$element->getDependencyName()?>" class="text-ellipsis">Dependencia: <?=$element->getDependencyName()?></div>
+	    						<?php
+	    						}
+	    						*/
+	    						?>
+    							</td>
+    						</tr>
+    						<tr id="element_row_<?=$element->getId()?>_3" class="claim_row_element_3">
+    							<td>
+    							<?php
+    						$requesterName = $element->getRequesterName();
+    						if(isset($requesterName) && $requesterName != null){ 
+    						?>
+    						<div title="<?=$element->getRequesterName()?>" class="text-ellipsis">Solicitante: <?=$element->getRequesterName()?></div>
+    						<?php
+    							}
+    							?>
+    							</td>
+    							<td>
+    							<?php 
+    						$claimAddress = $element->getClaimAddress();
+    						if(isset($claimAddress) && $claimAddress != null){ 
+    						?>
+    						<div title="<?=$element->getClaimAddress()?>" class="text-ellipsis">Domicilio: <?=$element->getClaimAddress()?></div>
+    						<?php
+    							}
+    							?>
+    							</td>
+    							<td>
+    							<?php
+    						$requesterPhone = $element->getRequesterPhone();
+    						if(isset($requesterPhone) && $requesterPhone != null){ 
+    						?>
+    						<div title="<?=$element->getRequesterPhone()?>" class="text-ellipsis">Teléfono: <?=$element->getRequesterPhone()?></div>
+    						<?php
+	    					}
+	    					?>
+    							</td>
+    							<td>
+    							</td>
+    						</tr>
+    					</table>
+    				</td>
+    				
+    				<td class="table_col_4">
+    					<?php
+    					$closedDate = $element->getClosedDate();
+    					if(isset($closedDate) && $closedDate != null){
+    						echo 'Terminado ' . Util::getAssignedDate($element->getClosedDate()->format("Y-m-d"));
+    					}
+    					else{
+	    					if($element->getAssigned()){
+	    						echo 'Asignado ' . Util::getAssignedDate($element->getEntryDate()->format("Y-m-d"));
+	    					}
+	    					else{
+	    						if($element->getStateId() != claimsConcepts::CANCELLEDSTATE){
+	    							echo "Sin asignar";
+	    						}
+	    					}
+    					}
+    					?>
+    				</td>
+    				
+    				<td class="table_col_5">
+    			    	<div class="close_icon action_button" title="<?=Util::getLiteral('edit_claim')?>" onclick="editClaim(<?=$element->getId()?>);">
+    			    		<?=Util::getLiteral('edit_claim')?>
+    			    	</div>
+
+    			    	<?php
+    			    	if($element->getStateId() == claimsConcepts::PENDINGSTATE){
+	    			    	?>
+    			    	<div class="close_icon action_button" title="<?=Util::getLiteral('close_claim')?>" onclick="closeClaim(<?=$element->getId()?>,<?=claimsConcepts::CLOSEDSTATE?>);">
+    			    		<?=Util::getLiteral('close_claim')?>
+    			    	</div>
+    			    	<?php
+    			    	} 
+    			    	?>
+    			    </td>
+    			    
+    			</tr>
+    			
+    			<tr>
+    				<td colspan="5" style="border-bottom: 1px solid; "></td>
+    			</tr>
+    			
+    		<?php
+    		}
+    		if(count($list) == 0){   		
+    	    	echo '<tr><td colspan="5">'.$_SESSION['s_message']['no_results_found'].'</td></tr>';
+    		}
+    		?>
+    		</table>
+    		
+		</form>
+    		
+		<br />
+    		
+		<?php
+		require_once $_SERVER['DOCUMENT_ROOT'].'/../application/views/Pager.view.php';
+		echo Pager::render($pager);    	
+		$_REQUEST['jsToLoad'][] = "/modules/settings/js/settings.js";
+    	$_REQUEST['jsToLoad'][] = "/modules/claims/js/claims.js";
+				
+		return ob_get_clean();
+	}
+	
+}

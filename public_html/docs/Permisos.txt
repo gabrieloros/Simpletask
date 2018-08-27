@@ -1,0 +1,43 @@
+Las siguientes carpetas deben tener los permisos de escritura necesarios para el usuario
+del servidor web, ya sea www-data o apache segun la distribucion de linux en la que se 
+este corriendo:
+
+log/
+public/core/css/
+public/core/js/
+public/modules/claims/imports/
+
+Por ejemplo:
+
+sudo chmod 777 /var/www/html/gdr/log/ 
+sudo chmod 777 /var/www/html/gdr/public/core/css/
+sudo chmod 777 /var/www/html/gdr/public/core/js/
+sudo chmod 777 /var/www/html/gdr/public/modules/claims/imports/
+
+
+sudo chmod 777 /var/www/godoycruz.gestionyservicios.com.ar/public_html/public/modules/claims/imports/
+sudo chmod 777 /var/www/godoycruz.gestionyservicios.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/godoycruz.gestionyservicios.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/godoycruz.gestionyservicios.com.ar/public_html/log/
+sudo chmod 777 /var/www/godoycruz.gestionyservicios.com.ar/log/
+
+sudo chmod 777 /var/www/lasheras.gestionyservicios.com.ar/public_html/public/modules/claim/imports/
+sudo chmod 777 /var/www/lasheras.gestionyservicios.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/lasheras.gestionyservicios.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/lasheras.gestionyservicios.com.ar/public_html/log/
+
+sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/modules/claims/imports/
+sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/log/
+
+sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/public/modules/claims/imports/
+sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/log/
+
+
+sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/modules/claims/imports/
+sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/log/

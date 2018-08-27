@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/GDR/!svn/ver/286/branches/trunk_integracion/application/core/managers/common/db
+END
+MySQLConnectionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/managers/common/db/MySQLConnectionManager.class.php
+END
+ConnectionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/managers/common/db/ConnectionManager.class.php
+END
+PostgreSQLConnectionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/GDR/!svn/ver/286/branches/trunk_integracion/application/core/managers/common/db/PostgreSQLConnectionManager.class.php
+END

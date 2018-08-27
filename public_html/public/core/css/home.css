@@ -1,0 +1,559 @@
+/********************* HOME-CONTENIDO ********************
+*********************************************************/
+#home-container
+{
+	float: left;
+	width: 960px;
+	margin-bottom: 50px;
+}
+#float-left-home
+{
+	float: left;
+	width: 235px;
+}
+/********************* 5. HOME-LINKBOX-1 ********************
+************************************************************/
+.interior-float-left .access01
+{
+	/*width:218px;*/
+	width: 180px;
+	clear: both;
+	float: left;
+}
+.access01 .menu-left
+{
+	/*color:#313131;*/
+	text-decoration: none;
+}
+.menu-left
+{
+	font-size: 18px;
+	/*color:black;*/
+	text-decoration: none;
+}
+#employment-linkbox
+{
+	color: #FF0000;
+}
+.linkboxevent_container
+{
+	color: #008000;
+}
+.link-more A
+{
+	color: #FFA500;
+}
+.menu-left
+{
+	/*color:purple;*/
+}
+/********************* 6. HOME-BANNER + INFO ********************
+****************************************************************/
+#banner-info
+{
+	margin-right: 160px;
+}
+#content-banner H2
+{
+	text-align: left;
+	font-size: 1.4em;
+	color: #5891C8;
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
+#content-banner DIV#desc-banner-text
+{
+	line-height: 1.35em;
+	font-size: 0.8em;
+	margin-bottom: 15px;
+}
+#content-banner DIV#desc-banner-text P
+{
+	padding-bottom: 15px;
+}
+#content-banner A
+{
+	color: #5273A0;
+	font-size: 0.82em;
+}
+/********************* 4. HOME-SEARCH ********************
+*********************************************************/
+#float-right-home
+{
+	float: right;
+	width: 145px;
+	overflow: hidden;
+}
+/********************* 10b. HOME-LINKBOX-2 ********************
+************************************************************/
+.float-right-interior .access02
+{
+	/*width:145px;*/
+	width: 181px;
+	float: left;
+	clear: both;
+	text-align: left;
+	margin-bottom: 15px;
+}
+/************************* DIV BANNER ***********************
+************************************************************/
+#banner_div
+{
+	text-align: center;
+	width: 900px;
+	margin-left: 18px;
+}
+/********************* LINKBOX ********************
+*********************************************************
+******************* Gen�rico **************************/
+.linkbox-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-paper.gif");
+	background-position: 0px 5px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+.linkbox-title A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 25px;
+}
+.linkbox-title A:hover
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	text-decoration: none;
+}
+.linkbox-title .menu-left
+{
+}
+.bottom-underline
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #E6E6E6;
+}
+.access-margin
+{
+	margin-bottom: 15px;
+}
+/******************** News 1 **************************/
+.news-home
+{
+	/*margin-top:10px;*/
+}
+.linkbox-news-blue-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #1E56A0;
+	font-weight: bold;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+.news-p SPAN
+{
+	font-weight: normal;
+	color: #1E56A0;
+}
+.news-p
+{
+	font-size: 11px !important;
+	margin: 0 !important;
+}
+.news-p SPAN:after
+{
+	content: " -";
+}
+.linkbox-news-blue
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #1E56A0;
+	font-weight: bold;
+	padding-top: 6px;
+}
+.linkbox-news-blue A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #1E56A0;
+	font-weight: bold;
+	text-decoration: none;
+}
+.linkbox-news-blue A:hover
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #1E56A0;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.linkbox-news-grey
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #313131;
+	font-weight: normal;
+}
+/******************** Calendar **************************/
+.linkbox-calendar-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-calendar.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+/*linkbox-calendar-title a*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*linkbox-calendar-title a:hover*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+.linkbox-borders
+{
+	padding-bottom: 0;
+	overflow: hidden;
+}
+.linkbox-borders .slideshow
+{
+	oferflow: hidden;
+}
+.linkbox-cal-red-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #B73319;
+	font-weight: bold;
+	/*background:url("/core/img/triangle03.gif");*/
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+	margin-top: 6px;
+}
+.linkbox-cal-red-title A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #1B72B5;
+	font-weight: bold;
+	text-decoration: none;
+}
+.linkbox-cal-red-title A:hover
+{
+	text-decoration: underline;
+}
+.linkbox-cal-red
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #B73319;
+	font-weight: normal;
+}
+.linkbox-cal-red A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #B73319;
+	font-weight: normal;
+	text-decoration: none;
+}
+.linkbox-cal-red A:hover
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #B73319;
+	font-weight: normal;
+	text-decoration: underline;
+}
+.linkbox-cal-date
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/event-blq-bell");
+	background-position: 0px 2px;
+	background-repeat: no-repeat;
+	text-indent: 15px;
+}
+.linkbox-cal-grey-place
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	color: #7F7F7F;
+	font-weight: normal;
+}
+.linkbox-cal-grey-hour
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #313131;
+	font-weight: normal;
+}
+/******************** Calendar2 **************************/
+.linkbox-calendar2-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-calendar2.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+/*linkbox-calendar2-title a*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*linkbox-calendar2-title a:hover*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/******************** Last documents **************************/
+.lastdocs-linkbox
+{
+	line-height: 15px;
+	margin-top: 10px;
+}
+.lastdocs-linkbox-img
+{
+	padding-top: 2px;
+}
+.linkbox-lastdocs-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-last.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+/*linkbox-lastdocs-title a*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*linkbox-lastdocs-title a:hover*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+.linkbox-lastdocs-links
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #354900;
+	font-weight: normal;
+	background: url("/core/img/lastdocs-doc.gif");
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+	line-height: 20px;
+	margin-left: 10px;
+}
+.linkbox-lastdocs-links A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #354900;
+	font-weight: normal;
+	line-height: 20px;
+	text-decoration: none;
+}
+.linkbox-lastdocs-links A:hover
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #354900;
+	font-weight: normal;
+	text-decoration: underline;
+}
+/******************** Case Studies 1 **************************/
+.linkbox-casestudies-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-casestudies.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+/*linkbox-casestudies-title a*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*linkbox-casestudies-title a:hover*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/******************** Employment 1 **************************/
+#employment-linkbox
+{
+	/*margin-top:10px;*/
+}
+.linkbox-ofertas-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	background: url("/core/img/linkbox-ofertas.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+.linkbox-ofertas-title A
+{
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+	text-decoration: none;
+}
+.linkbox-ofertas-title A:hover
+{
+	font-weight: bold;
+	text-decoration: none;
+}
+/******************** Destacados 1 **************************/
+.linkbox-destacados-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-destacados.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+/*linkbox-destacados-title a*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*linkbox-destacados-title a:hover*/
+#INVALID-RULE
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/******************** Destacados2 1 **************************/
+.linkbox-destacados2-title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	background: url("/core/img/linkbox-destacados2.gif");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+.linkbox-destacados2-title A
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+.linkbox-destacados2-title A:hover
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #313131;
+	font-weight: bold;
+	text-decoration: none;
+}
+/********************SERGI LINKBOX HOME****************************/
+.linkbox-content-home
+{
+	float: right;
+	/*width:398px;*/
+}
+.home-float-left
+{
+	float: left;
+	width: 199px;
+}
+.float-right-home
+{
+	float: left;
+	width: 199px;
+}
+.center-div-01-home
+{
+	width: auto;
+}
+.home-float-left .access01
+{
+	width: 190px;
+}
+.float-right-home .access02
+{
+	margin-bottom: 15px;
+	margin-left: 6px;
+	width: 190px;
+}

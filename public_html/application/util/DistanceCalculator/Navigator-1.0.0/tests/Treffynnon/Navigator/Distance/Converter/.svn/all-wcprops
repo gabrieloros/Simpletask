@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter
+END
+MetreToKilometreTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToKilometreTest.php
+END
+MetreToFurlongTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToFurlongTest.php
+END
+MetreToNauticalMileTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToNauticalMileTest.php
+END
+MetreToLeagueTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToLeagueTest.php
+END
+MetreToParsecTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToParsecTest.php
+END
+MetreToMileTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/MetreToMileTest.php
+END
+ConverterAbstractTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/tests/Treffynnon/Navigator/Distance/Converter/ConverterAbstractTest.php
+END

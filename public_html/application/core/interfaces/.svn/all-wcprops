@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/interfaces
+END
+ModuleManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/interfaces/ModuleManager.class.php
+END
+ActionManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/core/interfaces/ActionManager.class.php
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/db
+END
+AdrUsersPostgreSQL.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/331/branches/trunk_integracion/application/modules/adr/db/AdrUsersPostgreSQL.class.php
+END
+AdrPlansPostgreSQL.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/db/AdrPlansPostgreSQL.class.php
+END
+AdrUsersDB.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/adr/db/AdrUsersDB.class.php
+END
+AdrPlansDB.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/adr/db/AdrPlansDB.class.php
+END

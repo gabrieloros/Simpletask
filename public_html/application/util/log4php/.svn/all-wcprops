@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php
+END
+LoggerReflectionUtils.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerReflectionUtils.php
+END
+LoggerAppender.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerAppender.php
+END
+LoggerLayout.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerLayout.php
+END
+LoggerMDC.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerMDC.php
+END
+LoggerNDC.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerNDC.php
+END
+LoggerException.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerException.php
+END
+LoggerConfigurator.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerConfigurator.php
+END
+LoggerHierarchy.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerHierarchy.php
+END
+LoggerFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerFilter.php
+END
+LoggerLoggingEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerLoggingEvent.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/Logger.php
+END
+LoggerRoot.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerRoot.php
+END
+LoggerLocationInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerLocationInfo.php
+END
+LoggerAppenderPool.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerAppenderPool.php
+END
+LoggerLevel.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/log4php/LoggerLevel.php
+END

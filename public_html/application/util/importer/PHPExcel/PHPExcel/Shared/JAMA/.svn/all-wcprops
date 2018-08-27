@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA
+END
+QRDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/QRDecomposition.php
+END
+CholeskyDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/CholeskyDecomposition.php
+END
+CHANGELOG.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/CHANGELOG.TXT
+END
+SingularValueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/SingularValueDecomposition.php
+END
+LUDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/LUDecomposition.php
+END
+Matrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/Matrix.php
+END
+EigenvalueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/importer/PHPExcel/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php
+END

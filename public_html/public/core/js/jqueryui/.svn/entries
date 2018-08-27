@@ -1,0 +1,71 @@
+10
+
+dir
+330
+https://svn.concatel.com/GDR/branches/trunk_integracion/public/core/js/jqueryui
+https://svn.concatel.com/GDR
+
+
+
+2013-05-23T20:57:45.689845Z
+51
+pdavid.romero
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b94e5b24-a3d2-4a74-852f-b3514234328d
+
+css
+dir
+
+development-bundle
+dir
+
+index.html
+file
+
+
+
+
+2014-11-03T11:36:58.000000Z
+eeb5c3cd7406fd6cc9fa84f8102f18bd
+2013-05-23T20:57:45.689845Z
+51
+pdavid.romero
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31554
+
+js
+dir
+

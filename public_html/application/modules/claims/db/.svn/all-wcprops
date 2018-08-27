@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/claims/db
+END
+ClaimsDB.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/331/branches/trunk_integracion/application/modules/claims/db/ClaimsDB.class.php
+END
+ClaimsPostgreSQL.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/331/branches/trunk_integracion/application/modules/claims/db/ClaimsPostgreSQL.class.php
+END

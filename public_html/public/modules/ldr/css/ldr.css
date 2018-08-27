@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+#menu-search {
+	display: none;
+}
+
+#tools {
+	display: none;
+}
+
+#header-home {
+	display: none;
+}
+
+#container4a {
+	display: none;
+}
+
+#title-section {
+	display: none;
+}
+
+#interior-container-0 {
+	display: none;
+}
+
+#container {
+	border-bottom: 0 none;
+}
+
+.center-div-04 {
+	float: left;
+	margin-bottom: 0;
+	margin-left: 0;
+	min-height: 100%;
+	width: 100%;
+}
+
+body {
+	padding: 0px 0px;
+}
+
+
+.form-claim_closure{
+	text-align: center;
+}

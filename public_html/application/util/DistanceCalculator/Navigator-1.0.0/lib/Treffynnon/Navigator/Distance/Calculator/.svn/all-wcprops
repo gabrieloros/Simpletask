@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator
+END
+Vincenty.php
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator/Vincenty.php
+END
+Haversine.php
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator/Haversine.php
+END
+CosineLaw.php
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator/CosineLaw.php
+END
+GreatCircle.php
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator/GreatCircle.php
+END
+CalculatorAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/GDR/!svn/ver/269/branches/trunk_integracion/application/util/DistanceCalculator/Navigator-1.0.0/lib/Treffynnon/Navigator/Distance/Calculator/CalculatorAbstract.php
+END

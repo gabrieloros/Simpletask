@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5056d377-381d-4880-9444-be761cc6a250" name="Default" comment="" />
+    <ignored path="gdr_godoy_new.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gdr_godoy_new" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="adrActionManager.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/actionManagers/adrActionManager.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="1072" column="57" lean-forward="true" selection-start-line="1072" selection-start-column="57" selection-end-line="1072" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getAdrClaimStates</find>
+      <find>$claimStates</find>
+      <find>claimStates</find>
+      <find>$filterGroup</find>
+      <find>getClaims</find>
+      <find>getCriteriaQUery()</find>
+      <find>$counter</find>
+      <find>$list</find>
+      <find>getShowUnassignedClaimsByGroups</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public_html/public/core/js/scripts.js" />
+        <option value="$PROJECT_DIR$/public_html/public/core/css/login.css" />
+        <option value="$PROJECT_DIR$/public_html/application/views/Header.view.php" />
+        <option value="$PROJECT_DIR$/public_html/public/core/css/generalextra.css" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrUserHistory.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrTemporal.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/core/classes/filters/DateRangeFilter.class.php" />
+        <option value="$PROJECT_DIR$/public_html/public/core/css/general.css" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimsActions.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/core/classes/filters/TextFilter.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/views/Login.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/views/Menu.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/views/Import.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/core/classes/filters/FilterGroup.class.php" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/adr/css/adr.css" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/views/GeoLocationClaimsList.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimNewEdit.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrUserNewEdit.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrPlansList.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrPlanNewEdit.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrUsersList.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/ldr/views/LdrListMapClaim1.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/ldr/views/LdrListMapClaim.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/ldr/actionManagers/ldrActionManager.class.php" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/ldr/js/ldr-map.js" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/ldr/js/ldr-admin-map.js" />
+        <option value="$PROJECT_DIR$/public_html/index.html" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/classes/CAUClaimTypeElectricity.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/actionManagers/adrActionManager.class.php" />
+        <option value="$PROJECT_DIR$/public_html/public/services/cryptGenerator.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/classes/CAUClaimType.class.php" />
+        <option value="C:/xampp/tomcat/webapps/la/WEB-INF/classes/config/application-prod.yml" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/adr/js/adr-assign-tasks.js" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/claims/js/claims.js" />
+        <option value="$PROJECT_DIR$/public_html/docs/Permisos.txt" />
+        <option value="$PROJECT_DIR$/public_html/application/views/Master.view.php" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/adr/js/polygon.min.js" />
+        <option value="$PROJECT_DIR$/public_html/public/modules/adr/js/adr-assign-tasks-map.js" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrAssignTasks.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/classes/Claim.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/managers/AdrUsersManager.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/adr/views/AdrClaimsTrack.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimsList.view.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/actionManagers/claimsActionManager.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/managers/ClaimsManager.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/core/classes/filters/SelectionTreeFilter.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/core/classes/filters/SelectFilter.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/db/ddsds.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/modules/claims/db/ClaimsPostgreSQL.class.php" />
+        <option value="$PROJECT_DIR$/public_html/application/configs/config.ini" />
+        <option value="$PROJECT_DIR$/public_html/application/configs/log4php.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="52e2f1d4-66d4-4cda-ad7a-1ff99e36df76" name="server1" port="45" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="configs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="adr" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="adr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="actionManagers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="adr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="managers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="actionManagers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="db" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="enums" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="managers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="push" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="claims" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gdr_v.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gdr_v.1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public_html/index.html" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="adr-assign-tasks.js&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/modules/adr/js/adr-assign-tasks-map.js&#10;lum&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/modules/claims/css/img/lum_1_0.png&#10;ClaimNo&#9;null&#9;null&#10;assignClaims&#9;null&#9;null&#10;ini_set&#9;null&#9;null&#10;php.ini&#9;null&#9;null&#10;adr_captions_box&#9;null&#9;null&#10;checkPointWithinPolygon&#9;null&#9;null&#10;getPointsInsidePolygon&#9;null&#9;null&#10;picker&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/modules/claims/css/img/picker_2_0.png&#10;ldr&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/modules/ldr/js/ldr-map.js&#10;getAdrUserFrom&#9;null&#9;null&#10;gen&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/core/css/general.css&#10;selec&#9;null&#9;null&#10;Date&#9;null&#9;null&#10;Text&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/application/core/classes/filters/TextFilter.class.php&#10;claim&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/modules/claims/js/claims.js&#10;adrcl&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/application/modules/adr/views/AdrClaimsTrack.view.php&#10;adrte&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/application/modules/adr/views/AdrTemporal.view.php&#10;action&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/application/core/interfaces/ActionManager.class.php&#10;FilterG&#9;null&#9;null&#10;Filter&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/application/core/classes/filters/SelectionPopupFilterGeneric.class.php&#10;AdrTem&#9;null&#9;null&#10;AdrUserH&#9;null&#9;null&#10;AdrClaim&#9;null&#9;null&#10;generale&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/core/css/generalextra.css&#10;gene&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_v.1/public_html/public/core/css/general.css&#10;checkUserLoggin&#9;null&#9;null&#10;login&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/core/managers/actions/LoginActionManager.class.php&#10;Menu&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/views/Menu.view.php&#10;getAssignTasks&#9;null&#9;null&#10;sendFilters&#9;null&#9;null&#10;Puc&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/public/services/PublicImporter.class.php&#10;import.lo&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/log/import.log&#10;getAdrUnassignedClaimsCoords&#9;null&#9;null&#10;addMarkersForClaim&#9;null&#9;null&#10;PublicImporter&#9;null&#9;null&#10;Import&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/modules/claims/views/Import.view.php&#10;godoy_cruz.png&#9;null&#9;null&#10;ClaimViewPic&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/modules/claims/views/ClaimViewPic.view.php&#10;clai&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/modules/claims/views/ClaimsList.view.php&#10; getUserTypeId&#9;null&#9;null&#10;$_SESSION ['userType']&#9;null&#9;null&#10;getUserType&#9;null&#9;null&#10;BasicAjaxMessageResponse&#9;null&#9;null&#10;saveClaimGeoLocation&#9;null&#9;null&#10;geoPositionMap&#9;null&#9;null&#10;getUserByLogin&#9;null&#9;null&#10;user&#9;null&#9;null&#10;sessio&#9;FILE&#9;file://C:/xampp1/htdocs/gdr_godoy_new/public_html/application/util/requests/Requests/Session.php" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/public_html/application/modules/claims/db/ddsds.class.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\gdr_v.1\public_html\public\modules\claims\css\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp1\htdocs\gdr_godoy_new\public_html\public\core\css" />
+      <recent name="C:\xampp1\htdocs\gdr_godoy_new\public_html\public\modules\adr\css" />
+      <recent name="C:\xampp1\htdocs\gdr_godoy_new\public_html\application\views" />
+      <recent name="C:\xampp1\htdocs\gdr_godoy_new\public_html\application\modules\adr\views" />
+      <recent name="C:\xampp1\htdocs\gdr_godoy_new\public_html\public\modules\claims\css\img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Web Page.gdr">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/gdr_v.1/public_html/index.html" />
+    <configuration name="url.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/gdr_godoy_new/public_html/public/url.php" />
+    <configuration name="Logger.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public_html/application/util/log4php/Logger.php" />
+    <configuration name="gdr" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="server1" start_url="/$PROJECT_DIR$/public_html/public" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="PHP Web Page.gdr" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.url.php" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.Logger.php" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.url.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5056d377-381d-4880-9444-be761cc6a250" name="Default" comment="" />
+      <created>1492891617248</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1492891617248</updated>
+      <workItem from="1492891618623" duration="6695000" />
+      <workItem from="1493042371563" duration="8623000" />
+      <workItem from="1493295541120" duration="65000" />
+      <workItem from="1493385810992" duration="1230000" />
+      <workItem from="1493725993020" duration="593000" />
+      <workItem from="1493823350841" duration="387000" />
+      <workItem from="1495022926233" duration="67756000" />
+      <workItem from="1495539740746" duration="24396000" />
+      <workItem from="1496058210433" duration="38619000" />
+      <workItem from="1498219736069" duration="15425000" />
+      <workItem from="1498477789786" duration="39382000" />
+      <workItem from="1500381968511" duration="34020000" />
+      <workItem from="1501688463079" duration="31475000" />
+      <workItem from="1502711967264" duration="1836000" />
+      <workItem from="1503423140314" duration="22587000" />
+      <workItem from="1505840575376" duration="228000" />
+      <workItem from="1506688996383" duration="623000" />
+      <workItem from="1507292487478" duration="7905000" />
+      <workItem from="1507637270705" duration="56766000" />
+      <workItem from="1508241553231" duration="41099000" />
+      <workItem from="1508847350561" duration="589000" />
+      <workItem from="1509373022242" duration="7484000" />
+      <workItem from="1510747844572" duration="12520000" />
+      <workItem from="1511277313444" duration="32812000" />
+      <workItem from="1512388933917" duration="1862000" />
+      <workItem from="1513685146565" duration="1525000" />
+      <workItem from="1513866765431" duration="18878000" />
+      <workItem from="1515159179024" duration="2553000" />
+      <workItem from="1516115488841" duration="590000" />
+      <workItem from="1516289544705" duration="593000" />
+      <workItem from="1516897403079" duration="3732000" />
+      <workItem from="1520010399276" duration="3313000" />
+      <workItem from="1520427664702" duration="20230000" />
+      <workItem from="1521734922865" duration="26550000" />
+      <workItem from="1523281380833" duration="70000" />
+      <workItem from="1523281501138" duration="758000" />
+      <workItem from="1523461424614" duration="598000" />
+      <workItem from="1525280814679" duration="313000" />
+      <workItem from="1527683021562" duration="30059000" />
+      <workItem from="1528382384511" duration="1231000" />
+      <workItem from="1529327907963" duration="11919000" />
+      <workItem from="1531412604195" duration="2215000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="580127000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11956522" sideWeight="0.5060514" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11847826" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20869565" sideWeight="0.49394855" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/adr/js/adr-assign-tasks-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9163">
+          <caret line="539" column="0" lean-forward="false" selection-start-line="539" selection-start-column="0" selection-end-line="539" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/adr/js/adr-assign-tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="391" column="9" lean-forward="false" selection-start-line="391" selection-start-column="9" selection-end-line="391" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/classes/CAUClaimType.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2839">
+          <caret line="167" column="33" lean-forward="false" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/docs/Permisos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/adr/js/polygon.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="214" column="51" lean-forward="false" selection-start-line="214" selection-start-column="51" selection-end-line="214" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/db/ClaimPicDB.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/util/Util.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="504" column="27" lean-forward="false" selection-start-line="504" selection-start-column="27" selection-end-line="504" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/views/ActionMessage.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/views/Header.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2023">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/webservices/adrwebservice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrPlansList.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrTemporal.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/managers/AdrPlansManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrPublicClaims.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="73" lean-forward="true" selection-start-line="94" selection-start-column="73" selection-end-line="94" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/classes/AdrSubstateActivityUser.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrCaptions.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/managers/AdrTasksManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1176">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/managers/AdrUsersManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14436">
+          <caret line="610" column="31" lean-forward="true" selection-start-line="610" selection-start-column="31" selection-end-line="610" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrAssignTasks.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/views/AdrClaimsTrack.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimViewPic.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimNewEdit.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimsActions.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/FilterControl.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="120" column="20" lean-forward="false" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/managers/actions/ModuleActionManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="368" column="8" lean-forward="true" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/SelectionPopupFilterGeneric.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/SelectFilterType.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/FilterGroup.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="20" lean-forward="false" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/db/ClaimsDB.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="331" column="45" lean-forward="false" selection-start-line="331" selection-start-column="45" selection-end-line="331" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp1/htdocs/vialidad.simpletask.com.ar/public_html/application/modules/claims/actionManagers/claimsActionManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/managers/ClaimsManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="559" column="36" lean-forward="false" selection-start-line="559" selection-start-column="36" selection-end-line="559" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/classes/Claim.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="790" column="20" lean-forward="false" selection-start-line="790" selection-start-column="20" selection-end-line="790" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/db/ddsds.class.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/docs/configuracion en xampp" />
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/claims/css/img/alum_plaza_1_0.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/configs/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/docs/configuracion_servidor.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/configs/log4php.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/db/ClaimsPostgreSQL.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1779" column="24" lean-forward="false" selection-start-line="1779" selection-start-column="24" selection-end-line="1779" selection-end-column="24" />
+          <folding>
+            <marker date="1531486888155" expanded="true" signature="280:317" ph="SELECT * FRO... cause" />
+            <marker date="1531486888155" expanded="true" signature="608:691" ph="SELECT id, n... cause" />
+            <marker date="1531486888155" expanded="true" signature="970:1012" ph="SELECT * FRO... dependency" />
+            <marker date="1531486888155" expanded="true" signature="1289:1330" ph="SELECT * FRO... inputtype" />
+            <marker date="1531486888155" expanded="true" signature="1604:1642" ph="SELECT * FRO... origin" />
+            <marker date="1531486888155" expanded="true" signature="1920:1941" ph="SELECT * FRO... state" />
+            <marker date="1531486888155" expanded="true" signature="2216:2255" ph="SELECT * FRO... subject" />
+            <marker date="1531486888155" expanded="true" signature="2536:2581" ph="SELECT * FRO... telepromcause" />
+            <marker date="1531486888155" expanded="true" signature="3298:4337" ph="INSERT INTO claim... " />
+            <marker date="1531486888155" expanded="true" signature="4799:5033" ph="INSERT INTO telepromclaim... " />
+            <marker date="1531486888155" expanded="true" signature="5325:5449" ph="SELECT id FR... claim" />
+            <marker date="1531486888155" expanded="true" signature="5729:5785" ph="SELECT COUNT... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="6090:7300" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="7155:7259" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="7891:8960" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="9250:9793" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="9648:9752" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="10267:10303" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="10615:11488" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="12062:12575" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="13498:13619" ph="UPDATE claim... " />
+            <marker date="1531486888155" expanded="true" signature="14013:14043" ph="UPDATE claim... " />
+            <marker date="1531486888155" expanded="true" signature="16952:17058" ph="UPDATE telepromclaim... " />
+            <marker date="1531486888155" expanded="true" signature="17366:17434" ph="SELECT * FRO... phone_directory" />
+            <marker date="1531486888155" expanded="true" signature="17717:17781" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="18082:18133" ph="INSERT INTO street_lights_claims_data... " />
+            <marker date="1531486888155" expanded="true" signature="23358:25103" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="24922:25026" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="25700:26421" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="26249:26353" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="26890:27182" ph="SELECT COUNT... claim" />
+            <marker date="1531486888155" expanded="true" signature="27043:27147" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="27743:27779" ph="UPDATE street_lights_claims_data... " />
+            <marker date="1531486888155" expanded="true" signature="30964:31067" ph="SELECT * FRO... region" />
+            <marker date="1531486888155" expanded="true" signature="31353:31430" ph="SELECT * FRO... region" />
+            <marker date="1531486888155" expanded="true" signature="31731:32277" ph="SELECT state... claim" />
+            <marker date="1531486888155" expanded="true" signature="32072:32208" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="32898:32953" ph="SELECT count... claim" />
+            <marker date="1531486888155" expanded="true" signature="33420:33702" ph="SELECT telep... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="34328:34898" ph="INSERT INTO phone_directory_full... " />
+            <marker date="1531486888155" expanded="true" signature="35187:36258" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="36015:36117" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="36725:37788" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="37406:37547" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="38528:40964" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="39895:40351" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="41594:41638" ph="SELECT id, n... state" />
+            <marker date="1531486888155" expanded="true" signature="42266:43621" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="43206:43308" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="43999:45187" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="44915:45017" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="46306:47041" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="46764:46866" ph="SELECT 1 FRO... telepromclaim" />
+            <marker date="1531486888155" expanded="true" signature="47547:48134" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="47643:47986" ph="SELECT claim... claim" />
+            <marker date="1531486888155" expanded="true" signature="48192:48709" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="48452:48546" ph="UPDATE claim... " />
+            <marker date="1531486888155" expanded="true" signature="48777:49258" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="49041:49121" ph="UPDATE claim... " />
+            <marker date="1531486888155" expanded="true" signature="49318:49789" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="49588:49652" ph="DELETE FROM claimsystemuseradr... " />
+            <marker date="1531486888155" expanded="true" signature="49860:50226" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="49956:50092" ph="INSERT INTO claimsystemuseradr... " />
+            <marker date="1531486888155" expanded="true" signature="50420:51044" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="50798:50898" ph="UPDATE claim... " />
+            <marker date="1531486888155" expanded="true" signature="51109:51671" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="51204:51307" ph="SELECT DISTI... map_city" />
+            <marker date="1531486888155" expanded="true" signature="51736:52262" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="51831:51934" ph="SELECT DISTI... map_city" />
+            <marker date="1531486888155" expanded="true" signature="52323:52860" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="52416:52528" ph="SELECT DISTI... map_city" />
+            <marker date="1531486888155" expanded="true" signature="52926:53457" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="53019:53128" ph="SELECT DISTI... map_city" />
+            <marker date="1531486888155" expanded="true" signature="53519:54048" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="53612:53720" ph="SELECT DISTI... map_city" />
+            <marker date="1531486888155" expanded="true" signature="54097:54553" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="54192:54273" ph="SELECT map_c... map_city" />
+            <marker date="1531486888155" expanded="true" signature="54606:55013" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="54699:54731" ph="SELECT * FRO... map_city" />
+            <marker date="1531486888155" expanded="true" signature="55057:55309" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="55150:55179" ph="SELECT count... map_city" />
+            <marker date="1531486888155" expanded="true" signature="55460:55495" ph="SELECT type map_city" />
+            <marker date="1531486888155" expanded="true" signature="55685:55949" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="55777:55809" ph="SELECT * fro... map_city" />
+            <marker date="1531486888155" expanded="true" signature="56002:56666" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="56100:56521" ph="SELECT mater... claimclosureldr" />
+            <marker date="1531486888155" expanded="true" signature="56723:57244" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="56821:57102" ph="SELECT witho... withoutfixingldr" />
+            <marker date="1531486888155" expanded="true" signature="57298:57645" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="57393:57509" ph="SELECT descr... claimclosureldr" />
+            <marker date="1531486888155" expanded="true" signature="57690:58021" ph="..." />
+            <marker date="1531486888155" expanded="true" signature="57785:57877" ph="SELECT id,cl... claim_pic" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/enums/claims.enum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/SelectionTreeFilter.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+          <folding>
+            <marker date="1529415768000" expanded="true" signature="1011:1150" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="1024:1150" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="1064:1084" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="1085:1150" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="1221:1261" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="1262:2294" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="1308:1605" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="1332:1363" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="1650:1681" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="1774:1805" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="1806:2068" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="2089:2120" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="2141:2287" ph="..." />
+            <marker date="1529415768000" expanded="false" signature="2531:2598" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="2599:2694" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="2796:3082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/PC-ACER/xampp1/htdocs/gdr_v.1/public_html/application/modules/claims/classes/CAUClaimTypeElectricity.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2703">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/views/ClaimsList.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/core/classes/filters/SelectFilter.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="160" column="14" lean-forward="false" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
+          <folding>
+            <marker date="1529415768000" expanded="true" signature="1443:1505" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="2124:2440" ph="..." />
+            <marker date="1529415768000" expanded="true" signature="2193:2440" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp1/htdocs/gdr_v.1/public_html/application/modules/claims/classes/CAUClaimTypeElectricity.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/SimpleTask/public_html/application/modules/claims/classes/CAUClaimTypeElectricity.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/claims/css/img/state_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/public/modules/claims/css/img/state_1_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/PC-ACER/xampp1/htdocs/gdr_v.1/public_html/application/modules/claims/classes/CAUClaimType.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/claims/actionManagers/claimsActionManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/application/modules/adr/actionManagers/adrActionManager.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="1072" column="57" lean-forward="true" selection-start-line="1072" selection-start-column="57" selection-end-line="1072" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

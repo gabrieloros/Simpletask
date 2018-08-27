@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/common
+END
+EnumCommon.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/common/EnumCommon.class.php
+END
+ConceptDetailGeneric.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/common/ConceptDetailGeneric.class.php
+END
+EnumUserType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/common/EnumUserType.class.php
+END

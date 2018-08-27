@@ -1,0 +1,46 @@
+10
+
+dir
+330
+https://svn.concatel.com/GDR/branches/trunk_integracion/application
+https://svn.concatel.com/GDR
+
+
+
+2014-11-03T15:07:28.635623Z
+330
+dalberto.saez
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b94e5b24-a3d2-4a74-852f-b3514234328d
+
+configs
+dir
+
+core
+dir
+
+db
+dir
+
+modules
+dir
+
+util
+dir
+
+views
+dir
+

@@ -1,0 +1,78 @@
+<?php
+class AdrUsersList extends Render {
+
+	static public function render ($list, $filterGroup, $pager, $actions, $numrows) {
+		
+		ob_start();
+		?>
+		
+		<br />
+		
+		<?
+		echo $filterGroup->drawForm();
+    	?>
+    
+    	<br />
+    	
+		<?php
+    	//Actions
+    	echo $actions;
+
+    	//Counters?>
+   		<div class="users-counters">
+   		<?php
+    		echo '<div>' . Util::getLiteral('total_users') . ': ' . $numrows . '</div>';
+   		?>
+   		</div>
+    		
+   		<div style="clear:both;"></div>
+
+   		<?php
+	    if(count($list) != 0){
+		?>
+			<div id="contenedor-table">
+			    <div id="contenidos" class="head-contenidos">
+			        <div id="columna1" class="head-column"><?=Util::getLiteral('user_id')?></div>
+		    	    <div id="columna1" class="head-column"><?=Util::getLiteral('user_loggin')?></div>
+			        <div id="columna1" class="head-column"><?=Util::getLiteral('user_fullname')?></div>
+					<div id="columna1" class="head-column"><?=Util::getLiteral('adr_plan_name')?></div>
+					<div id="columna1" class="head-column"><?=Util::getLiteral('user_state')?></div>
+			        <div id="columna2" class="head-column column-action-head"><?=Util::getLiteral('user_actions')?></div>
+			    </div>
+			    <?php
+		    	/* @var $adrUser AdrUser */
+		    	foreach ($list as $adrUser){?>
+			    <div id="contenidos" class="column-contenidos fila_<?=$adrUser->getId()?>">
+			        <div id="columna1"><?php echo ($adrUser->getId()) ?></div>
+			        <div id="columna1"><?php echo ($adrUser->getUserLogin()) ?></div>
+			        <div id="columna1"><?php echo ($adrUser->getFirstName() .' '. $adrUser->getLastName()) ?></div>
+		    	    <div id="columna1"><?php echo ($adrUser->getPlanName()) ?></div>
+		        	<div id="columna1"><?php echo ($adrUser->getStateName()) ?></div>
+			        <div id="columna2" class="column-action">
+			        	<div onclick="editUser(<?=$adrUser->getId()?>);" title="<?=Util::getLiteral('user_edit')?>" class="close_icon action_button"><?=Util::getLiteral('user_edit')?></div>
+			        	<div onclick="deleteUser(<?=$adrUser->getId()?>);" title="<?=Util::getLiteral('user_delete')?>" class="close_icon action_button"><?=Util::getLiteral('user_delete')?></div>
+		    	    </div>
+			    </div>
+		<?php } ?>
+			</div>
+		<?php
+		} else {
+				echo '
+					<div>'.$_SESSION['s_message']['no_results_found'].'</div>
+				';
+		}
+		?>
+    
+		<br />
+
+		<?php
+		require_once $_SERVER['DOCUMENT_ROOT'].'/../application/views/Pager.view.php';
+		echo Pager::render($pager);    	
+
+    	$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-users.js";
+				
+		return ob_get_clean();
+	}
+	
+}
+?>

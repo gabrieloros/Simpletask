@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/claims/classes
+END
+Subject.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/Subject.class.php
+END
+TelepromClaimType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/TelepromClaimType.class.php
+END
+ClaimFactory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/classes/ClaimFactory.class.php
+END
+ManualClaimType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/GDR/!svn/ver/320/branches/trunk_integracion/application/modules/claims/classes/ManualClaimType.class.php
+END
+State.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/State.class.php
+END
+TelepromClaim.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/classes/TelepromClaim.class.php
+END
+CAUClaimTypeElectricity.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/CAUClaimTypeElectricity.class.php
+END
+ManualClaimFactory.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/ManualClaimFactory.class.php
+END
+Region.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/273/branches/trunk_integracion/application/modules/claims/classes/Region.class.php
+END
+ClaimType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/ClaimType.class.php
+END
+ManualClaimCreator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/ManualClaimCreator.class.php
+END
+TypeAddress.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/GDR/!svn/ver/295/branches/trunk_integracion/application/modules/claims/classes/TypeAddress.class.php
+END
+Claim.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/claims/classes/Claim.class.php
+END
+Map.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/Map.class.php
+END
+CAUClaimType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/CAUClaimType.class.php
+END
+ClaimRequestPush.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/317/branches/trunk_integracion/application/modules/claims/classes/ClaimRequestPush.php
+END
+InputType.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/InputType.class.php
+END
+Origin.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/Origin.class.php
+END
+CAUElectricClaim.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/CAUElectricClaim.class.php
+END
+Cause.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/Cause.class.php
+END
+MaterialLdr.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/claims/classes/MaterialLdr.php
+END
+Dependency.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/GDR/!svn/ver/269/branches/trunk_integracion/application/modules/claims/classes/Dependency.class.php
+END
+WithoutFixing.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/GDR/!svn/ver/328/branches/trunk_integracion/application/modules/claims/classes/WithoutFixing.php
+END
