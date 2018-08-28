@@ -130,9 +130,9 @@ class ClaimsList extends Render {
 
 
 
-						/*var_dump*/($list);
+					
 						/* var_dump($element->getDetailCloseClaim());*/
-
+						
 			?>
 
 		<div class='<?=$colorState?>'>
@@ -147,6 +147,7 @@ class ClaimsList extends Render {
 
 					<td><img src="/modules/claims/css/img/<?=$cause?>_<?=$priority?>_<?=$state?>.png"></td>
 					<div class="tdTitle"><td>ID: <?=$element->getCode()?></td></div>
+				
 					<td> <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> <?=$element->getEntryDate()->format("d/m/Y")?> </td>
 						<?
 						if(null != $element->getClosedDate()){

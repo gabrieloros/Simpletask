@@ -179,7 +179,8 @@ class claimsActionManager extends ModuleActionManager {
 
 		$html = '';
 		
-		
+		// var_dump($list);
+		// die();
 		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/ClaimsActions.view.php';
 
 		$actions = ClaimsActions::render();
@@ -593,16 +594,19 @@ class claimsActionManager extends ModuleActionManager {
 			}
 
 			//List
-			$list = $this->manager->getExportClaims($filters);
-
+			$list = $this->manager->getExportExcelClaims($filters);
+		
 			require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/ExportXLS.view.php';
 
 			$export = new ExportXLS();
 
-			$header1 = array('ENVIO','','PEDIDO','','','','','','','','','LÁMPARAS','','','','EXTERIOR','','','','INTERIOR','','','','');
-			$header2 = array('FECHA','Nº Rec','FECHA INGRESO','FECHA CIERRE','Ubicación','Domicilio Reclamo','Contribuyente','Domicilio Denunciante','Teléfono','Piq.','FU','125','150','250','400','125','150','250','400','125','150','250','400','MO','ES','COL','ATR','NE','CAB','TUL','POR','CAN','DETALLE','LATITUD','LONGITUD','DEPENDENCIA');
-
-			$html = $export->export($header1, $header2, $list);
+			$headerTitle = array('','Reclamos');
+			$headerReportofDate = array('','FECHA DE INFORME:');
+			$headerDate =  array('','FECHA:');
+			$headerCounts = array('','PENDIENTE','','CERRADO','','BAJA','','BAJA SIN GEO','');
+			$headerTable =array('','IDENTIFICADOR','FECHA DE INGRESO','FECHA DE CIERE','TERMINADO HACE','ESTADO','SOLICITANTE','TELEFONO','DIRECCION RECLAMO','DETALLE DE INGRESO','ORIGEN DE INGRESO','OPERARIO','MATERIAL 1','MATERIAL 2','MATERIAL 3','MATERIAL 4','MATERIAL 5','DETALLE DE CIERRE');
+	
+			$html = $export->export($headerTitle,$headerReportofDate,$headerDate,$headerCounts,$headerTable, $list);
 
 			$render = new RenderActionResponse ( $html );
 

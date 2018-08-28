@@ -539,7 +539,7 @@ class ClaimsManager implements ModuleManager {
 		$connectionManager = ConnectionManager::getInstance ();
 
 		$rs = $connectionManager->select ( $query );
-	
+		
 		if (is_array ( $rs )) {
 
 			foreach ( $rs as $element ) {
@@ -571,7 +571,7 @@ class ClaimsManager implements ModuleManager {
         /*        var_dump($element);
                 die();*/
 
-				
+			
 
 				$idUser = 0;
 				$nameUser = 'Sin asignar';
@@ -1042,7 +1042,90 @@ class ClaimsManager implements ModuleManager {
 		}
 
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+		var_dump($list);
+		die();
+		return $list;
+	}
+	/**
+	 * Return the claims for export processs
+	 *
+	 * @param array $filters
+	 * @return Claim array
+	 */
+	public function getExportExcelClaims($filters) {
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
 
+		$list = array ();
+
+		$count = $this->getClaimsCountForExport ( $filters );
+
+		if ($count > 0) {
+
+			$query = ClaimsDB::getClaimsForExport ( 0, $count, $filters, 'asc' );
+
+			$connectionManager = ConnectionManager::getInstance ();
+
+			$rs = $connectionManager->select ( $query );
+
+
+			if (is_array ( $rs )) {
+
+				foreach ( $rs as $element ) {
+
+				$obj = new Claim ( $element ['claimid'], $element ['code'], $element ['requestername'], $element ['claimaddress'], $element ['requesterphone'] );
+
+				$obj->setSubjectName ( $element ['subjectname'] );
+				$obj->setInputTypeName ( $element ['inputtypename'] );
+				$obj->setCauseName ( $element ['causename'] );
+				$obj->setCauseId( $element ['icon']);
+				$obj->setOriginName ( $element ['originname'] );
+				$obj->setDependencyName ( $element ['dependencyname'] );
+				$obj->setStateId ( $element ['stateid'] );
+				$obj->setStateName ( $element ['statename'] );
+				$obj->setEntryDate ( $element ['entrydate'], 'Y-m-d' );
+				$obj->setClosedDate ( $element ['closedate'], 'Y-m-d' );
+				$obj->setAssigned ( $element ['assigned'] );
+				$obj->setDetail($element['detail']);
+				$obj->setPriority($element['priority']);
+				$obj->setDetailCloseClaim($element['description']);
+				$obj->setMat_1($element['mat_1']);
+				$obj->setMat_2($element['mat_2']);
+				$obj->setMat_3($element['mat_3']);
+				$obj->setMat_4($element['mat_4']);
+				$obj->setMat_5($element['mat_5']);
+
+				$idUser = 0;
+				$nameUser = 'Sin asignar';
+
+				if(isset($element['id'])){
+					$idUser = $element['id'];
+						
+				}
+
+
+				if(isset($element['name'])){
+					$nameUser = $element['name'];
+				}
+				if(isset ($element['surname'])){
+					$nameUser .=' - ' .$element['surname'];
+						
+				}
+
+				$obj->setUserId($idUser);
+
+				$obj->setUserName($nameUser);
+
+					
+
+				$list [] = $obj;
+				}
+			}
+		}
+
+
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+		// var_dump($list);
+		// die();
 		return $list;
 	}
 
