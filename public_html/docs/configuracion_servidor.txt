@@ -91,4 +91,47 @@ host all all <ip> <mask> md5
 ip, por ejemplo: 192.168.150.108
 mask, por ejemplo: 255.255.255.0
 
+<-------------------------------------------------------------------------------------------------------------------->
+configuracion nuevaaa....
+autor gabriel oros
 
+
+
+Agregar dentro del archivo httpd-vhosts.conf
+
+
+<VirtualHost *:80>
+DocumentRoot "C:/xampp2/htdocs/gdr_v.1/public_html/public"
+ServerName www.godoycruz.example.com
+ServerAlias godoycruz.example.com
+DirectoryIndex url.php
+
+<Directory "C:/xampp2/htdocs/gdr_v.1/public_html/public">
+AllowOverride None
+Order allow,deny
+Allow from all
+Options FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/maps/
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule [^\x00-,.-@[-^`{-\x7F] /url.php
+</Directory>
+
+<Directory "C:/xampp2/htdocs/gdr_v.1/public_html/public/maps">
+            AllowOverride None
+            Options +Indexes
+            Order allow,deny
+            Allow from all
+</Directory>
+
+</VirtualHost>
+
+cambiar en php.ini esta linea a ON
+short_open_tag=On
+
+
+
+como ultimo paso para usuarios xampp
+
+http://yonynet.blogspot.com/2013/11/habilitar-driver-de-postgres-en-xampp.html
