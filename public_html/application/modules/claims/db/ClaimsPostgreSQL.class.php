@@ -1823,6 +1823,7 @@ public static function getPublicClaimCoords($filters) {
 		AND claim.regionid IS NOT NULL
 		AND latitude IS NOT NULL AND longitude IS NOT NULL
 		AND latitude <> '' AND longitude <> ''
+		AND latitude !='' and longitude !=''
 		";
 
 		if($groupId!=null && $groupId != "undefined"){
@@ -1927,7 +1928,7 @@ public static function getPublicClaimCoords($filters) {
 		g.name as namegroup
 		FROM claim c
 		LEFT JOIN claimgroup g ON g.id = c.groupid
-		WHERE regionid IS NOT NULL
+		WHERE regionid IS NOT NULL and latitude !='' and longitude !=''
 		";
 		//claim.groupid IS NULL 
 		//AND claim.stateid = ".claimsConcepts::PENDINGSTATE."
