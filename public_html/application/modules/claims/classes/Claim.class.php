@@ -210,7 +210,10 @@ class Claim {
 	private $mat_3;
 	private $mat_4;
 	private $mat_5;
+	
 	//----------------------------------------------------------------------------------
+
+
 	function __construct($id, $code, $requesterName = '', $claimAddress = '', $requesterPhone = '') {
 		
 		$this->id = $id;

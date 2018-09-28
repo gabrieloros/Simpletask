@@ -733,6 +733,14 @@ border:1px solid #57c7e8;*/
 {
 	float: right;
 	padding-bottom: 5px;
+	padding-top: 50px;
+	margin-top: -672px;
+    margin-right: 48px
+}
+.botton-aligment-sucess
+{
+	float: right;
+	padding-bottom: 5px;
 	padding-top: 5px;
 	margin-top: -672px;
     margin-right: 48px

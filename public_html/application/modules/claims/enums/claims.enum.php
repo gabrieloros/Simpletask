@@ -31,6 +31,9 @@ class claimsConcepts{
 	const CLAIMTYPECAUELECTRICITY = "origincauelectricity";
 	const CLAIMTYPEMANUALID = 4;
 	const CLAIMTYPEMANUAL = "manual";
+	const CLAIMTYPEDATAID = 7;
+	const CLAIMTYPEDATA = "origindata";
+	
 	
 	//Claims input types
 	const CLAIMINPUTTYPEPHONEID = 1; 
