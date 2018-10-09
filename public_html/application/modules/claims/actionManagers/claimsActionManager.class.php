@@ -1136,7 +1136,8 @@ class claimsActionManager extends ModuleActionManager {
 	 * Edit or add a claim
 	 * @return RenderActionResponse
 	 */
-	/** public function claimPic() {
+	
+	  public function claimPic() {
 
 		$_SESSION ['logger']->debug ( __METHOD__ . ' begin' );
 
@@ -1196,7 +1197,7 @@ class claimsActionManager extends ModuleActionManager {
 		return $render;
 
 	}
-	 */
+	 
 
 
 	/**
@@ -1264,6 +1265,74 @@ class claimsActionManager extends ModuleActionManager {
 		return $render;
 
 	}
+
+	
+	/**
+	 * Crear claims Multiple
+	 * @return RenderActionResponse
+	 */
+	public function newClaims() {
+
+		$_SESSION ['logger']->debug ( __METHOD__ . ' begin' );
+
+		//Causes
+		$causeList = array();
+
+		if(!isset($_REQUEST['claimId']) || $_REQUEST['claimId'] == 'undefined') {
+			$claim = new Claim(null, null);
+			$claim->setTypeAddress(null);
+			
+		} else {
+			$claim = $this->manager->getClaim($_REQUEST['claimId']);
+			$typeAddress = null;
+			if($claim->getTypeAddressId() != null){
+				$typeAddress = $this->manager->getTypeAddressById($claim->getTypeAddressId());
+				
+			}
+			
+			$claim->setTypeAddress($typeAddress);
+			
+			
+			//Causes by subject
+			$causeList = $this->manager->getCausesBySubject($claim->getSubjectId());
+		}
+
+		//Subject
+		$subjectList = $this->manager->getSubjectsList();
+
+		//Input types
+		$inputTypeList = $this->manager->getInputTypesList();
+
+		//Dependencies
+		$dependencyList = $this->manager->getDependenciesList();
+
+		//States
+		$stateList = $this->manager->getStatesList();
+
+		$html = '';
+
+		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/ClaimsNewMultiple.view.php';
+
+		$countMapCity = $this->manager->getCountMapCity();
+		$typeAddress = $countMapCity > 0;
+		//var_dump($claim);
+		//die();
+		$html .= ClaimsNewMultiple::render($claim, $subjectList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress);
+
+		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/core/factories/MasterFactory.class.php';
+
+		$masterView = MasterFactory::getMaster ();
+			
+		$view = $masterView->render ( $html );
+			
+		$render = new RenderActionResponse ( $view );
+
+		$_SESSION ['logger']->debug ( __METHOD__ . ' end' );
+
+		return $render;
+
+	}
+
 
 	/**
 	 * Save the claim content
@@ -1417,7 +1486,31 @@ class claimsActionManager extends ModuleActionManager {
 		return new AjaxRender(json_encode($causes));
 
 	}
+	/**
+	 * @return AjaxMessageBox
+	 */
+	public function mapGeoPositioningForMultipleClaims(){
 
+		$_SESSION ['logger']->debug ( __METHOD__ . ' begin' );
+
+		try{
+
+			require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/MapNewMultipleClaims.view.php';
+
+			$html = MapNewEditClaim::render($_REQUEST['lat'],$_REQUEST['lon'],$_REQUEST['title']);
+
+		}
+		catch (Exception $e){
+
+			$html = $e->getMessage();
+
+		}
+
+		$_SESSION ['logger']->debug ( __METHOD__ . ' end' );
+
+		return new AjaxConfirmBox( $html, null, Util::getLiteral('claims_map') );
+
+	}
 	/**
 	 * Get a map for showing the current claim position to re positioning or to defining a new position
 	 * @return AjaxMessageBox

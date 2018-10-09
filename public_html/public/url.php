@@ -189,7 +189,9 @@ try {
 	$postPosition = strpos ( $_SERVER ["REQUEST_URI"], '?' );
 	$strlenURL = strlen($_SERVER ["REQUEST_URI"]);
 	$passportArray = split("&",substr ( $_SERVER ["REQUEST_URI"], $postPosition+1,strlen($_SERVER ["REQUEST_URI"])));
-        //si es publicClaim hace login con usuario public
+		//si es publicClaim hace login con usuario public
+		var_dump($_GET ['action']);
+		var_dump(strcmp($_GET ['action'],"getPublicClaims"));
 	if( strcmp($_GET ['action'],"getPublicClaims") == 0 && ! isset($_SESSION ['loggedUser'] ) )
         {
                  $actionManager = new LoginActionManager ();

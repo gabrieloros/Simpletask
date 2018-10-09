@@ -699,6 +699,11 @@ function enableRequesterAddressText(elementId, status) {
 
 }
 
+function addMultipleClaims() {
+
+	window.location = window.location.pathname + '?action=newClaims';
+}
+
 /**
  * Add a new claim
  */
@@ -901,6 +906,57 @@ function getCauses(subjectId){
  * @param claimId
  */
 var claimAddress;
+function geoPositionMapMultiplePoints(){
+	var latitude = null;
+	var longitude = null;
+	var title = "";
+	claimAddress = null;
+	
+	if($('#claim-address').val() != ''){
+		claimAddress = $('#claim-address').val();
+	}
+	if($('#latitude').val() != ''){
+		latitude = $('#latitude').val();
+	}
+	if($('#longitude').val() != ''){
+		longitude = $('#longitude').val();
+	}
+
+
+	var urlUser = location.protocol+"//"+location.host+"/es/reclamos?action=getGeolocationData";
+	title = claimAddress;
+	if(geolocationEnabled){	
+		$.get(urlUser, function(data){
+			
+			var geolocation = eval('('+data[1]+')');
+			claimAddress += ', '+geolocation.locality+', '+geolocation.province+' ,'+geolocation.country;
+			if(claimAddress != null && (latitude == null && longitude  == null)){
+				georef(claimAddress, title);
+			} else if(latitude == null && longitude  == null){
+				latitude = centerLatitude;
+				longitude = centerLongitude;
+				showPopupMapMultiplePoints(latitude, longitude, title);
+			}else{			
+				showPopupMapMultiplePoints(latitude, longitude, title);
+			}		
+		}, 'json');
+		
+	}else{
+		
+		if(latitude != null && longitude  != null){		
+			showPopupMapMultiplePoints(latitude, longitude, title);
+		}else{			
+			showPopupMapMultiplePoints(centerLatitude, centerLongitude, "");			
+		}		
+		
+	
+}
+}
+/**
+ * Get the map popup and show the claim on it
+ * @param claimId
+ */
+var claimAddress;
 function geoPositionMap(){
 	var latitude = null;
 	var longitude = null;
@@ -943,9 +999,9 @@ function geoPositionMap(){
 			showPopupMap(centerLatitude, centerLongitude, "");			
 		}		
 		
-	}	
+	
 }
-
+}
 function georef(address, title){
 	//Metodo que busca por BING Maps
 	var bingKey = "AtAJlYnfPc5VY-84vuu_UWPHrnS3BGGIXvFk8EClcvND7GbL0es-tQy2GB1ZaFYG";
@@ -1007,7 +1063,21 @@ function showPopupMap(lat, long, title){
 		''
 	);	
 }
-
+function showPopupMapMultiplePoints(lat, long, title){
+	// Llamar al mapa pasando lat, lon, titulo del icono
+	submitActionAjaxForm(
+		window.location.pathname, 
+		'mapGeoPositioningForMultipleClaims', 
+		'', 
+		'', 
+		'', 
+		'', 
+		{lat: lat,
+		lon: long,
+		title: title}, 
+		''
+	);	
+}
 
 
 
