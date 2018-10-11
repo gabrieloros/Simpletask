@@ -1,8 +1,8 @@
 <?php
 
-class MapNewEditClaim extends Render{
+class MapNewMultipleClaims extends Render{
 	
-	public function render($lat, $lon, $title){
+	public function render($lat, $lon, $markers){
 		
 		ob_start();
 		// // Load map
@@ -22,7 +22,10 @@ class MapNewEditClaim extends Render{
 			};
 
 			function initialize(){
-
+				
+				
+				var marker = null;
+				var index = 0;
 				//Map options
 				var mapOptions = {
 		            zoom: 13,
@@ -31,48 +34,48 @@ class MapNewEditClaim extends Render{
 		        };
 		        //Map instance
 				map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
-
+						
 				newLatitude = <?=$lat?>;
 				newLongitude = <?=$lon?>;
-				
-				<?php
-				//Create marker
-				$markerIcon = '/modules/claims/css/icon/mm_20_verde.png';
-				$markerTitle = $title;
-				
-				?>
-				var position = new google.maps.LatLng(<?=$lat?>,<?=$lon?>);
+				markers = <?=$markers?>
+					<?php
+					//Create marker
+					$markerIcon = '/modules/claims/css/icon/mm_20_verde.png';
+					$markerTitle = $title;
 
-				var marker = new google.maps.Marker({
-					position: position,
-					draggable: true,
-					animation: google.maps.Animation.DROP,
-					title: '<?=$markerTitle?>',
-					map: map,
-					icon: '<?=$markerIcon?>'
-				});
-
-
-				google.maps.event.addListener(map, 'click', function(event) {
-				addMarker(event.latLng, map);
-				});
-				  // Adds a marker to the map.
-				  function addMarker(location, map) {
-        			// Add the marker at the clicked location, and add the next-available label
-       			 	// from the array of alphabetical characters.
-					var marker = new google.maps.Marker({
-					position: location,
-					label: labels[labelIndex++],
-					map: map
+					?>
+					
+					google.maps.event.addListener(map, 'click', function(event) {
+					addMarker(event.latLng, map);
+					index++;
 					});
-				}
 
+					function addMarker(location, map) {
+						var datos = [];
+						var object = {};
+							marker = new google.maps.Marker({
+							position: location,
+							draggable: true,
+							animation: google.maps.Animation.DROP,
+							icon: '<?=$markerIcon?>',
+							map: map,
+							index: index
+							});
+							datos.push({"latLong" : marker.getPosition()});
+							object.datos = datos;
+							markers = object.datos;
+							//markers[index] = marker;
+					}
+
+				google.maps.event.addDomListener(window, 'load', initialize);
 				//Marker last position
 				google.maps.event.addListener(marker, 'dragend', function(){
 					newLatitude = marker.getPosition().lat();
 					newLongitude = marker.getPosition().lng();
+					points = marker.getPosition();
 				});
-
+				
+				return markers;
 		    }
 
 			//Load Google Maps scripts
@@ -99,15 +102,7 @@ class MapNewEditClaim extends Render{
 		</script>
 		<script type="text/javascript" src="/modules/settings/js/layers.js"></script>
 		<?php
-		
-				
-		$_REQUEST['jsToLoad'][] = "/modules/adr/js/polygon.min.js";
-		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-common.js";
-		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-assign-tasks.js";
-		$_REQUEST['jsToLoad'][] = "/modules/adr/js/adr-assign-tasks-map.js";
-		$_REQUEST['jsToLoad'][] = "/modules/settings/js/settings.js";
-		$_REQUEST['jsToLoad'][] = "/core/js/jquery.slidePanel.min.js";
-		$_REQUEST['jsToLoad'][] = "/modules/settings/js/layers.js";			
+			
 		
 
 		return ob_get_clean();

@@ -824,6 +824,52 @@ function saveClaim() {
 	}		
 
 }
+function saveClaims() {
+
+	$('#stateId').removeAttr('disabled');
+	$('#entry-date').removeAttr('disabled');
+	$('#input-type').removeAttr('disabled');
+	
+	if (validateForm('claimNewEditForm')) {
+
+		var formData = $('#claimNewEditForm').serialize();
+	
+		$.ajax({
+			scriptCharset: "utf-8" ,
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			cache:false,
+			dataType: "json",
+			type: "POST",
+			url: window.location.pathname + '?action=saveClaim',
+			async: true,
+			data: formData, 
+			beforeSend: function(){
+				showLoadingWheel();
+			},
+			complete: function(data){
+				showLoadingWheel();
+			},
+			success: function(data){
+				
+				$('body').append(data[1]);
+				
+				var result = trimString($('#basicAjaxResultContainer #ajaxMessageResult').html());
+
+				if(result == 1){
+					window.location = window.location.pathname + '?action=getList';
+				}
+				
+				$('#basicAjaxResultContainer').remove();
+				
+			},
+			error: function(){
+				genericNoDataFound(s_message['error_saving_claim']);
+			}
+		});
+		
+	}		
+
+}
 
 /**
  * Set the datepicker values
@@ -909,14 +955,14 @@ var claimAddress;
 function geoPositionMapMultiplePoints(){
 	var latitude = null;
 	var longitude = null;
-	var title = "";
+	var markers = [];
 	claimAddress = null;
 	
 	if($('#claim-address').val() != ''){
 		claimAddress = $('#claim-address').val();
 	}
 	if($('#latitude').val() != ''){
-		latitude = $('#latitude').val();
+		markers = $('#latitude').val();
 	}
 	if($('#longitude').val() != ''){
 		longitude = $('#longitude').val();
@@ -927,24 +973,23 @@ function geoPositionMapMultiplePoints(){
 	title = claimAddress;
 	if(geolocationEnabled){	
 		$.get(urlUser, function(data){
-			
 			var geolocation = eval('('+data[1]+')');
 			claimAddress += ', '+geolocation.locality+', '+geolocation.province+' ,'+geolocation.country;
 			if(claimAddress != null && (latitude == null && longitude  == null)){
-				georef(claimAddress, title);
+				georefMapMultiple(claimAddress, markers);
 			} else if(latitude == null && longitude  == null){
 				latitude = centerLatitude;
 				longitude = centerLongitude;
-				showPopupMapMultiplePoints(latitude, longitude, title);
+				showPopupMapMultiplePoints(latitude, longitude, markers);
 			}else{			
-				showPopupMapMultiplePoints(latitude, longitude, title);
+				showPopupMapMultiplePoints(latitude, longitude, markers);
 			}		
 		}, 'json');
 		
 	}else{
 		
 		if(latitude != null && longitude  != null){		
-			showPopupMapMultiplePoints(latitude, longitude, title);
+			showPopupMapMultiplePoints(latitude, longitude, markers);
 		}else{			
 			showPopupMapMultiplePoints(centerLatitude, centerLongitude, "");			
 		}		
@@ -1001,6 +1046,34 @@ function geoPositionMap(){
 		
 	
 }
+}
+function georefMapMultiple(address, markers){
+	//Metodo que busca por BING Maps
+	var bingKey = "AtAJlYnfPc5VY-84vuu_UWPHrnS3BGGIXvFk8EClcvND7GbL0es-tQy2GB1ZaFYG";
+	
+	$.ajax({
+       		url: "http://dev.virtualearth.net/REST/v1/Locations",
+        	dataType: "jsonp",
+        	data: {
+            		key: bingKey,
+            		q: address
+        	},
+        	jsonp: "jsonp",
+        	success: function (data) {
+            		var result = data.resourceSets[0];
+            		if (result && result.estimatedTotal > 0) {
+                	 	latitude = data.resourceSets[0].resources[0].point.coordinates[0];
+                	 	longitude = data.resourceSets[0].resources[0].point.coordinates[1];
+						 showPopupMapMultiplePoints(latitude, longitude, markers);
+            		}else
+			{				
+                        	latitude = centerLatitude;
+                       		longitude = centerLongitude;
+							   showPopupMapMultiplePoints(latitude, longitude, markers);
+			}
+        	}
+    	});
+
 }
 function georef(address, title){
 	//Metodo que busca por BING Maps
@@ -1063,8 +1136,7 @@ function showPopupMap(lat, long, title){
 		''
 	);	
 }
-function showPopupMapMultiplePoints(lat, long, title){
-	// Llamar al mapa pasando lat, lon, titulo del icono
+function showPopupMapMultiplePoints(lat, long, markers){
 	submitActionAjaxForm(
 		window.location.pathname, 
 		'mapGeoPositioningForMultipleClaims', 
@@ -1074,7 +1146,7 @@ function showPopupMapMultiplePoints(lat, long, title){
 		'', 
 		{lat: lat,
 		lon: long,
-		title: title}, 
+		markers: markers}, 
 		''
 	);	
 }
@@ -1084,12 +1156,15 @@ function showPopupMapMultiplePoints(lat, long, title){
 /**
  * Get the new claim position
  */
-var newLatitude, newLongitude;
+var newLatitude, newLongitude, points;
 function getClaimCurrentCoords(){
 	
 	if((newLatitude != undefined || newLatitude != '') && (newLongitude != undefined || newLongitude != '')){
 		$('#latitude').val(newLatitude);
 		$('#longitude').val(newLongitude);
+	}
+	if(points != undefined || points != ''){
+		$('#markers').val(points);
 	}
 	
 	PopupManager.getActive().close();

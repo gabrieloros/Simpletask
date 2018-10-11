@@ -1497,7 +1497,7 @@ class claimsActionManager extends ModuleActionManager {
 
 			require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/MapNewMultipleClaims.view.php';
 
-			$html = MapNewEditClaim::render($_REQUEST['lat'],$_REQUEST['lon'],$_REQUEST['title']);
+			$html = MapNewMultipleClaims::render($_REQUEST['lat'],$_REQUEST['lon'],$_REQUEST['title']);
 
 		}
 		catch (Exception $e){
