@@ -262,7 +262,7 @@ class ClaimsNewMultiple extends Render {
 							<div class="textbox">
 								<label>points:</label>
 								<div class="lineal-box2">
-									<input type="hidden" id="markers" class="form-control" name="markers" readonly="readonly"/>
+									<input type="text" id="markers" class="form-control" name="markers" readonly="readonly"/>
 								</div>
 							</div>
 						</div>

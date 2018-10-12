@@ -1332,7 +1332,102 @@ class claimsActionManager extends ModuleActionManager {
 		return $render;
 
 	}
+/**
+	 * Save the claim content
+	 * @return AjaxRender
+	 */
+	public function saveClaimsMultiples() {
 
+		$_SESSION ['logger']->debug ( __METHOD__ . ' begin' );
+
+		try {
+			//Check required fields
+			if (! isset ( $_POST['subjectId'] ) || $_POST['subjectId'] == null) {
+				self::$logger->error ( 'subject parameter expected' );
+				throw new InvalidArgumentException ( 'subject parameter expected' );
+			}
+
+			if (! isset ( $_POST['inputTypeId'] ) || $_POST['inputTypeId'] == null) {
+				self::$logger->error ( 'inputTypeId parameter expected' );
+				throw new InvalidArgumentException ( 'inputTypeId parameter expected' );
+			}
+
+			if (! isset ( $_POST['causeId'] ) || $_POST['causeId'] == null) {
+				self::$logger->error ( 'causeId parameter expected' );
+				throw new InvalidArgumentException ( 'causeId parameter expected' );
+			}
+
+			if (! isset ( $_POST['dependencyId'] ) || $_POST['dependencyId'] == null) {
+				self::$logger->error ( 'dependencyId parameter expected' );
+				throw new InvalidArgumentException ( 'dependencyId parameter expected' );
+			}
+
+			if (! isset ( $_POST['stateId'] ) || $_POST['stateId'] == null) {
+				self::$logger->error ( 'stateId parameter expected' );
+				throw new InvalidArgumentException ( 'stateId parameter expected' );
+			}
+
+			if (! isset ( $_POST['entryDate'] ) || $_POST['entryDate'] == null) {
+				self::$logger->error ( 'entryDate parameter expected' );
+				throw new InvalidArgumentException ( 'entryDate parameter expected' );
+			}
+
+			if (! isset ( $_POST['requesterName'] ) || $_POST['requesterName'] == null) {
+				self::$logger->error ( 'requesterName parameter expected' );
+				throw new InvalidArgumentException ( 'requesterName parameter expected' );
+			}
+
+			if (! isset ( $_POST['requesterPhone'] ) || $_POST['requesterPhone'] == null) {
+				self::$logger->error ( 'requesterPhone parameter expected' );
+				throw new InvalidArgumentException ( 'requesterPhone parameter expected' );
+			}
+			
+			$result = $this->manager->saveManualClaimsMultiple($_REQUEST['id'], $_POST);
+			$message = 'Se actualizó el reclamo correctamente';
+			if(isset($_REQUEST['id']) && $_REQUEST['id'] != null && $_REQUEST['id'] != 0 && $_REQUEST['id'] !='' && ! empty($_REQUEST['id'])){
+				
+			$claim = $this->manager->getClaim($_REQUEST['id']);
+
+			
+			//Verificamos que el reclamo tenga un usuario asignado para enviarle la notificación y el estado sea pendiente
+			
+			if($claim->getAssigned() && $claim->getUserId() != null && $claim->getStateId() == claimsConcepts::PENDINGSTATE){
+				
+				$user  = $this->adrUserManager->getUser($claim->getUserId());
+				$registrationId = $user->getRegistrationId();
+				
+				if(isset($registrationId)){
+				$crp = new ClaimRequestPush(array($registrationId), $claim, claimsConcepts::PUSH_ACTION_UPDATE);
+				$cnp = new ClaimNotificationPush();
+				$cnp->sendClaimNotificationPush($crp);					
+				}else{
+					
+					$_SESSION ['logger']->info('No se envió notificacion push debido a que el usuario '.$claim->getUserId(). ' no tiene registrationid');
+					
+				}
+												
+			}
+			}
+			
+		}
+		catch (Exception $e) {
+			$message = $e->getMessage();
+			$result = false;
+		}
+
+		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/views/BasicAjaxMessageResponse.view.php';
+
+		$html = BasicAjaxMessageResponse::render($message, $result);
+
+		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/core/classes/actions/AjaxRender.class.php';
+
+		$render = new AjaxRender($html);
+
+		$_SESSION ['logger']->debug ( __METHOD__ . ' end' );
+
+		return $render;
+
+	}
 
 	/**
 	 * Save the claim content
@@ -1400,11 +1495,7 @@ class claimsActionManager extends ModuleActionManager {
 			//	self::$logger->error ( 'imagen no se recibio ninguna imagen' );
 
 		//	}
-
-
-
-			
-			
+	
 			
 			$result = $this->manager->saveManualClaim($_REQUEST['id'], $_POST);
 			$message = 'Se actualizó el reclamo correctamente';

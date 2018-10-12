@@ -1893,7 +1893,46 @@ class ClaimsManager implements ModuleManager {
 		return true;
 	}
 
+/**
+	 * Add a claims multiple
+	 *
+	 * @param int $claimId
+	 * @param array $claimData
+	 * @throws InvalidArgumentException
+	 * @throws Exception
+	 * @return boolean
+	 */
+	public function saveManualClaimsMultiple($claimId, $claimData) {
 
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
+
+		if (! isset ( $claimData ) || $claimData == null || ! is_array ( $claimData )) {
+			self::$logger->error ( 'claimData must be an array' );
+			throw new InvalidArgumentException ( 'claimData must be an array' );
+		}
+
+		if (! isset ( $claimId ) || $claimId == null) {
+			//Nuevo reclamo, generar code.
+			$manualClaimFactory = new ManualClaimFactory();
+
+			//Devuelve el ManualClaimCreator
+			$creator = $manualClaimFactory->create();
+
+			$records = $creator->create($claimData);
+
+			if(!$records) {
+				self::$logger->error ( 'Error inserting a new claim' );
+				throw new Exception ( 'Error inserting a new claim' );
+			}
+
+		} else {
+			
+		}
+
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+
+		return true;
+	}
 	/**
 	 * Add or update a claim
 	 *

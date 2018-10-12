@@ -840,7 +840,7 @@ function saveClaims() {
 			cache:false,
 			dataType: "json",
 			type: "POST",
-			url: window.location.pathname + '?action=saveClaim',
+			url: window.location.pathname + '?action=saveClaimsMultiples',
 			async: true,
 			data: formData, 
 			beforeSend: function(){
@@ -1156,21 +1156,20 @@ function showPopupMapMultiplePoints(lat, long, markers){
 /**
  * Get the new claim position
  */
-var newLatitude, newLongitude, points;
+var newLatitude, newLongitude, markers;
 function getClaimCurrentCoords(){
 	
 	if((newLatitude != undefined || newLatitude != '') && (newLongitude != undefined || newLongitude != '')){
 		$('#latitude').val(newLatitude);
 		$('#longitude').val(newLongitude);
 	}
-	if(points != undefined || points != ''){
-		$('#markers').val(points);
+	if(markers!= undefined || markers!= ''){
+		$('#markers').val(markers);
 	}
 	
 	PopupManager.getActive().close();
 
 }
-
 
 //------------------------------------------------------------
 //------------------------------------------------------------

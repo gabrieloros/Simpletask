@@ -34,7 +34,7 @@ class MapNewMultipleClaims extends Render{
 		        };
 		        //Map instance
 				map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
-						
+				var datos = [];		
 				newLatitude = <?=$lat?>;
 				newLongitude = <?=$lon?>;
 				markers = <?=$markers?>
@@ -51,9 +51,8 @@ class MapNewMultipleClaims extends Render{
 					});
 
 					function addMarker(location, map) {
-						var datos = [];
-						var object = {};
-							marker = new google.maps.Marker({
+						
+							var marker = new google.maps.Marker({
 							position: location,
 							draggable: true,
 							animation: google.maps.Animation.DROP,
@@ -61,9 +60,9 @@ class MapNewMultipleClaims extends Render{
 							map: map,
 							index: index
 							});
-							datos.push({"latLong" : marker.getPosition()});
-							object.datos = datos;
-							markers = object.datos;
+							datos.push(marker.getPosition());
+						
+							markers = datos;
 							//markers[index] = marker;
 					}
 
