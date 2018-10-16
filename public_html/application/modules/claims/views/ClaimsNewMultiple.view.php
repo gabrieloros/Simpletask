@@ -4,7 +4,8 @@ class ClaimsNewMultiple extends Render {
 	static public function render ($claim, $subjectsList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress = false) {
 		
 		ob_start();
-	
+		
+		
 		/* @var $claim Claim */
 		$style = '';
 		$disabledInputType = 'disabled="disabled"';
@@ -92,6 +93,7 @@ class ClaimsNewMultiple extends Render {
 								<select id="causeId" class="form-control mandatory-input" name="causeId" />
 								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
 								<?php
+							
 								/* @var $cause Cause */
 								foreach ($causeList as $cause) {
 									$selectedCause = '';
@@ -270,7 +272,7 @@ class ClaimsNewMultiple extends Render {
 							<div class="textbox">
 								<label>:</label>
 								<div class="lineal-box2">
-									<input type="text" id="latitude" class="form-control" name="latitude" readonly="readonly"   value="<?=$claim->getLatitude()?>" />
+									<input type="text" id="latitude" class="form-control" name="latitude" readonly="readonly"   value="" />
 								</div>
 							</div>
 						</div>
@@ -278,7 +280,7 @@ class ClaimsNewMultiple extends Render {
 							<div class="textbox">
 								<label>:</label>
 								<div class="lineal-box2">
-									<input type="text" id="longitude" class="form-control" name="longitude" readonly="readonly"  value="<?=$claim->getLongitude()?>" />
+									<input type="text" id="longitude" class="form-control" name="longitude" readonly="readonly"  value="" />
 								</div>
 							</div>
 						</div> -->
@@ -315,7 +317,7 @@ class ClaimsNewMultiple extends Render {
 							<input type="hidden" name="id" id="id" value="<?=$claim->getId()?>" />
 
 
-							<div onclick="saveClaims();" title="<?=Util::getLiteral('claim_save')?>" class="btn btn-success action_button"><?=Util::getLiteral('claim_save')?></div>
+							<div onclick="saveClaim();" title="<?=Util::getLiteral('claim_save')?>" class="btn btn-success action_button"><?=Util::getLiteral('claim_save')?></div>
 
 
 							<div onclick="cancelSaveClaim();" title="<?=Util::getLiteral('claim_cancel_save')?>" class="btn btn-danger action_button"><?=Util::getLiteral('claim_cancel_save')?></div>

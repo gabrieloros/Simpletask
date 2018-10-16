@@ -31,7 +31,7 @@ class ManualClaimType extends ClaimType {
 		$entryDate = $data['entryDate'];
 		
 		//Address
-		$address = '';
+		$address = $data['claimAddress'];
 		
 		//Code generation
 		$claimCount = $this->getClaimsCount();
@@ -70,32 +70,40 @@ class ManualClaimType extends ClaimType {
 		if(isset($data['id_type_address'])){
 			
 		$claimObj->setTypeAddressId($data['id_type_address']);
-			
-		}
-
-		//$cadena = "-32.90660063906105|-68.85388812422758,-32.92317283709698|-68.86247119307524,-32.9125093438245|-68.88015231490141,-32.9125093438245|-68.83912524580961,-32.890169485130166|-68.86779269576078,-32.88699820982297|-68.85611972212797,-32.894926185263444|-68.85285815596586";
-		$cadena = $data ['markers'];
-		$array = explode(",", $cadena);
-		echo "<br><br>El número de elementos en el array es: " . count($array);
-		foreach  ($array as $valor) { 
-
-			$latLong = explode("|", $valor);
-			echo $latLong[0];
-			echo $latLong[1];
-			echo "<br>";
-			
-			$claimObj->setLatitude( $latLong[0]);
-			$claimObj->setLongitude($latLong[1]);
-
-			$result = $claimObj->insert();
-			if(!$result){
-				$_SESSION['logger']->error("Error inserting claim");
-				throw new Exception("Error inserting claim");
-			}
-	
-		}
 		
-	
+			
+		}
+		//Get GeoLocation data
+		if (trim ( $data ['claimAddress'] ) != '' && trim($data ['latitude']) == '' && trim($data['longitude']) == '') {
+			if(trim($address) != '') {
+				require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/util/GoogleAPI/GeoLocation.class.php';
+			
+				$fullAddress = trim($address) . ' ' . $_SESSION['loggedUser']->getLocationName() . ' ' . $_SESSION['loggedUser']->getProvinceName() . ' ' . $_SESSION['loggedUser']->getCountryName();
+			
+				$geoLocation = new GeoLocation();
+				$geoCodes = $geoLocation->getGeoLocationFromAddress($fullAddress);
+			
+				if(is_array($geoCodes) && count($geoCodes) > 0){
+					$claimObj->setLatitude($geoCodes ['lat']);
+					$claimObj->setLongitude($geoCodes ['lon']);
+				}
+			}			
+			
+		}else{
+			if(trim($data ['latitude']) != '' && trim($data['longitude']) != ''){				
+				$claimObj->setLatitude($data['latitude']);
+				$claimObj->setLongitude($data['longitude']);				
+			}
+						
+		}
+
+		$result = $claimObj->insert();
+
+		if(!$result){
+			$_SESSION['logger']->error("Error inserting claim");
+			throw new Exception("Error inserting claim");
+		}
+
 		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
 		
 		return true;

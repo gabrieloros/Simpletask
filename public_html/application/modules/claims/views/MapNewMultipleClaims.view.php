@@ -60,7 +60,7 @@ class MapNewMultipleClaims extends Render{
 							map: map,
 							index: index
 							});
-							datos.push(marker.getPosition());
+							datos.push(marker.getPosition().lat() + "|" + marker.getPosition().lng());
 						
 							markers = datos;
 							//markers[index] = marker;
