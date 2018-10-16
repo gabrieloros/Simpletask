@@ -190,7 +190,6 @@ try {
 	$strlenURL = strlen($_SERVER ["REQUEST_URI"]);
 	$passportArray = split("&",substr ( $_SERVER ["REQUEST_URI"], $postPosition+1,strlen($_SERVER ["REQUEST_URI"])));
 		//si es publicClaim hace login con usuario public
-		var_dump( $_GET ['action']);
 		//var_dump($_SESSION ['loggedUser'] );
 		
 	//	var_dump(strcmp($_GET ['action'],"getPublicClaims"));  $_GET ['action'] != NULL && $_GET ['action'] != 'undefined'&& 
