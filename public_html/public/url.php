@@ -189,8 +189,12 @@ try {
 	$postPosition = strpos ( $_SERVER ["REQUEST_URI"], '?' );
 	$strlenURL = strlen($_SERVER ["REQUEST_URI"]);
 	$passportArray = split("&",substr ( $_SERVER ["REQUEST_URI"], $postPosition+1,strlen($_SERVER ["REQUEST_URI"])));
-        //si es publicClaim hace login con usuario public
-	if( strcmp($_GET ['action'],"getPublicClaims") == 0 && ! isset($_SESSION ['loggedUser'] ) )
+		//si es publicClaim hace login con usuario public
+		//var_dump($_SESSION ['loggedUser'] );
+		
+	//	var_dump(strcmp($_GET ['action'],"getPublicClaims"));  $_GET ['action'] != NULL && $_GET ['action'] != 'undefined'&& 
+
+	if(strcmp($_GET ['action'],"getPublicClaims") == 0 && ! isset($_SESSION ['loggedUser'] ) )
         {
                  $actionManager = new LoginActionManager ();
                  $actionManager->setDefaultAction ( LoginActionManagerActions::NOLOGIN );
@@ -219,8 +223,8 @@ try {
 		
 		$responseAction = $actionManager->execute ();
 		
-	}
-		
+	
+}	
 	$_SESSION ['logger']->debug ( "executing response of : " . get_class ( $responseAction ) );
 	$responseAction->execute ();
 		

@@ -33,7 +33,7 @@ class PopupConfirm extends AdvancedPopup {
 		
 		$output .= $this->html;
 		
-		$output .= "	<div class=\"botton-aligment\">
+		$output .= "	<div class=\"botton-aligment-sucess\">
 							<input type=\"button\" value=\"".$_SESSION ['s_message'] ['confirm_map_accept']."\" onclick=\"getClaimCurrentCoords();\" onkeypress=\"getClaimCurrentCoords();\" class=\"confirm_icon action_button\" />
 						</div>";
 		$output .= "	<div class=\"botton-aligment\">

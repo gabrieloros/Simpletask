@@ -30,6 +30,7 @@ sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/modu
 sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/core/js/
 sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/public/core/css/
 sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/public_html/log/
+sudo chmod 777 /var/www/capital.gestionyservicios.com.ar/log/
 
 sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/public/modules/claims/imports/
 sudo chmod 777 /var/www/capital.simpletask.com.ar/public_html/public/core/js/

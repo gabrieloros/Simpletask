@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/../application/modules/claims/enums/c
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/CAUClaimType.class.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/TelepromClaimType.class.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/CAUClaimTypeElectricity.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/DataClaimType.class.php';
 
 class ImporterFactory {
 	
@@ -61,6 +62,10 @@ class ImporterFactory {
 			}
 			case claimsConcepts::CLAIMTYPETELEPROM:{
 				$claimType = new TelepromClaimType();
+				break;
+			}
+			case claimsConcepts::CLAIMTYPEDATA:{
+				$claimType = new DataClaimType();
 				break;
 			}
 			default:{
