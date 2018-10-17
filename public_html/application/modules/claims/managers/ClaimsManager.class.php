@@ -125,11 +125,10 @@ class ClaimsManager implements ModuleManager {
 			$obj->setName($element['name']);
 
 			$list [] = $obj;
+			
 		}
 
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
-
-
 
 		return $list;
 	}
@@ -1893,6 +1892,15 @@ class ClaimsManager implements ModuleManager {
 		return true;
 	}
 
+/**
+	 * Add a claims multiple
+	 *
+	 * @param int $claimId
+	 * @param array $claimData
+	 * @throws InvalidArgumentException
+	 * @throws Exception
+	 * @return boolean
+	 */
 
 	/**
 	 * Add or update a claim
