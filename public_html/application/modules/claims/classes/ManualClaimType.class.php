@@ -29,69 +29,133 @@ class ManualClaimType extends ClaimType {
 		
 		//Entry date
 		$entryDate = $data['entryDate'];
+		$inputTypeid = $data['inputTypeId'];
+		$originId = $data['originId'];
 		
 		//Address
-		$address = '';
-		
-		//Code generation
-		$claimCount = $this->getClaimsCount();
-		$code = $this->generateCode($claimCount);
-		
-		$claimObj = new Claim(null, $code, $data['requesterName'], $address, $data['requesterPhone']);
-		
-		//Set entry date
-		$claimObj->setEntryDate($entryDate, 'd/m/Y');
-		
-		//Set input type
-		$claimObj->setInputTypeId($data['inputTypeId']);
-		
-		//Set origin
-		$claimObj->setOriginId($data['originId']);
-		
-		//Set subject
-		$claimObj->setSubjectId($data['subjectId']);
-		
-		//Set cause
-		$claimObj->setCauseId($data['causeId']);
-		
-		//Set dependency
-		$claimObj->setDependencyId($data['dependencyId']);
-		
-		//Set assigned
-		$claimObj->setAssigned('false');
-		
-		//Set state
-		//Siempre viene pending
-		$claimObj->setStateId($data['stateId']);
-		
-		//Set Neighborhood
-		$claimObj->setNeighborhood($data['neighborhood']);
-
-		if(isset($data['id_type_address'])){
-			
-		$claimObj->setTypeAddressId($data['id_type_address']);
-			
+		if($data['address']!= null && $data['subjectId']!="undefined"){
+			$address = $data['address'];
+		}else{
+			$address = '';
 		}
+		
+		
+		
 
-		//$cadena = "-32.90660063906105|-68.85388812422758,-32.92317283709698|-68.86247119307524,-32.9125093438245|-68.88015231490141,-32.9125093438245|-68.83912524580961,-32.890169485130166|-68.86779269576078,-32.88699820982297|-68.85611972212797,-32.894926185263444|-68.85285815596586";
-		$cadena = $data ['markers'];
-		$array = explode(",", $cadena);
-		echo "<br><br>El número de elementos en el array es: " . count($array);
-		foreach  ($array as $valor) { 
+		$subjectId = $data['subjectId'];
+		$causeId = $data['causeId'];
+		$dependencyId = $data['dependencyId'];
+		$stateId = $data['stateId'];
+		$neightborhood = $data['neighborhood'];
+		$name =  $data['requesterName'];
+		$phone = $data['requesterPhone'];
+		$detail = $data['detail'];
 
-			$latLong = explode("|", $valor);
-			echo $latLong[0];
-			echo $latLong[1];
-			echo "<br>";
+		if ( $data ['latitude']!= "undefined" && $data ['latitude']!= null && $data ['longitude']!= "undefined" && $data ['longitude']!= null  ){
+
+			$claimCount = $this->getClaimsCount();
+			$code = $this->generateCode($claimCount);
+			$claimObj = new Claim(null, $code,$name, $address,$phone);
 			
-			$claimObj->setLatitude( $latLong[0]);
-			$claimObj->setLongitude($latLong[1]);
-
-			$result = $claimObj->insert();
-			if(!$result){
-				$_SESSION['logger']->error("Error inserting claim");
-				throw new Exception("Error inserting claim");
+			//Set entry date
+			$claimObj->setEntryDate($entryDate, 'd/m/Y');
+			
+			//Set input type
+			$claimObj->setInputTypeId($inputTypeid);
+			
+			//Set origin
+			$claimObj->setOriginId($originId);
+			
+			//Set subject
+			$claimObj->setSubjectId($subjectId);
+			
+			//Set cause
+			$claimObj->setCauseId($causeId);
+			
+			//Set dependency
+			$claimObj->setDependencyId($dependencyId);
+			
+			//Set assigned
+			$claimObj->setAssigned('false');
+			
+			//Set state
+			//Siempre viene pending
+			$claimObj->setStateId($stateId);
+			
+			//Set Neighborhood
+			$claimObj->setNeighborhood($neightborhood);
+	
+			if(isset($data['id_type_address'])){
+				
+			$claimObj->setTypeAddressId($data['id_type_address']);
+				
 			}
+			$claimObj->setDetail($detail);
+			$claimObj->setLatitude($data['latitude']);
+			$claimObj->setLongitude($data['longitude']);
+
+		}else {
+
+					//$cadena = "-32.90660063906105|-68.85388812422758,-32.92317283709698|-68.86247119307524,-32.9125093438245|-68.88015231490141,-32.9125093438245|-68.83912524580961,-32.890169485130166|-68.86779269576078,-32.88699820982297|-68.85611972212797,-32.894926185263444|-68.85285815596586";
+					$cadena = $data ['markers'];
+					$array = explode(",", $cadena);
+					echo "<br><br>El número de elementos en el array es: " . count($array);
+					foreach  ($array as $valor) { 
+						//Code generation
+			$claimCount = $this->getClaimsCount();
+			$code = $this->generateCode($claimCount);
+			$claimObj = new Claim(null, $code,$name, $address,$phone);
+			
+			//Set entry date
+			$claimObj->setEntryDate($entryDate, 'd/m/Y');
+			
+			//Set input type
+			$claimObj->setInputTypeId($inputTypeid);
+			
+			//Set origin
+			$claimObj->setOriginId($originId);
+			
+			//Set subject
+			$claimObj->setSubjectId($subjectId);
+			
+			//Set cause
+			$claimObj->setCauseId($causeId);
+			
+			//Set dependency
+			$claimObj->setDependencyId($dependencyId);
+			
+			//Set assigned
+			$claimObj->setAssigned('false');
+			
+			//Set state
+			//Siempre viene pending
+			$claimObj->setStateId($stateId);
+			
+			//Set Neighborhood
+			$claimObj->setNeighborhood($neightborhood);
+	
+			if(isset($data['id_type_address'])){
+				
+			$claimObj->setTypeAddressId($data['id_type_address']);
+				
+			}
+			$claimObj->setDetail($detail);
+
+	
+				$latLong = explode("|", $valor);
+				echo $latLong[0];
+				echo $latLong[1];
+				echo "<br>";
+				
+				$claimObj->setLatitude( $latLong[0]);
+				$claimObj->setLongitude($latLong[1]);
+	
+				$result = $claimObj->insert();
+				var_dump ("Este es el result");
+				var_dump ("Este es el result:" . $result);
+
+		}
+			
 	
 		}
 		

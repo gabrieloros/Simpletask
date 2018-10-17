@@ -262,10 +262,14 @@ class ClaimsNewMultiple extends Render {
 
 						<div class="claim-form-item">
 							<div class="textbox">
-								<label>points:</label>
+								<label>Cant de Reclamos:</label>
 								<div class="lineal-box2">
-									<input type="text" id="markers" class="form-control" name="markers" readonly="readonly"/>
+									<input type="hidden" id="markers" class="form-control" name="markers" readonly="readonly"/>
 								</div>
+								<div class="lineal-box2">
+									<input type="text" id="countMarkers" class="form-control" name="countMarkers" readonly="readonly"/>
+								</div>
+								<br>
 							</div>
 						</div>
 						<!-- <div class="claim-form-item">
@@ -317,7 +321,7 @@ class ClaimsNewMultiple extends Render {
 							<input type="hidden" name="id" id="id" value="<?=$claim->getId()?>" />
 
 
-							<div onclick="saveClaim();" title="<?=Util::getLiteral('claim_save')?>" class="btn btn-success action_button"><?=Util::getLiteral('claim_save')?></div>
+							<div onclick="saveClaims();" title="<?=Util::getLiteral('claim_save')?>" class="btn btn-success action_button"><?=Util::getLiteral('claim_save')?></div>
 
 
 							<div onclick="cancelSaveClaim();" title="<?=Util::getLiteral('claim_cancel_save')?>" class="btn btn-danger action_button"><?=Util::getLiteral('claim_cancel_save')?></div>

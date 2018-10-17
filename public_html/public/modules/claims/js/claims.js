@@ -824,7 +824,56 @@ function saveClaim() {
 	}		
 
 }
+/**
+ * Save a claim through ajax
+ */
+function saveClaims() {
 
+	$('#stateId').removeAttr('disabled');
+	$('#entry-date').removeAttr('disabled');
+	$('#input-type').removeAttr('disabled');
+	
+	if (validateForm('claimNewEditForm')) {
+
+		var formData = $('#claimNewEditForm').serialize();
+	
+		$.ajax({
+			scriptCharset: "utf-8" ,
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			cache:false,
+			dataType: "json",
+			type: "POST",
+			url: window.location.pathname + '?action=saveClaims',
+			async: true,
+			data: formData, 
+			beforeSend: function(){
+				showLoadingWheel();
+			},
+			complete: function(data){
+				showLoadingWheel();
+			},
+			success: function(data){
+				
+				$('body').append(data[1]);
+				
+				var result = trimString($('#basicAjaxResultContainer #ajaxMessageResult').html());
+
+				if(result == 1){
+					window.location = window.location.pathname + '?action=getList';
+				}
+				
+				$('#basicAjaxResultContainer').remove();
+				
+			},
+			error: function(){
+				
+				genericNoDataFound(s_message['error_saving_claim']);
+			}
+		});
+		
+	}		
+
+}
 
 /**
  * Set the datepicker values
@@ -1120,6 +1169,7 @@ function getClaimCurrentCoords(){
 	}
 	if(markers!= undefined || markers!= ''){
 		$('#markers').val(markers);
+		$('#countMarkers').val(markers.length);
 	}
 	
 	PopupManager.getActive().close();
