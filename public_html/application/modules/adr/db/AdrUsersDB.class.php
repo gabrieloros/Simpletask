@@ -116,6 +116,31 @@ class AdrUsersDB extends Util {
 
 	}
 
+	public static function getListUsers() {
+
+		$query = '';
+
+		Util::getConnectionType ();
+
+		switch ($_SESSION ['s_dbConnectionType']) {
+			case Util::DB_MYSQL :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_ORACLE :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_SQLSERVER :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_POSTGRESQL :
+				$query = AdrUsersPostgreSQL::getListUsers();
+				break;
+		}
+
+		return $query;
+
+	}
+
 	public static function updateAdrUser($userData) {
 
 		$query = '';

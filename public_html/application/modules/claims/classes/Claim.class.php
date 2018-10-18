@@ -210,6 +210,8 @@ class Claim {
 	private $mat_3;
 	private $mat_4;
 	private $mat_5;
+
+	private $systemUserId
 	
 	//----------------------------------------------------------------------------------
 
@@ -292,7 +294,7 @@ class Claim {
 			$claimData['neighborhood'] = $this->neighborhood;
 			$claimData['regionId'] = Util::getClaimRegion($this->latitude, $this->longitude);
 			$claimData['id_type_address'] = isset($this->typeAddressId)?$this->typeAddressId:'NULL';
-
+			$claimData["systemUserId"] = $this->systemUserId;
 			$claimData["priority"] = $this->priority;
 			$claimData["detail"] = $this->detail;
 			
@@ -352,6 +354,19 @@ class Claim {
 	 */
 	public function setSubjectId($subjectId) {
 		$this->subjectId = $subjectId;
+	}
+	/**
+	 * @return the $systemUserId
+	 */
+	public function getSystemUserId() {
+		return $this->systemUserId;
+	}
+
+	/**
+	 * @param int $systemUserId
+	 */
+	public function setSystemUserId($systemUserId) {
+		$this->systemUserId = $systemUserId;
 	}
 
 	/**

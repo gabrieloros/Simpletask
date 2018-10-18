@@ -144,6 +144,29 @@ class AdrUsersPostgreSQL extends UtilPostgreSQL {
 
 	}
 
+	public static function getListUsers() {
+
+		self::initializeSession ();
+
+		self::$logger->debug ( __METHOD__ . ' begin' );
+
+		$query = 'SELECT
+		su.id AS userid,
+		su.userlogin AS userlogin,
+		su.name AS name,
+		su.surname AS surname	
+		FROM systemuser su'
+		;
+
+		self::$logger->debug ( __METHOD__ . ' QUERY: ' . $query );
+
+		self::$logger->debug ( __METHOD__ . ' end' );
+
+		return $query;
+
+	}
+
+
 	public static function updateAdrUser($userData) {
 
 		self::initializeSession ();

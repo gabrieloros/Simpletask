@@ -211,6 +211,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		stateid,
 		entrydate,
 		detail,
+		systemuserid,
 		closedate,
 		requestername,
 		claimaddress,
@@ -234,6 +235,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		' . $claimData ["stateId"] . ',
 		\'' . $claimData ["entryDate"] . '\',
 		\'' . $claimData ["detail"] . '\',
+		' . $claimData ["systemUserId"] . ',
 
 		DEFAULT,
 		\'' . $claimData ["requesterName"] . '\',
@@ -2188,6 +2190,32 @@ public static function getPublicClaimCoords($filters) {
 		self::initializeSession ();
 
 		self::$logger->debug ( __METHOD__ . ' begin' );
+
+		$query = "INSERT INTO claimsystemuseradr(
+		systemuseradrid,
+		claimid,
+		listplace
+		) VALUES(
+		".$userId.",
+		".$claimId.",
+		".$placeNum."
+		)";
+
+		self::$logger->debug ( __METHOD__ . ' QUERY: ' . $query );
+
+		self::$logger->debug ( __METHOD__ . ' end' );
+
+		return $query;
+
+	}
+
+
+	public static function setListPlaceForClaim($userId, $claimId) {
+
+		self::initializeSession ();
+
+		self::$logger->debug ( __METHOD__ . ' begin' );
+		$placeNum = "(select max(listplace)+1 from claimsystemuseradr where systemuseradrid=".$userId.")";
 
 		$query = "INSERT INTO claimsystemuseradr(
 		systemuseradrid,
