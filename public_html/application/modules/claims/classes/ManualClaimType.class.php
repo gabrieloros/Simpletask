@@ -50,6 +50,7 @@ class ManualClaimType extends ClaimType {
 		$name =  $data['requesterName'];
 		$phone = $data['requesterPhone'];
 		$detail = $data['detail'];
+		
 
 		if ( $data ['latitude']!= "undefined" && $data ['latitude']!= null && $data ['longitude']!= "undefined" && $data ['longitude']!= null  ){
 
@@ -94,6 +95,8 @@ class ManualClaimType extends ClaimType {
 			$claimObj->setLatitude($data['latitude']);
 			$claimObj->setLongitude($data['longitude']);
 
+			
+
 		}else {
 
 					//$cadena = "-32.90660063906105|-68.85388812422758,-32.92317283709698|-68.86247119307524,-32.9125093438245|-68.88015231490141,-32.9125093438245|-68.83912524580961,-32.890169485130166|-68.86779269576078,-32.88699820982297|-68.85611972212797,-32.894926185263444|-68.85285815596586";
@@ -106,6 +109,17 @@ class ManualClaimType extends ClaimType {
 			$code = $this->generateCode($claimCount);
 			$claimObj = new Claim(null, $code,$name, $address,$phone);
 			
+			if($data['userId'] != null && $data['userId'] != ''){
+
+			$claimObj->setSystemUserId($data['userId']);
+				//Set assigned
+			$claimObj->setAssigned('true');
+			
+			}else{
+				//Set assigned
+			$claimObj->setAssigned('false');
+			$claimObj->setSystemUserId(null);
+			}
 			//Set entry date
 			$claimObj->setEntryDate($entryDate, 'd/m/Y');
 			
@@ -124,8 +138,6 @@ class ManualClaimType extends ClaimType {
 			//Set dependency
 			$claimObj->setDependencyId($dependencyId);
 			
-			//Set assigned
-			$claimObj->setAssigned('false');
 			
 			//Set state
 			//Siempre viene pending

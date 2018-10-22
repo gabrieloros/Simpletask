@@ -260,10 +260,46 @@ class AdrUsersManager implements ModuleManager {
 			$user->setStateName($rs[0]['statename']);
 			$user->setRegistrationId($rs[0]['registrationid']);
 		}
+		
 
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
 
 		return $user;
+
+	}
+
+	/**
+	 * 
+	 */
+	public function getListUsers() {
+
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
+		$list = array ();
+
+		$query = AdrUsersDB::getListUsers();
+
+		$connectionManager = ConnectionManager::getInstance ();
+
+		$rs = $connectionManager->select ( $query );
+
+
+		if(is_array($rs)){
+
+			foreach ( $rs as $element ) {
+
+				$obj = new AdrUser( $element['userid'], $element['name'], $element['surname'] );
+			
+				$obj->setId($element['userid']);
+				$obj->setFirstName($element['name']);
+				$obj->setLastName($element['surname']);
+
+				$list [] = $obj;
+			}
+
+		}
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+
+		return $list;
 
 	}
 

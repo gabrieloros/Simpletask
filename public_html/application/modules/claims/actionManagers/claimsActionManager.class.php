@@ -1309,15 +1309,17 @@ class claimsActionManager extends ModuleActionManager {
 		//States
 		$stateList = $this->manager->getStatesList();
 
+		$usersList = $this->adrUserManager->getListUsers();
+
 		$html = '';
 
 		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/ClaimsNewMultiple.view.php';
 
 		$countMapCity = $this->manager->getCountMapCity();
 		$typeAddress = $countMapCity > 0;
-		//var_dump($claim);
-		//die();
-		$html .= ClaimsNewMultiple::render($claim, $subjectList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress);
+		// var_dump($usersList);
+		// die();
+		$html .= ClaimsNewMultiple::render($claim, $subjectList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress, $usersList);
 
 		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/core/factories/MasterFactory.class.php';
 
