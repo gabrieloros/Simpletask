@@ -1,10 +1,11 @@
 <?php
 class ClaimsNewMultiple extends Render {
 
-	static public function render ($claim, $subjectsList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress = false) {
+	static public function render ($claim, $subjectsList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress = false,$usersList) {
 		
 		ob_start();
-		
+		 //var_dump($usersList);
+		//  die();
 		
 		/* @var $claim Claim */
 		$style = '';
@@ -122,6 +123,28 @@ class ClaimsNewMultiple extends Render {
 									}
 									echo '<option value="'.$dependency->getId().'" '.$selectedDependency.'>'.$dependency->getName().'</option>';
 								}
+								?>
+								</select>
+							</div>
+						</div>
+						<div >
+							<div class="textbox">
+								<label>Asignar a:</label>
+							</div>
+							<div class="opt-box">
+								<select id="userId" class="form-control mandatory-input" name="userId" />
+								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
+								<?php
+						
+								/* @var $cause Cause */
+								 foreach ($usersList as $user) {
+	
+								// 	$selectedUser = '';
+								// 	if($user->getId() == $claim->getSystemUserId()) {
+								// 		$selectedUser = 'selected="selected"';
+								// 	}
+								 	echo '<option value="'.$user->getId().'" >'.$user->getFirstName().'</option>';
+								 }
 								?>
 								</select>
 							</div>

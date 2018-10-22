@@ -210,7 +210,8 @@ class Claim {
 	private $mat_3;
 	private $mat_4;
 	private $mat_5;
-	
+
+	private $systemUserId;
 	//----------------------------------------------------------------------------------
 
 
@@ -292,7 +293,7 @@ class Claim {
 			$claimData['neighborhood'] = $this->neighborhood;
 			$claimData['regionId'] = Util::getClaimRegion($this->latitude, $this->longitude);
 			$claimData['id_type_address'] = isset($this->typeAddressId)?$this->typeAddressId:'NULL';
-
+			$claimData["systemUserId"] = $this->systemUserId;
 			$claimData["priority"] = $this->priority;
 			$claimData["detail"] = $this->detail;
 			
@@ -300,9 +301,19 @@ class Claim {
 			
 			$_SESSION ['logger']->debug('Insertando reclamo1: '.$insertQuery);
 			$connectionManager = ConnectionManager::getInstance ();
-
+			
 			$rs = $connectionManager->executeTransaction($insertQuery, true, 'claim_id_seq');
-	
+			if($claimData["code"]!= null && $claimData["code"]!= '' && $claimData["code"]!='undefined' && $claimData["systemUserId"]!= null && $claimData["systemUserId"]!= '' && $claimData["systemUserId"]!='undefined'  ){
+				$query2 = ClaimsDB::setListPlaceForClaim ( $claimData["systemUserId"],$claimData["code"]);
+				$rs2 = $connectionManager->executeTransaction ( $query2 );
+				if (! $rs2) {
+					self::$logger->error ( 'Error inserting order' );
+					throw new Exception ( 'Error inserting order' );
+				}
+			}
+		
+
+			
 		}
 		
 		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
@@ -352,6 +363,19 @@ class Claim {
 	 */
 	public function setSubjectId($subjectId) {
 		$this->subjectId = $subjectId;
+	}
+	/**
+	 * @return the $systemUserId
+	 */
+	public function getSystemUserId() {
+		return $this->systemUserId;
+	}
+
+	/**
+	 * @param int $systemUserId
+	 */
+	public function setSystemUserId($systemUserId) {
+		$this->systemUserId = $systemUserId;
 	}
 
 	/**
