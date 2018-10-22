@@ -2210,12 +2210,13 @@ public static function getPublicClaimCoords($filters) {
 	}
 
 
-	public static function setListPlaceForClaim($userId, $claimId) {
+	public static function setListPlaceForClaim($userId, $code) {
 
 		self::initializeSession ();
 
 		self::$logger->debug ( __METHOD__ . ' begin' );
-		$placeNum = "(select max(listplace)+1 from claimsystemuseradr where systemuseradrid=".$userId.")";
+		$placeNum = "(select COALESCE(max(listplace)+1,1) from claimsystemuseradr where systemuseradrid=".$userId.")";
+		$claimId = "(select id from claim where code='".$code."')";
 
 		$query = "INSERT INTO claimsystemuseradr(
 		systemuseradrid,

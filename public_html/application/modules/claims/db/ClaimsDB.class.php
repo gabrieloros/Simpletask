@@ -1346,6 +1346,30 @@ class ClaimsDB extends Util {
 		return $query;
 
 	}
+	public static function setListPlaceForClaim($userId, $code) {
+
+		$query = '';
+	
+		Util::getConnectionType ();
+	
+		switch ($_SESSION ['s_dbConnectionType']) {
+			case Util::DB_MYSQL :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_ORACLE :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_SQLSERVER :
+				throw new Exception ( "not implemented" );
+				break;
+			case Util::DB_POSTGRESQL :
+				$query = ClaimsPostgreSQL::setListPlaceForClaim($userId, $code);
+				break;
+		}
+
+		return $query;
+
+	}
 	
 
 	public static function getAllClaimStreet($filters, $order){

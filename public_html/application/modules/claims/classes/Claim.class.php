@@ -211,8 +211,7 @@ class Claim {
 	private $mat_4;
 	private $mat_5;
 
-	private $systemUserId
-	
+	private $systemUserId;
 	//----------------------------------------------------------------------------------
 
 
@@ -302,9 +301,19 @@ class Claim {
 			
 			$_SESSION ['logger']->debug('Insertando reclamo1: '.$insertQuery);
 			$connectionManager = ConnectionManager::getInstance ();
-
+			
 			$rs = $connectionManager->executeTransaction($insertQuery, true, 'claim_id_seq');
-	
+			if($claimData["code"]!= null && $claimData["code"]!= '' && $claimData["code"]!='undefined' && $claimData["systemUserId"]!= null && $claimData["systemUserId"]!= '' && $claimData["systemUserId"]!='undefined'  ){
+				$query2 = ClaimsDB::setListPlaceForClaim ( $claimData["systemUserId"],$claimData["code"]);
+				$rs2 = $connectionManager->executeTransaction ( $query2 );
+				if (! $rs2) {
+					self::$logger->error ( 'Error inserting order' );
+					throw new Exception ( 'Error inserting order' );
+				}
+			}
+		
+
+			
 		}
 		
 		$_SESSION ['logger']->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
