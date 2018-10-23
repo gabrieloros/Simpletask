@@ -199,6 +199,18 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		if(isset($claimData ["regionId"]) && $claimData ["regionId"] != null && $claimData ["regionId"] != 0){
 			$regionId = $claimData ["regionId"];
 		}
+		
+		if($claimData ["groupid"]!= '' && $claimData ["groupid"] != NULL && $claimData ["groupid"] != 0  && $claimData ["groupid"]!= 'undefined'){
+			$groupId = $claimData ["groupid"];
+		}else{
+			$groupId = NULL;
+		}
+		if($claimData ["systemUserId"]!= '' && $claimData ["systemUserId"] != NULL && $claimData ["systemUserId"] != 0 && $claimData ["systemUserId"]!= 'undefined'){
+			$systemUserId = $claimData ["systemUserId"];
+			
+		}else{
+			$systemUserId = NULL;
+		}
 
 		$query = 'INSERT INTO claim
 		(
@@ -212,6 +224,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		entrydate,
 		detail,
 		systemuserid,
+		groupid,
 		closedate,
 		requestername,
 		claimaddress,
@@ -236,6 +249,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		\'' . $claimData ["entryDate"] . '\',
 		\'' . $claimData ["detail"] . '\',
 		' . $claimData ["systemUserId"] . ',
+		' . $groupId = $claimData ["groupid"] . ',
 
 		DEFAULT,
 		\'' . $claimData ["requesterName"] . '\',

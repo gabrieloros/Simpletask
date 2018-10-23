@@ -1,7 +1,7 @@
 <?php
 class ClaimsNewMultiple extends Render {
 
-	static public function render ($claim, $subjectsList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress = false,$usersList) {
+	static public function render ($claim, $subjectsList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress = false,$usersList,$groupsList) {
 		
 		ob_start();
 		 //var_dump($usersList);
@@ -135,7 +135,7 @@ class ClaimsNewMultiple extends Render {
 								<select id="userId" class="form-control mandatory-input" name="userId" />
 								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
 								<?php
-						
+								echo '<option value="0" > No Asignar </option>';
 								/* @var $cause Cause */
 								 foreach ($usersList as $user) {
 	
@@ -144,6 +144,28 @@ class ClaimsNewMultiple extends Render {
 								// 		$selectedUser = 'selected="selected"';
 								// 	}
 								 	echo '<option value="'.$user->getId().'" >'.$user->getFirstName().'</option>';
+								 }
+								?>
+								</select>
+							</div>
+						</div>
+						<div >
+							<div class="textbox">
+								<label>Pertenece a:</label>
+							</div>
+							<div class="opt-box">
+								<select id="groupId" class="form-control mandatory-input" name="groupId" />
+								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
+								<?php
+								echo '<option value="0" > Sin Grupo </option>';
+								/* @var $cause Cause */
+								 foreach ($groupsList as $group) {
+	
+								// 	$selectedUser = '';
+								// 	if($user->getId() == $claim->getSystemUserId()) {
+								// 		$selectedUser = 'selected="selected"';
+								// 	}
+								 	echo '<option value="'.$group->getId().'" >'.$group->getName().'</option>';
 								 }
 								?>
 								</select>

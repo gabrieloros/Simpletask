@@ -50,6 +50,14 @@ class ManualClaimType extends ClaimType {
 		$name =  $data['requesterName'];
 		$phone = $data['requesterPhone'];
 		$detail = $data['detail'];
+
+		if($data['groupId'] != 0 ){
+			$groupId = $data['groupId'];
+		}else {
+			$groupId = '';
+		}
+		
+		
 		
 
 		if ( $data ['latitude']!= "undefined" && $data ['latitude']!= null && $data ['longitude']!= "undefined" && $data ['longitude']!= null  ){
@@ -109,12 +117,17 @@ class ManualClaimType extends ClaimType {
 			$code = $this->generateCode($claimCount);
 			$claimObj = new Claim(null, $code,$name, $address,$phone);
 			
-			if($data['userId'] != null && $data['userId'] != ''){
+			if($groupId != ''){
+				$claimObj->setGroupid($groupId);
+				
+			}
+			if($data['userId'] != null && $data['userId'] != '' && $data['userId'] != 0){
 
 			$claimObj->setSystemUserId($data['userId']);
 				//Set assigned
 			$claimObj->setAssigned('true');
 			
+
 			}else{
 				//Set assigned
 			$claimObj->setAssigned('false');

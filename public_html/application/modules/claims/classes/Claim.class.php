@@ -296,6 +296,7 @@ class Claim {
 			$claimData["systemUserId"] = $this->systemUserId;
 			$claimData["priority"] = $this->priority;
 			$claimData["detail"] = $this->detail;
+			$claimData["groupid"] = $this->groupid;
 			
 			$insertQuery = ClaimsDB::insertClaim($claimData);
 			

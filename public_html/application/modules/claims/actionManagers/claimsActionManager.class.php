@@ -6,6 +6,7 @@ require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/core/classes/filters/
 require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/adr/managers/AdrUsersManager.class.php';
 require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/classes/ClaimRequestPush.php';
 require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/push/ClaimNotificationPush.php';
+require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/adr/managers/AdrTasksManager.class.php';
 
 
 /**
@@ -21,11 +22,13 @@ class claimsActionManager extends ModuleActionManager {
 	protected $manager;
 	protected $userManager;
 	protected $adrUserManager;
+	protected $managerTask;
 	function __construct() {
 
 
 		$this->manager = ClaimsManager::getInstance();
 		$this->userManager = UserManager::getInstance();
+		$this->managerTask = AdrTasksManager::getInstance ();
 		//Load the claims concepts in session
 		$this->manager->getClaimsConcepts($_SESSION['loggedUser']->getLocationid());
 		$this->userManager->getUsersConcepts();
@@ -1308,7 +1311,7 @@ class claimsActionManager extends ModuleActionManager {
 
 		//States
 		$stateList = $this->manager->getStatesList();
-
+		$groupsList=$this->managerTask->getListGroups();
 		$usersList = $this->adrUserManager->getListUsers();
 
 		$html = '';
@@ -1319,7 +1322,7 @@ class claimsActionManager extends ModuleActionManager {
 		$typeAddress = $countMapCity > 0;
 		// var_dump($usersList);
 		// die();
-		$html .= ClaimsNewMultiple::render($claim, $subjectList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress, $usersList);
+		$html .= ClaimsNewMultiple::render($claim, $subjectList, $inputTypeList, $causeList, $dependencyList, $stateList, $typeAddress, $usersList,$groupsList);
 
 		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/core/factories/MasterFactory.class.php';
 
