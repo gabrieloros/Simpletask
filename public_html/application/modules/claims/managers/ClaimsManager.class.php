@@ -1041,8 +1041,7 @@ class ClaimsManager implements ModuleManager {
 		}
 
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
-		var_dump($list);
-		die();
+		
 		return $list;
 	}
 	/**

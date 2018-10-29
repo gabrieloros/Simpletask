@@ -200,17 +200,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 			$regionId = $claimData ["regionId"];
 		}
 		
-		if($claimData ["groupid"]!= '' && $claimData ["groupid"] != NULL && $claimData ["groupid"] != 0  && $claimData ["groupid"]!= 'undefined'){
-			$groupId = $claimData ["groupid"];
-		}else{
-			$groupId = NULL;
-		}
-		if($claimData ["systemUserId"]!= '' && $claimData ["systemUserId"] != NULL && $claimData ["systemUserId"] != 0 && $claimData ["systemUserId"]!= 'undefined'){
-			$systemUserId = $claimData ["systemUserId"];
-			
-		}else{
-			$systemUserId = NULL;
-		}
+		
 
 		$query = 'INSERT INTO claim
 		(

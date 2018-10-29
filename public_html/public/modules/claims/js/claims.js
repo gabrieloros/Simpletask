@@ -1167,11 +1167,16 @@ function getClaimCurrentCoords(){
 		$('#latitude').val(newLatitude);
 		$('#longitude').val(newLongitude);
 	}
+	if(markers == undefined || markers == ''){
+
+	}else{
+
+	
 	if(markers!= undefined || markers!= ''){
 		$('#markers').val(markers);
 		$('#countMarkers').val(markers.length);
 	}
-	
+}
 	PopupManager.getActive().close();
 
 }

@@ -1050,6 +1050,7 @@ class claimsActionManager extends ModuleActionManager {
 			//List
 			$list = $this->manager->getExportClaims($filters);
 
+
 			require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/MapClaims.view.php';
 
 			$html = MapClaims::render($list);
