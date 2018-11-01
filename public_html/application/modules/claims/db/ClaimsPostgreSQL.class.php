@@ -1064,6 +1064,105 @@ WHERE claim.id = '.$id ;
 		return $query;
 
 	}
+	public static function getClaimsForMaps($begin, $count, $filters, $order){
+
+		self::initializeSession ();
+
+		self::$logger->debug ( __METHOD__ . ' begin' );
+
+		$query = 'SELECT
+		claim.id claimid,
+		claim.code,
+		claim.detail,
+		subject.name subjectname,
+		inputtype.name inputtypename,
+		cause.name causename,
+		origin.name originname,
+		dependency.name dependencyname,
+		claim.stateid,
+		state.name statename,
+		claim.entrydate,
+		claim.closedate,
+		claim.requestername,
+		claim.claimaddress,
+		claim.requesterphone,
+		claim.assigned,
+		claim.neighborhood,
+		claim.detail,
+		teleprom.requesteraddress,
+		teleprom.lights,
+		claim.piquete,
+		claim.latitude,
+		claim.longitude,
+		streetlights.tulipa,
+		streetlights.portalampara,
+		streetlights.canasto,
+		streetlights.fusible,
+		streetlights.lamp_125,
+		streetlights.lamp_150,
+		streetlights.lamp_250,
+		streetlights.lamp_400,
+		streetlights.ext_125,
+		streetlights.ext_150,
+		streetlights.ext_250,
+		streetlights.ext_400,
+		streetlights.int_125,
+		streetlights.int_150,
+		streetlights.int_250,
+		streetlights.int_400,
+		streetlights.morceto,
+		streetlights.espejo,
+		streetlights.columna,
+		streetlights.atrio,
+		streetlights.neutro,
+		streetlights.cable
+		FROM claim
+		INNER JOIN state ON state.id = claim.stateid
+		LEFT JOIN subject ON subject.id = claim.subjectid
+		INNER JOIN inputtype ON inputtype.id = claim.inputtypeid
+		INNER JOIN origin ON origin.id = claim.originid
+		LEFT JOIN cause ON cause.id = claim.causeid
+		LEFT JOIN dependency ON dependency.id = claim.dependencyid
+		LEFT JOIN telepromclaim teleprom ON teleprom.claimid = claim.id
+		LEFT JOIN street_lights_claims_data streetlights ON streetlights.claimid = claim.id
+		WHERE
+		(
+		(claim.originid = 2 AND EXISTS(
+		SELECT 1
+		FROM telepromclaim
+		WHERE telepromclaim.claimid = claim.id
+		AND telepromclaim.datum = \'5\'
+		)
+		)
+		OR
+		(claim.originid <> 2)
+		)
+		
+		AND claim.regionid IS not NULL
+		';
+		//AND claim.causeid = 14
+		if(is_array($filters) && count($filters) > 0){
+				
+			foreach ($filters as $filter){
+					
+				$query .= $filter->getCriteriaQuery();
+					
+			}
+				
+		}
+
+		$query .= '
+		ORDER BY claim.entrydate '.$order.', claim.id DESC
+		LIMIT ' . $count . ' OFFSET ' . $begin . '
+		';
+
+		self::$logger->debug ( __METHOD__ . ' QUERY: ' . $query );
+
+		self::$logger->debug ( __METHOD__ . ' end' );
+
+		return $query;
+
+	}
 
 	public static function getClaimsForExport($begin, $count, $filters, $order){
 

@@ -110,7 +110,7 @@ class ManualClaimType extends ClaimType {
 			$code = $this->generateCode($claimCount);
 			$claimObj = new Claim(null, $code,$name, $address,$phone);
 			
-			if($data['groupId'] != 0 $data['groupId'] != null && $data['groupId'] != '' ){
+			if($data['groupId'] != 0 && $data['groupId'] != null && $data['groupId'] != '' ){
 			$groupId = $data['groupId'];
 			$claimObj->setGroupid($groupId);
 			}else {

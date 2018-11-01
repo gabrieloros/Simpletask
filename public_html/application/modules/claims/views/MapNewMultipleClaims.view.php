@@ -65,14 +65,13 @@ class MapNewMultipleClaims extends Render{
 							markers = datos;
 							//markers[index] = marker;
 					}
-
-				google.maps.event.addDomListener(window, 'load', initialize);
-				//Marker last position
-				google.maps.event.addListener(marker, 'dragend', function(){
+					google.maps.event.addListener(marker, 'dragend', function(){
 					newLatitude = marker.getPosition().lat();
 					newLongitude = marker.getPosition().lng();
-					points = marker.getPosition();
+					location = marker.getPosition();
 				});
+				google.maps.event.addDomListener(window, 'load', initialize);
+				
 				
 				return markers;
 		    }

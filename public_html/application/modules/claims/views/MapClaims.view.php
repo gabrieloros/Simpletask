@@ -5,7 +5,7 @@ class MapClaims extends Render{
 	public function render($list){
 		
 		ob_start();
-		
+		// var_dump($list);
 		?>
 		 
 		<div id="map_canvas"></div>

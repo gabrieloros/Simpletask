@@ -1021,14 +1021,14 @@ class ClaimsManager implements ModuleManager {
 
 		if ($count > 0) {
 
-			$query = ClaimsDB::getClaimsForExport ( 0, $count, $filters, 'asc' );
+			$query = ClaimsDB::getClaimsForMaps ( 0, $count, $filters, 'asc' );
 
 			$connectionManager = ConnectionManager::getInstance ();
 
 			$rs = $connectionManager->select ( $query );
-
+			
 			$claimFactory = new ClaimFactory ();
-
+	
 			if (is_array ( $rs )) {
 
 				foreach ( $rs as $element ) {
@@ -1039,9 +1039,9 @@ class ClaimsManager implements ModuleManager {
 				}
 			}
 		}
-
-		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
 		
+		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
+	
 		return $list;
 	}
 	/**
@@ -1122,8 +1122,7 @@ class ClaimsManager implements ModuleManager {
 
 
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' end' );
-		// var_dump($list);
-		// die();
+		 
 		return $list;
 	}
 

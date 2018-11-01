@@ -181,9 +181,10 @@ class claimsActionManager extends ModuleActionManager {
 		$filterGroup->setFiltersList ( $filters );
 
 		$html = '';
-		
-		// var_dump($list);
-		// die();
+		// $list1 = $this->manager->getExportClaims($filters);
+
+		// var_dump($list1);
+		//  die();
 		require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/ClaimsActions.view.php';
 
 		$actions = ClaimsActions::render();
@@ -1050,7 +1051,7 @@ class claimsActionManager extends ModuleActionManager {
 			//List
 			$list = $this->manager->getExportClaims($filters);
 
-
+			// var_dump($list);
 			require_once $_SERVER ['DOCUMENT_ROOT'] . '/../application/modules/claims/views/MapClaims.view.php';
 
 			$html = MapClaims::render($list);

@@ -135,7 +135,7 @@ class ClaimsNewMultiple extends Render {
 								<select id="userId" class="form-control mandatory-input" name="userId" />
 								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
 								<?php
-								echo '<option value="0" > No Asignar </option>';
+								//echo '<option value="0" > No Asignar </option>';
 								/* @var $cause Cause */
 								 foreach ($usersList as $user) {
 	
@@ -157,7 +157,7 @@ class ClaimsNewMultiple extends Render {
 								<select id="groupId" class="form-control mandatory-input" name="groupId" />
 								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
 								<?php
-								echo '<option value="0" > Sin Grupo </option>';
+								//echo '<option value="0" > Sin Grupo </option>';
 								/* @var $cause Cause */
 								 foreach ($groupsList as $group) {
 	
