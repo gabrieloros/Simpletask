@@ -540,7 +540,8 @@ class ClaimsManager implements ModuleManager {
 		$rs = $connectionManager->select ( $query );
 		
 		if (is_array ( $rs )) {
-
+// var_dump($rs);
+// die();
 			foreach ( $rs as $element ) {
 
 				$obj = new Claim ( $element ['claimid'], $element ['code'], $element ['requestername'], $element ['claimaddress'], $element ['requesterphone'] );
@@ -564,11 +565,12 @@ class ClaimsManager implements ModuleManager {
 				$obj->setMat_3($element['mat_3']);
 				$obj->setMat_4($element['mat_4']);
 				$obj->setMat_5($element['mat_5']);
+				$obj->setDaypending($element['daypending']);
 
 
 
-        /*        var_dump($element);
-                die();*/
+                // var_dump($element);
+                // die();
 
 			
 
@@ -1575,6 +1577,29 @@ class ClaimsManager implements ModuleManager {
 	 * @param date $entryDate
 	 * @return number
 	 */
+	
+	// $now = DateTime::createFromFormat ( 'd/m/Y', date ( 'd/m/Y' ) );
+	// var_dump($now);
+	// die();
+	// $fecha1 = DateTime::createFromFormat ( 'Y-m-d H:i:s', $rs [0] ['entrydate'] . ' 00:00:00' );
+	// //echo $fecha1;
+
+	// for($fecha1;$fecha1<=$now;$fecha1=strtotime('+1 day ' . date('Y-m-d',$fecha1))){ 
+	// 	var_dump($now);
+	// 	var_dump( strtotime($fecha1) );
+	// 		die();
+	// 	if((strcmp(date('D',strtotime($fecha1)),'Sun')!=0) || (strcmp(date('D',strtotime($fecha1)),'Sat')!=0)){
+		
+	// 		echo date('Y-m-d D',$fecha1) . '<br />'; 
+	// 	}
+	// }  
+	// $diff = $now->diff ( DateTime::createFromFormat ( 'Y-m-d H:i:s', $rs [0] ['entrydate'] . ' 00:00:00' ) );
+	// $years = $diff->y;
+	// $months = $diff->m;
+	// $days = $diff->d;
+	// if ($rs [0] ['daypending'] >= (claimsConcepts::CRITICALPENDINGSTATETIME + 1)) {
+	// 	$isCritical = 1;
+	// }
 	public static function getCheckCriticalPendingClaim($claimId) {
 		self::$logger->debug ( __CLASS__ . '-' . __METHOD__ . ' begin' );
 
@@ -1585,12 +1610,12 @@ class ClaimsManager implements ModuleManager {
 		$rs = $connectionManager->select ( $query );
 
 		if ($rs [0] ['stateid'] == claimsConcepts::PENDINGSTATE) {
-			$now = DateTime::createFromFormat ( 'd/m/Y', date ( 'd/m/Y' ) );
-			$diff = $now->diff ( DateTime::createFromFormat ( 'Y-m-d H:i:s', $rs [0] ['entrydate'] . ' 00:00:00' ) );
-			$years = $diff->y;
-			$months = $diff->m;
-			$days = $diff->d;
-			if ($years > 0 || $months > 0 || $days >= claimsConcepts::CRITICALPENDINGSTATETIME) {
+		
+			
+		
+			if (-($rs [0] ['daypending']) > claimsConcepts::CRITICALPENDINGSTATETIME ) {
+			
+				
 				$isCritical = 1;
 			}
 		}

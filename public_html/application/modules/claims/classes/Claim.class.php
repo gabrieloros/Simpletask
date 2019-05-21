@@ -212,6 +212,8 @@ class Claim {
 	private $mat_5;
 
 	private $systemUserId;
+
+	private $daypending;
 	//----------------------------------------------------------------------------------
 
 
@@ -897,5 +899,13 @@ class Claim {
 	}
 	public function setMat_5($mat_5) {
 		$this->mat_5 = $mat_5;
-	}			
+	}
+	
+	public function getDaypending(){
+	 return	$this->daypending;
+	}
+
+	public function setDaypending($daypending) {
+		$this->daypending = $daypending;
+	}
 }

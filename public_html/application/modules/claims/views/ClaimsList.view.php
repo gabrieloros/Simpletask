@@ -87,12 +87,15 @@ class ClaimsList extends Render {
 			$state = 0;
 
 			if($element->getStateId() == claimsConcepts::PENDINGSTATE){
-				$now = DateTime::createFromFormat('d/m/Y', date('d/m/Y'));
-				$diff = $now->diff($element->getEntryDate());
-				$years = $diff->y;
-				$months = $diff->m;
-				$days = $diff->d;
-				if($years > 0 || $months > 0 || $days >= claimsConcepts::CRITICALPENDINGSTATETIME){
+
+				$day = $element->getDaypending();
+				// $now = DateTime::createFromFormat('d/m/Y', date('d/m/Y'));
+				// $diff = $now->diff($element->getEntryDate());
+				// $years = $diff->y;
+				// $months = $diff->m;
+				// $days = $diff->d;
+				//$years > 0 || $months > 0 || $days >=
+				if( -($day) > claimsConcepts::CRITICALPENDINGSTATETIME){
 					$state = 1;
 				}
 			}
@@ -102,8 +105,8 @@ class ClaimsList extends Render {
 			$priority = $element->getPriority();
 
 
-			//var_dump($cause);
-			//die();
+			// var_dump($element->getCode());
+			// die();
 
 			$dependencyName = $element->getDependencyName();
 			$thirdCellWidth = '28%';
@@ -146,7 +149,7 @@ class ClaimsList extends Render {
 				<tr>
 
 					<td><img src="/modules/claims/css/img/<?=$cause?>_<?=$priority?>_<?=$state?>.png"></td>
-					<div class="tdTitle"><td>ID: <?=$element->getCode()?></td></div>
+					<div class="tdTitle"><td>ID: <?= $element->getCode()?></td></div>
 				
 					<td> <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> <?=$element->getEntryDate()->format("d/m/Y")?> </td>
 						<?
@@ -171,7 +174,7 @@ class ClaimsList extends Render {
 						}
 						else{
 							if($element->getAssigned()){
-								echo 'Asignado ' . Util::getAssignedDate($element->getEntryDate()->format("Y-m-d"));
+								echo 'Subido ' . Util::getAssignedDate($element->getEntryDate()->format("Y-m-d"));
 							}
 							else{
 								if($element->getStateId() != claimsConcepts::CANCELLEDSTATE){

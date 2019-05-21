@@ -42,3 +42,9 @@ sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/modules/c
 sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/core/js/
 sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/public/core/css/
 sudo chmod 777 /var/www/rvialidad.simpletask.com.ar/public_html/log/
+
+sudo chmod 777 /var/www/laplata.simpletask.com.ar/public_html/public/modules/claims/imports/
+sudo chmod 777 /var/www/laplata.simpletask.com.ar/public_html/public/core/js/
+sudo chmod 777 /var/www/laplata.simpletask.com.ar/public_html/public/core/css/
+sudo chmod 777 /var/www/laplata.simpletask.com.ar/public_html/log/
+sudo chmod 777 /var/www/laplata.gestionyservicios.com.ar/public_html/log/

@@ -344,7 +344,8 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 
 		self::$logger->debug ( __METHOD__ . ' begin' );
 
-		$query = 'SELECT DISTINCT 
+		$query = 'SELECT DISTINCT
+		 SUM((select (select count(*) as nolab from nolaborables where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = claim.id ) + (select extract(days from (c.entrydate - now())) from claim c where id = claim.id )) as daypending, 
 		claim.id claimid,
 		claim.detail,
 		claim.code,
@@ -412,6 +413,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 
         
 		$query .= '
+		group by claim.id ,subject.name,inputtype.name,cause.icon,cause.name,claim.causeid,origin.name,dependency.name,claim.stateid,state.name,claim.entrydate,claim.closedate,claim.requestername,claim.claimaddress,claim.requesterphone,claim.assigned,systemuser.id,systemuser.name,systemuser.surname,systemuser.usertypeid,claimclosureldr.description,mat.mat_1,mat.mat_2,mat.mat_3,mat.mat_4,mat.mat_5
 		ORDER BY claim.entrydate ' . $order . '
 		LIMIT ' . $count . ' OFFSET ' . $begin . '
 		';
@@ -421,7 +423,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		self::$logger->debug ( __METHOD__ . ' end' );
 
 		
-		// var_dump($query);
+		//  var_dump($query);
 		// die();
 		return $query;
 
@@ -435,8 +437,9 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 
 		self::$logger->debug ( __METHOD__ . ' begin' );
 
-		$query = '
-	SELECT
+		$query = '	SELECT
+		
+		SUM((select (select count(*) as nolab from nolaborables where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = '.$id.' ) + (select extract(days from (c.entrydate - now())) from claim c where id = '.$id.')) as daypending,
 		claim.id claimid,
 		claim.code,
 		claim.detail,
@@ -486,7 +489,8 @@ LEFT JOIN
 		dependency on dependency.id = claim.dependencyid
 LEFT JOIN 
 		region on claim.regionid = region.id
-WHERE claim.id = '.$id ;
+WHERE claim.id = '.$id.' group by claim.id,subject.name,subject.id,inputtype.name,inputtype.id,cause.name,cause.id,origin.name,origin.id,dependency.name,dependency.id,claim.stateid,state.name,claim.entrydate,claim.closedate,claim.requestername,claim.claimaddress,	claim.requesterphone,claim.assigned,claim.latitude,claim.longitude,claim.neighborhood,claim.typeaddressid,claim.systemuserid,claim.substateid,region.name,claim.piquete,claim.groupid,g.name 
+' ;
 
 
 

@@ -168,7 +168,8 @@ class claimsActionManager extends ModuleActionManager {
 		}
 
 
-
+		// var_dump($list);
+		// die();
 		
 		//Pager
 		$pager = Util::getPager ( $numrows, $begin, $page, $count );
