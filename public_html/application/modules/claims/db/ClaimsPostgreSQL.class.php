@@ -345,7 +345,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 		self::$logger->debug ( __METHOD__ . ' begin' );
 
 		$query = 'SELECT DISTINCT
-		 SUM((select (select count(*) as nolab from nolaborables where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = claim.id ) + (select extract(days from (c.entrydate - now())) from claim c where id = claim.id )) as daypending, 
+		 SUM((select (select count(*) as nolab from blockeddate where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = claim.id ) + (select extract(days from (c.entrydate - now())) from claim c where id = claim.id )) as daypending, 
 		claim.id claimid,
 		claim.detail,
 		claim.code,
@@ -439,7 +439,7 @@ class ClaimsPostgreSQL extends UtilPostgreSQL {
 
 		$query = '	SELECT
 		
-		SUM((select (select count(*) as nolab from nolaborables where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = '.$id.' ) + (select extract(days from (c.entrydate - now())) from claim c where id = '.$id.')) as daypending,
+		SUM((select (select count(*) as nolab from blockeddate where fecha >= c.entrydate and fecha <= c.entrydate +2)  from claim c where id = '.$id.' ) + (select extract(days from (c.entrydate - now())) from claim c where id = '.$id.')) as daypending,
 		claim.id claimid,
 		claim.code,
 		claim.detail,
