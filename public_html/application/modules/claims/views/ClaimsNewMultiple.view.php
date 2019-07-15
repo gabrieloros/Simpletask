@@ -139,12 +139,13 @@ class ClaimsNewMultiple extends Render {
 								/* @var $cause Cause */
 								 foreach ($usersList as $user) {
 	
-								// 	$selectedUser = '';
-								// 	if($user->getId() == $claim->getSystemUserId()) {
-								// 		$selectedUser = 'selected="selected"';
-								// 	}
+								 //	$selectedUser = '';
+								 //	if($user->getId() == $claim->getSystemUserId()) {
+								 //		$selectedUser = 'selected="selected"';
+								 //	}
 								 	echo '<option value="'.$user->getId().'" >'.$user->getFirstName().'</option>';
 								 }
+								
 								?>
 								</select>
 							</div>
@@ -157,14 +158,14 @@ class ClaimsNewMultiple extends Render {
 								<select id="groupId" class="form-control mandatory-input" name="groupId" />
 								<option value=""><?=Util::getLiteral('claim_cause_select_one')?></option>
 								<?php
-								//echo '<option value="0" > Sin Grupo </option>';
+								echo '<option value="0" > Sin Grupo </option>';
 								/* @var $cause Cause */
 								 foreach ($groupsList as $group) {
 	
-								// 	$selectedUser = '';
-								// 	if($user->getId() == $claim->getSystemUserId()) {
-								// 		$selectedUser = 'selected="selected"';
-								// 	}
+								//$selectedUser = '';
+								//if($user->getId() == $claim->getSystemUserId()) {
+								//	$selectedUser = 'selected="selected"';
+								//	}
 								 	echo '<option value="'.$group->getId().'" >'.$group->getName().'</option>';
 								 }
 								?>
